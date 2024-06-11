@@ -2,7 +2,10 @@ extends CharacterBody3D
 
 var speed
 const WALK_SPEED = 5.0
-const SPRINT_SPEED = 8.0
+const SPRINT_SPEED = 7.0
+const CROUCH_MOVE_SPEED = 3.0
+const CROUCH_SPRINT_SPEED = 4.0
+const CROUCH_SPEED = 20.0
 const JUMP_VELOCITY = 4.5
 const SENSITIVITY = 0.003
 
@@ -12,12 +15,15 @@ var t_bob = 0.0
 
 const BASE_FOV = 75.0
 const FOV_CHANGE = 1.5
+
+var default_height = 1.5
+var crouch_height = 0.5
 # Get the gravity from the project settings to be synced with RigidBody nodes.
 var gravity = 9.8
 
 @onready var head = $Head
 @onready var camera = $Head/Camera3D
-
+@onready var capsule = $CollisionShape3D
 
 func _ready():
 	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
@@ -29,6 +35,7 @@ func _unhandled_input(event):
 		camera.rotation.x = clamp(camera.rotation.x, deg_to_rad(-80), deg_to_rad(70))
 		
 func _physics_process(delta):
+	speed = WALK_SPEED
 	# Add the gravity.
 	if not is_on_floor():
 		velocity.y -= gravity * delta
@@ -36,13 +43,20 @@ func _physics_process(delta):
 	# Handle jump.
 	if Input.is_action_pressed("jump") and is_on_floor():
 		velocity.y = JUMP_VELOCITY
-
-	# Handle sprint.
-	if Input.is_action_pressed("sprint"):
-		speed = SPRINT_SPEED
+	# Handle crouch.
+	if Input.is_action_pressed("crouch") and not Input.is_action_pressed("sprint"):
+		capsule.shape.height -= CROUCH_SPEED * delta
+		speed = CROUCH_MOVE_SPEED
 	else:
-		speed = WALK_SPEED
-
+		capsule.shape.height += CROUCH_SPEED * delta
+	capsule.shape.height = clamp(capsule.shape.height, crouch_height, default_height)
+	# Handle sprint.
+	if Input.is_action_pressed("sprint") and not Input.is_action_pressed("crouch"):
+		speed = SPRINT_SPEED
+	elif Input.is_action_pressed("sprint") and speed == CROUCH_MOVE_SPEED:
+		speed = CROUCH_SPRINT_SPEED
+	
+	
 	# Get the input direction and handle the movement/deceleration.
 	# As good practice, you should replace UI actions with custom gameplay actions.
 	var input_dir = Input.get_vector("left", "right", "forwards", "backwards")
