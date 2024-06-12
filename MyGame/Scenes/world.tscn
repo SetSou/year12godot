@@ -1,4 +1,4 @@
-[gd_scene load_steps=26 format=3 uid="uid://cx8yrmud2g7g6"]
+[gd_scene load_steps=27 format=3 uid="uid://cx8yrmud2g7g6"]
 
 [ext_resource type="PackedScene" uid="uid://bklenyncmwhyt" path="res://Scenes/character_body_3d.tscn" id="1_ifomk"]
 [ext_resource type="Script" path="res://addons/cyclops_level_builder/nodes/cyclops_block.gd" id="2_nuwmn"]
@@ -620,6 +620,34 @@ active_edge = -1
 active_face = -1
 active_face_vertex = 0
 
+[sub_resource type="Resource" id="Resource_8c56w"]
+script = ExtResource("3_e06mj")
+selected = false
+active = false
+collsion = true
+physics_layer = 0
+physics_mask = 0
+vertex_points = PackedVector3Array(0, 1, 0, 0, 1, 5, 0, 0, 5, 0, 0, 0, 2, 1, 0, 2, 1, 5, 2, 0, 5, 2, 0, 0)
+vertex_selected = PackedByteArray(0, 0, 0, 0, 0, 0, 0, 0)
+edge_selected = PackedByteArray(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0)
+face_material_indices = PackedInt32Array(-1, -1, -1, -1, -1, -1)
+face_uv_transform = Array[Transform2D]([Transform2D(1, 0, 0, 1, 0, 0), Transform2D(1, 0, 0, 1, 0, 0), Transform2D(1, 0, 0, 1, 0, 0), Transform2D(1, 0, 0, 1, 0, 0), Transform2D(1, 0, 0, 1, 0, 0), Transform2D(1, 0, 0, 1, 0, 0)])
+face_visible = PackedByteArray(1, 1, 1, 1, 1, 1)
+face_color = PackedColorArray(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1)
+face_selected = PackedByteArray(0, 0, 0, 0, 0, 0)
+face_vertex_face_index = PackedInt32Array(0, 0, 0, 0, 1, 1, 1, 1, 2, 2, 2, 2, 3, 3, 3, 3, 4, 4, 4, 4, 5, 5, 5, 5)
+face_vertex_vertex_index = PackedInt32Array(0, 1, 2, 3, 7, 6, 5, 4, 1, 0, 4, 5, 2, 1, 5, 6, 3, 2, 6, 7, 0, 3, 7, 4)
+face_vertex_normal = PackedVector3Array(-1, 0, 0, -1, 0, 0, -1, 0, 0, -1, 0, 0, 1, 0, 0, 1, 0, 0, 1, 0, 0, 1, 0, 0, 0, 1, 0, 0, 1, 0, 0, 1, 0, 0, 1, 0, 0, 0, 1, 0, 0, 1, 0, 0, 1, 0, 0, 1, 0, -1, 0, 0, -1, 0, 0, -1, 0, 0, -1, 0, 0, 0, -1, 0, 0, -1, 0, 0, -1, 0, 0, -1)
+face_vertex_color = PackedColorArray(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1)
+edge_vertex_indices = PackedInt32Array(0, 1, 1, 2, 2, 3, 3, 0, 7, 6, 6, 5, 5, 4, 4, 7, 0, 4, 5, 1, 6, 2, 7, 3)
+edge_face_indices = PackedInt32Array(0, 2, 0, 3, 0, 4, 0, 5, 1, 4, 1, 3, 1, 2, 1, 5, 2, 5, 2, 3, 3, 4, 4, 5)
+face_vertex_count = PackedInt32Array(4, 4, 4, 4, 4, 4)
+face_vertex_indices = PackedInt32Array(0, 1, 2, 3, 7, 6, 5, 4, 1, 0, 4, 5, 2, 1, 5, 6, 3, 2, 6, 7, 0, 3, 7, 4)
+active_vertex = -1
+active_edge = -1
+active_face = -1
+active_face_vertex = 0
+
 [node name="World" type="Node3D"]
 
 [node name="CharacterBody3D" parent="." instance=ExtResource("1_ifomk")]
@@ -736,6 +764,11 @@ block_data = SubResource("Resource_kdy0u")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.31423, 8)
 script = ExtResource("2_nuwmn")
 block_data = SubResource("Resource_6mif4")
+
+[node name="Block_21" type="Node3D" parent="Cyclops"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 1, 8)
+script = ExtResource("2_nuwmn")
+block_data = SubResource("Resource_8c56w")
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
 transform = Transform3D(0.916712, -0.100545, -0.386691, 0.399549, 0.230688, 0.887211, 0, -0.967819, 0.251647, -0.145126, 6.38985, -0.118574)

@@ -22,12 +22,14 @@ var crouch_height = 0.5
 var gravity = 9.8
 
 @onready var head = $Head
-@onready var camera = $Head/Camera3D
-@onready var capsule = $CollisionShape3D
+@onready var camera = $Head/Camera
+@onready var capsule = $Collision
+@onready var CROUCH_ANIMATION = $CrouchAnimation
 
 func _ready():
 	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
-
+	CROUCH_ANIMATION.play("RESET")
+	
 func _unhandled_input(event):
 	if event is InputEventMouseMotion:
 		head.rotate_y(-event.relative.x * SENSITIVITY)
@@ -45,11 +47,8 @@ func _physics_process(delta):
 		velocity.y = JUMP_VELOCITY
 	# Handle crouch.
 	if Input.is_action_pressed("crouch") and not Input.is_action_pressed("sprint"):
-		capsule.shape.height -= CROUCH_SPEED * delta
-		speed = CROUCH_MOVE_SPEED
-	else:
-		capsule.shape.height += CROUCH_SPEED * delta
-	capsule.shape.height = clamp(capsule.shape.height, crouch_height, default_height)
+		pass
+	
 	# Handle sprint.
 	if Input.is_action_pressed("sprint") and not Input.is_action_pressed("crouch"):
 		speed = SPRINT_SPEED
