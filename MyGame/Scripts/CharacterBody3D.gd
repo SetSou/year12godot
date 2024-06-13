@@ -3,9 +3,8 @@ extends CharacterBody3D
 var speed
 const WALK_SPEED = 5.0
 const SPRINT_SPEED = 7.0
-const CROUCH_MOVE_SPEED = 3.0
+const CROUCH_SPEED = 3.0
 const CROUCH_SPRINT_SPEED = 4.0
-const CROUCH_SPEED = 20.0
 const JUMP_VELOCITY = 4.5
 const SENSITIVITY = 0.003
 
@@ -24,11 +23,12 @@ var gravity = 9.8
 @onready var head = $Head
 @onready var camera = $Head/Camera
 @onready var capsule = $Collision
-@onready var CROUCH_ANIMATION = $CrouchAnimation
+
+var state = "normal"
 
 func _ready():
 	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
-	CROUCH_ANIMATION.play("RESET")
+	$CrouchAnimation.play("RESET")
 	
 func _unhandled_input(event):
 	if event is InputEventMouseMotion:
@@ -46,14 +46,15 @@ func _physics_process(delta):
 	if Input.is_action_pressed("jump") and is_on_floor():
 		velocity.y = JUMP_VELOCITY
 	# Handle crouch.
-	if Input.is_action_pressed("crouch") and not Input.is_action_pressed("sprint"):
-		pass
-	
+	if Input.is_action_pressed("crouch") and state != "sprinting":
+				if state != "crouching":
+					enter_crouch_state()
+	elif state != "sprinting":
+		enter_normal_state()
+		
 	# Handle sprint.
 	if Input.is_action_pressed("sprint") and not Input.is_action_pressed("crouch"):
-		speed = SPRINT_SPEED
-	elif Input.is_action_pressed("sprint") and speed == CROUCH_MOVE_SPEED:
-		speed = CROUCH_SPRINT_SPEED
+		enter_sprint_state()
 	
 	
 	# Get the input direction and handle the movement/deceleration.
@@ -80,6 +81,28 @@ func _physics_process(delta):
 	
 	move_and_slide()
 
+func enter_normal_state():
+	#print("entering normal state")
+	var prev_state = state
+	if prev_state == "crouching":
+		$CrouchAnimation.play_backwards("crouch")
+	state = "normal"
+	speed = WALK_SPEED
+
+func enter_crouch_state():
+	#print("entering crouch state")
+	var prev_state = state
+	state = "crouching"
+	speed = CROUCH_SPEED
+	$CrouchAnimation.play("crouch")
+
+func enter_sprint_state():
+	#print("entering sprint state")
+	var prev_state = state
+	if prev_state == "crouching":
+		$CrouchAnimation.play_backwards("crouch")
+	state = "sprinting"
+	speed = SPRINT_SPEED
 
 func _headbob(time) -> Vector3:
 	var pos = Vector3.ZERO

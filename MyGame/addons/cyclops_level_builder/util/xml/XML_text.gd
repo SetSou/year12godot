@@ -22,27 +22,10 @@
 # SOFTWARE.
 
 @tool
-class_name ActionExportAsGltf
-extends CyclopsAction
+extends XMLNode
+class_name XMLText
 
-var wizard:ExporterGltfWizard = preload("res://addons/cyclops_level_builder/exporter/exporter_gltf_wizard.tscn").instantiate()
+@export var value:String
 
-func _init(plugin:CyclopsLevelBuilder, name:String = "", accellerator:Key = KEY_NONE):
-	super._init(plugin, "Export As Gltf...")
-
-func _execute():
-	var base_control:Node = plugin.get_editor_interface().get_base_control()
-	base_control.add_child(wizard)
-	
-	wizard.plugin = plugin
-	wizard.popup_centered()
-	
-	#await base_control.get_tree().process_frame
-	
-#	wizard.popup_hide.connect(func(): wizard.queue_free() )
-	
-	#wizard.popup_centered()
-	
-	
-	
-	
+func format_document_recursive(cur_indent:String = "", indent_increment:String = "    ")->String:
+	return value

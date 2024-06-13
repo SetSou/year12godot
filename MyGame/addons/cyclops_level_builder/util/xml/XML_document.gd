@@ -22,11 +22,14 @@
 # SOFTWARE.
 
 @tool
-extends RefCounted
-class_name DataVector
+extends XMLNode
+class_name XMLDocument
 
-@export var name:String
-@export var type:Variant.Type
-@export var data:Array
+@export var root:XMLElement
 
+func format_document(indent:String = "")->String:
+	return root.format_document_recursive("", indent) if root else ""
 
+func format_document_recursive(cur_indent:String = "", indent_increment:String = "")->String:
+	assert(false, "Call to_string()")
+	return ""

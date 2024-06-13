@@ -22,27 +22,18 @@
 # SOFTWARE.
 
 @tool
-class_name ActionExportAsGodotScene
-extends CyclopsAction
+extends Resource
+class_name ToolEditEdgeSettings
 
-var wizard:ExporterGodotSceneWizard = preload("res://addons/cyclops_level_builder/exporter/exporter_godot_scene_wizard.tscn").instantiate()
+@export var transform_space:TransformSpace.Type = TransformSpace.Type.GLOBAL
+@export var triplanar_lock_uvs:bool = true
 
-func _init(plugin:CyclopsLevelBuilder, name:String = "", accellerator:Key = KEY_NONE):
-	super._init(plugin, "Export As Godot Scene...")
-
-func _execute():
-	var base_control:Node = plugin.get_editor_interface().get_base_control()
-	base_control.add_child(wizard)
+func load_from_cache(cache:Dictionary):
+	transform_space = cache.get("transform_space", TransformSpace.Type.GLOBAL)
+	triplanar_lock_uvs = cache.get("triplanar_lock_uvs", true)
 	
-	wizard.plugin = plugin
-	wizard.popup_centered()
-	
-	#await base_control.get_tree().process_frame
-	
-#	wizard.popup_hide.connect(func(): wizard.queue_free() )
-	
-	#wizard.popup_centered()
-	
-	
-	
-	
+func save_to_cache():
+	return {
+		"transform_space": transform_space,
+		"triplanar_lock_uvs": triplanar_lock_uvs,
+	}

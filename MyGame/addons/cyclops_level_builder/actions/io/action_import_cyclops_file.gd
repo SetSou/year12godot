@@ -22,20 +22,18 @@
 # SOFTWARE.
 
 @tool
-extends Control
-class_name StickyToolbar
+class_name ActionImportCyclopsFile
+extends CyclopsAction
 
-var plugin:CyclopsLevelBuilder
+var wizard:ImporterCyclopsFileWizard = preload("res://addons/cyclops_level_builder/io/importer/importer_cyclops_file_wizard.tscn").instantiate()
 
-# Called when the node enters the scene tree for the first time.
-func _ready():
-	$HBoxContainer/PanelContainer.visible = false
+func _init(plugin:CyclopsLevelBuilder, name:String = "", accellerator:Key = KEY_NONE):
+	super._init(plugin, "Import Cyclops File...")
 
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta):
-	pass
-
-
-func _on_texture_button_toggled(button_pressed):
-	$HBoxContainer/PanelContainer.visible = button_pressed
+func _execute():
+	if !wizard.get_parent():
+		var base_control:Node = plugin.get_editor_interface().get_base_control()
+		base_control.add_child(wizard)
+	
+	wizard.plugin = plugin
+	wizard.popup_centered()

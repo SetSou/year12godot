@@ -81,7 +81,6 @@ tracks/4/keys = {
 [sub_resource type="Animation" id="Animation_5ec5e"]
 resource_name = "crouch"
 length = 0.2
-loop_mode = 2
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -171,6 +170,7 @@ shape = SubResource("CapsuleShape3D_uy03j")
 libraries = {
 "": SubResource("AnimationLibrary_5e5t5")
 }
+autoplay = "RESET"
 
 [node name="Head" type="Node3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.5, 0)
