@@ -273,7 +273,7 @@ func enter_crouch_state():
 	state = "crouching"
 	speed = crouch_speed
 	CROUCH_ANIMATION.play("crouch")
-
+ 
 func enter_sprint_state():
 	#print("entering sprint state")
 	var prev_state = state
