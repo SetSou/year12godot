@@ -24,7 +24,7 @@ var gravity = 9.8
 @onready var camera = $Head/Camera
 @onready var capsule = $Collision
 
-var state = "normal"
+@export var state = "normal"
 
 func _ready():
 	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
@@ -49,7 +49,7 @@ func _physics_process(delta):
 	if Input.is_action_pressed("crouch") and state != "sprinting":
 				if state != "crouching":
 					enter_crouch_state()
-	elif state != "sprinting":
+	else:
 		enter_normal_state()
 		
 	# Handle sprint.
@@ -95,6 +95,7 @@ func enter_crouch_state():
 	state = "crouching"
 	speed = CROUCH_SPEED
 	$CrouchAnimation.play("crouch")
+	
 
 func enter_sprint_state():
 	#print("entering sprint state")
