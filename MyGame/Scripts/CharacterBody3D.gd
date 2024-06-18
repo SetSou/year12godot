@@ -46,12 +46,12 @@ func _physics_process(delta):
 		velocity.y -= gravity * delta
 
 	# Handle jump.
-	if Input.is_action_pressed("jump") and (is_on_floor() or is_on_wall()):
+	if Input.is_action_pressed("jump") and is_on_floor():
 		velocity.y = JUMP_VELOCITY
 	# Handle crouch.
 	if Input.is_action_pressed("crouch") and state != "sprinting":
-				if state != "crouching":
-					enter_crouch_state()
+		if state != "crouching":
+			enter_crouch_state()
 	else:
 		enter_normal_state()
 		
@@ -88,11 +88,12 @@ func _physics_process(delta):
 
 func enter_normal_state():
 	#print("entering normal state")
-	var prev_state = state
-	if prev_state == "crouching":
-		$CrouchAnimation.play_backwards("crouch")
-	state = "normal"
-	speed = WALK_SPEED
+	if !$CrouchCeilingDetection.is_colliding():
+		var prev_state = state
+		if prev_state == "crouching":
+			$CrouchAnimation.play_backwards("crouch")
+		state = "normal"
+		speed = WALK_SPEED
 
 func enter_crouch_state():
 	#print("entering crouch state")
