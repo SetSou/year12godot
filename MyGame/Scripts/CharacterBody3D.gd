@@ -17,7 +17,7 @@ const FOV_CHANGE = 1.5
 var default_height = 1.5
 var crouch_height = 0.5
 var gravity = 9.8
-
+@export var wall_time = 0
 @onready var head = $Head
 @onready var camera = $Head/Camera
 @onready var capsule = $Collision
@@ -35,9 +35,10 @@ func _unhandled_input(event):
 		camera.rotation.x = clamp(camera.rotation.x, deg_to_rad(-80), deg_to_rad(70))
 	
 func wall_run():
+	
 	if Input.is_action_pressed("forwards"):
 		if is_on_wall():
-			velocity.y = 0
+			velocity.y /= 1.15
 	
 func _physics_process(delta):
 	speed = WALK_SPEED
