@@ -21,6 +21,8 @@ var gravity = 9.8
 @onready var head = $Head
 @onready var camera = $Head/Camera
 @onready var capsule = $Collision
+@onready var right_wall_cast = $Head/RightWallCast
+@onready var left_wall_cast = $Head/LeftWallCast
 
 @export var state = "normal"
 
@@ -35,10 +37,13 @@ func _unhandled_input(event):
 		camera.rotation.x = clamp(camera.rotation.x, deg_to_rad(-80), deg_to_rad(70))
 	
 func wall_run():
-	
 	if Input.is_action_pressed("forwards"):
-		if is_on_wall():
+		if is_on_wall() and right_wall_cast.is_colliding():
 			velocity.y /= 1.15
+		if is_on_wall() and left_wall_cast.is_colliding():
+			velocity.y /= 1.15
+	if Input.is_action_pressed("jump"):
+		velocity
 	
 func _physics_process(delta):
 	speed = WALK_SPEED

@@ -185,6 +185,14 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.5, 0)
 [node name="Camera" type="Camera3D" parent="Head"]
 transform = Transform3D(1, 0, 0, 0, 0.999391, -0.0348995, 0, 0.0348995, 0.999391, 0, 0, 0)
 
+[node name="RightWallCast" type="RayCast3D" parent="Head"]
+transform = Transform3D(3.5, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
+target_position = Vector3(0.3, 0, 0)
+
+[node name="LeftWallCast" type="RayCast3D" parent="Head"]
+transform = Transform3D(-3.5, 8.74228e-08, 0, -3.0598e-07, -1, 0, 0, 0, 1, 0, 0, 0)
+target_position = Vector3(0.3, 0, 0)
+
 [node name="UserInterface" type="Control" parent="."]
 layout_mode = 3
 anchors_preset = 15
