@@ -43,7 +43,8 @@ func wall_run():
 		if is_on_wall() and left_wall_cast.is_colliding():
 			velocity.y /= 1.15
 	if Input.is_action_pressed("jump"):
-		velocity
+		if is_on_wall():
+			velocity.y = 4.5
 	
 func _physics_process(delta):
 	speed = WALK_SPEED
