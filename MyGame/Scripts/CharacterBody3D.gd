@@ -38,19 +38,25 @@ func _unhandled_input(event):
 	
 func wall_run():
 	if Input.is_action_pressed("forwards"):
-		if is_on_wall() and right_wall_cast.is_colliding():
-			velocity.y /= 1.15
-		if is_on_wall() and left_wall_cast.is_colliding():
-			velocity.y /= 1.15
-	if Input.is_action_pressed("jump"):
-		if is_on_wall():
-			velocity.y = 4.5
+		if is_on_wall() and right_wall_cast.is_colliding() and velocity.y < 0:
+			print("gravity lower")
+			gravity = 1.8
+			#await get_tree().create_timer(0.2).timeout
+		if is_on_wall() and left_wall_cast.is_colliding() and velocity.y < 0:
+			print("gravity lower")
+			gravity = 1.8
+	#if Input.is_action_pressed("jump"):
+		#if is_on_wall():
+			#velocity.y = 4.5
 	
 func _physics_process(delta):
 	speed = WALK_SPEED
 	# Add the gravity.
 	if not is_on_floor():
 		velocity.y -= gravity * delta
+	if not is_on_wall():
+		print("gravity normal")
+		gravity = 9.8
 
 	# Handle jump.
 	if Input.is_action_pressed("jump") and is_on_floor():
