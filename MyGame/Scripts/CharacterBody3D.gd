@@ -1,6 +1,8 @@
 extends CharacterBody3D
 
 var speed
+var gravity = 9.8
+var jumped = false
 const WALK_SPEED = 5.0
 const SPRINT_SPEED = 7.0
 const CROUCH_SPEED = 3.0
@@ -11,13 +13,9 @@ const SENSITIVITY = 0.003
 const BOB_FREQ = 2
 const BOB_AMP = 0.08
 var t_bob = 0.0
-var wall_normal
+
 const BASE_FOV = 75.0
 const FOV_CHANGE = 1.5
-var default_height = 1.5
-var crouch_height = 0.5
-var gravity = 9.8
-@export var wall_time = 0
 @onready var head = $Head
 @onready var camera = $Head/Camera
 @onready var capsule = $Collision
@@ -39,23 +37,25 @@ func _unhandled_input(event):
 func wall_run():
 	if Input.is_action_pressed("forwards"):
 		if is_on_wall() and right_wall_cast.is_colliding() and velocity.y < 0:
-			print("gravity lower")
+			#print("gravity lower")
 			gravity = 1.8
-			#await get_tree().create_timer(0.2).timeout
 		if is_on_wall() and left_wall_cast.is_colliding() and velocity.y < 0:
-			print("gravity lower")
+			#print("gravity lower")
 			gravity = 1.8
-	#if Input.is_action_pressed("jump"):
-		#if is_on_wall():
-			#velocity.y = 4.5
-	
+	if Input.is_action_just_pressed("jump") and jumped == false:
+		if is_on_wall():
+			velocity.y = 4
+			jumped = true
 func _physics_process(delta):
 	speed = WALK_SPEED
 	# Add the gravity.
+	print(jumped)
 	if not is_on_floor():
 		velocity.y -= gravity * delta
 	if not is_on_wall():
-		print("gravity normal")
+		#print("gravity normal")
+		if is_on_floor:
+			jumped = false
 		gravity = 9.8
 
 	# Handle jump.
