@@ -4,7 +4,7 @@ var speed
 var gravity = 9.8
 var jumped = false
 const WALK_SPEED = 5.0
-const SPRINT_SPEED = 7.0
+const SPRINT_SPEED = 9.0
 const CROUCH_SPEED = 3.0
 const CROUCH_SPRINT_SPEED = 4.0
 const JUMP_VELOCITY = 4.5
@@ -38,10 +38,10 @@ func wall_run():
 	if Input.is_action_pressed("forwards"):
 		if is_on_wall() and right_wall_cast.is_colliding() and velocity.y < 0:
 			#print("gravity lower")
-			gravity = 1.8
+			gravity = 1
 		if is_on_wall() and left_wall_cast.is_colliding() and velocity.y < 0:
 			#print("gravity lower")
-			gravity = 1.8
+			gravity = 1
 	if Input.is_action_just_pressed("jump") and jumped == false:
 		if is_on_wall():
 			velocity.y = 4
