@@ -1647,4 +1647,4 @@ script = ExtResource("2_ew27n")
 mesh_vector_data = SubResource("Resource_q8jn2")
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
-transform = Transform3D(0.916712, -0.100545, -0.386691, 0.399549, 0.230688, 0.887211, 0, -0.967819, 0.251647, -0.145126, 6.38985, -0.118574)
+transform = Transform3D(0.351348, -0.862356, -0.36455, 0.662477, -0.0461525, 0.747659, -0.661574, -0.504195, 0.555075, -0.145126, 6.38985, -0.118574)

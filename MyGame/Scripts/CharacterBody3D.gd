@@ -45,11 +45,11 @@ func wall_run(direction):
 	if Input.is_action_just_pressed("jump") and jumped == false and not is_on_floor():
 		if is_on_wall():
 			if left_wall_cast.is_colliding():
-				velocity = head.transform.basis *  Vector3.RIGHT * 5 + direction
+				velocity = head.transform.basis *  Vector3.RIGHT * 7 + direction
 				velocity.y += 4
 				jumped = true
 			if right_wall_cast.is_colliding():
-				velocity = head.transform.basis *  Vector3.LEFT * 5 + direction
+				velocity = head.transform.basis *  Vector3.LEFT * 7 + direction
 				velocity.y += 4
 				jumped = true
 			
