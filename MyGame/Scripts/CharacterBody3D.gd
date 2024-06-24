@@ -34,7 +34,7 @@ func _unhandled_input(event):
 		camera.rotate_x(-event.relative.y * SENSITIVITY)
 		camera.rotation.x = clamp(camera.rotation.x, deg_to_rad(-80), deg_to_rad(70))
 	
-func wall_run():
+func wall_run(direction):
 	if Input.is_action_pressed("forwards"):
 		if is_on_wall() and right_wall_cast.is_colliding() and velocity.y < 0:
 			#print("gravity lower")
@@ -42,10 +42,17 @@ func wall_run():
 		if is_on_wall() and left_wall_cast.is_colliding() and velocity.y < 0:
 			#print("gravity lower")
 			gravity = 1
-	if Input.is_action_just_pressed("jump") and jumped == false:
+	if Input.is_action_just_pressed("jump") and jumped == false and not is_on_floor():
 		if is_on_wall():
-			velocity.y = 4
-			jumped = true
+			if left_wall_cast.is_colliding():
+				velocity = head.transform.basis *  Vector3.RIGHT * 5 + direction
+				velocity.y += 4
+				jumped = true
+			if right_wall_cast.is_colliding():
+				velocity = head.transform.basis *  Vector3.LEFT * 5 + direction
+				velocity.y += 4
+				jumped = true
+			
 func _physics_process(delta):
 	speed = WALK_SPEED
 	# Add the gravity.
@@ -67,7 +74,8 @@ func _physics_process(delta):
 			enter_crouch_state()
 	else:
 		enter_normal_state()
-		
+	if jumped == true:
+		gravity = 9.8
 	# Handle sprint.
 	if Input.is_action_pressed("sprint") and not Input.is_action_pressed("crouch"):
 		enter_sprint_state()
@@ -96,7 +104,8 @@ func _physics_process(delta):
 	var velocity_clamped = clamp(velocity.length(), 0.5, SPRINT_SPEED * 2)
 	var target_fov = BASE_FOV + FOV_CHANGE * velocity_clamped
 	camera.fov = lerp(camera.fov, target_fov, delta * 8.0)
-	wall_run()
+	
+	wall_run(direction)
 	move_and_slide()
 
 func enter_normal_state():

@@ -7,7 +7,7 @@
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_f5xne"]
 albedo_texture = ExtResource("2_mr8pa")
-uv1_offset = Vector3(0.485, 0.12, 0)
+uv1_offset = Vector3(0.485, 0.14, 0)
 grow_amount = 4.3
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_kp17n"]
