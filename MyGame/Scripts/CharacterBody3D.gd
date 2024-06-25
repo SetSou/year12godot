@@ -7,6 +7,7 @@ const WALK_SPEED = 5.0
 const SPRINT_SPEED = 9.0
 const CROUCH_SPEED = 3.0
 const CROUCH_SPRINT_SPEED = 4.0
+const WALLRUN_SPEED = 10.0
 const JUMP_VELOCITY = 4.5
 const SENSITIVITY = 0.003
 
@@ -21,6 +22,8 @@ const FOV_CHANGE = 1.5
 @onready var capsule = $Collision
 @onready var right_wall_cast = $Head/RightWallCast
 @onready var left_wall_cast = $Head/LeftWallCast
+@onready var right_long_cast = $Head/RightLongCast
+@onready var left_long_cast = $Head/LeftLongCast
 
 @export var state = "normal"
 
@@ -38,9 +41,11 @@ func wall_run(direction):
 	if Input.is_action_pressed("forwards"):
 		if is_on_wall() and right_wall_cast.is_colliding() and velocity.y < 0:
 			#print("gravity lower")
+			enter_wall_state()
 			gravity = 1
 		if is_on_wall() and left_wall_cast.is_colliding() and velocity.y < 0:
 			#print("gravity lower")
+			enter_wall_state()
 			gravity = 1
 	if Input.is_action_just_pressed("jump") and jumped == false and not is_on_floor():
 		if is_on_wall():
@@ -56,13 +61,18 @@ func wall_run(direction):
 func _physics_process(delta):
 	speed = WALK_SPEED
 	# Add the gravity.
-	print(jumped)
+	#print(jumped)
 	if not is_on_floor():
 		velocity.y -= gravity * delta
 	if not is_on_wall():
 		#print("gravity normal")
-		if is_on_floor:
+		if jumped == false:
+			enter_normal_state()
+		if is_on_floor():
 			jumped = false
+		if jumped == true:
+			if not right_long_cast.is_colliding() and not left_long_cast.is_colliding():
+				jumped = false
 		gravity = 9.8
 
 	# Handle jump.
@@ -107,6 +117,7 @@ func _physics_process(delta):
 	
 	wall_run(direction)
 	move_and_slide()
+	
 
 func enter_normal_state():
 	#print("entering normal state")
@@ -130,8 +141,16 @@ func enter_sprint_state():
 	var prev_state = state
 	if prev_state == "crouching":
 		$CrouchAnimation.play_backwards("crouch")
-	state = "sprinting"
-	speed = SPRINT_SPEED
+	if prev_state != "wallrunning":
+		state = "sprinting"
+		speed = SPRINT_SPEED
+
+func enter_wall_state():
+	print("entering wall state")
+	var prev_state = state
+	state = "wallrunning"
+	speed = WALLRUN_SPEED
+	velocity.y /= 2
 
 func _headbob(time) -> Vector3:
 	var pos = Vector3.ZERO

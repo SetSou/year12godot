@@ -201,11 +201,11 @@ transform = Transform3D(-3.5, 8.74228e-08, 0, -3.0598e-07, -1, 0, 0, 0, 1, 0, 0,
 target_position = Vector3(0.3, 0, 0)
 
 [node name="RightLongCast" type="RayCast3D" parent="Head"]
-transform = Transform3D(7.75, 0, 0, 0, 0.633, 0, 0, 0, 0.633, 0, 0, 0)
+transform = Transform3D(-5, 0, 0, 0, 0.633, -5.53386e-08, 0, 5.53386e-08, 0.633, 0, -0.117985, 0)
 target_position = Vector3(0.3, 0, 0)
 
 [node name="LeftLongCast" type="RayCast3D" parent="Head"]
-transform = Transform3D(-7.75, -5.53386e-08, 0, 6.77527e-07, -0.633, 0, 0, 0, 0.633, 0, 0, 0)
+transform = Transform3D(5, -5.53386e-08, -5.53386e-08, -4.37114e-07, -0.633, 0, 4.37114e-07, -4.83786e-15, 0.633, 0, -0.117985, 0)
 target_position = Vector3(0.3, 0, 0)
 
 [node name="UserInterface" type="Control" parent="."]
