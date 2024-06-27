@@ -165,7 +165,6 @@ MarginContainer/constants/margin_top = 10
 [node name="Character" type="CharacterBody3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
 script = ExtResource("1_ujyip")
-state = null
 
 [node name="Mesh" type="MeshInstance3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
@@ -176,7 +175,8 @@ mesh = SubResource("CapsuleMesh_jw1de")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
 shape = SubResource("CapsuleShape3D_uy03j")
 
-[node name="CrouchAnimation" type="AnimationPlayer" parent="."]
+[node name="CrouchAnimation" type="AnimationPlayer" parent="Collision"]
+root_node = NodePath("../..")
 libraries = {
 "": SubResource("AnimationLibrary_5e5t5")
 }

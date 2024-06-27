@@ -7,7 +7,7 @@ const WALK_SPEED = 5.0
 const SPRINT_SPEED = 9.0
 const CROUCH_SPEED = 3.0
 const CROUCH_SPRINT_SPEED = 4.0
-const WALLRUN_SPEED = 10.0
+const WALLRUN_SPEED = 255.0
 const JUMP_VELOCITY = 4.5
 const SENSITIVITY = 0.003
 
@@ -59,7 +59,10 @@ func wall_run(direction):
 				jumped = true
 			
 func _physics_process(delta):
-	speed = WALK_SPEED
+	if state == "normal":
+		speed = WALK_SPEED
+	if state == "sprinting":
+		speed = SPRINT_SPEED
 	# Add the gravity.
 	#print(jumped)
 	if not is_on_floor():
@@ -150,7 +153,7 @@ func enter_wall_state():
 	var prev_state = state
 	state = "wallrunning"
 	speed = WALLRUN_SPEED
-	velocity.y /= 2
+
 
 func _headbob(time) -> Vector3:
 	var pos = Vector3.ZERO
