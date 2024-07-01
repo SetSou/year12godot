@@ -3,6 +3,7 @@ extends CharacterBody3D
 var speed
 var gravity = 9.8
 var jumped = false
+var wall = false
 const WALK_SPEED = 5.0
 const SPRINT_SPEED = 9.0
 const CROUCH_SPEED = 3.0
@@ -57,7 +58,12 @@ func wall_run(direction):
 				velocity = head.transform.basis *  Vector3.LEFT * 7 + direction
 				velocity.y += 4
 				jumped = true
-			
+	#if is_on_wall() and wall == false:
+	#	velocity.y /= 3
+	#	wall = true
+	#	print("wowowo")
+	#if jumped == true:
+	#	wall = false
 func _physics_process(delta):
 	print (jumped)
 	if state == "normal":
