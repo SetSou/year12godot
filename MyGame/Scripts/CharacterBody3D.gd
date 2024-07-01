@@ -7,7 +7,7 @@ const WALK_SPEED = 5.0
 const SPRINT_SPEED = 9.0
 const CROUCH_SPEED = 3.0
 const CROUCH_SPRINT_SPEED = 4.0
-const WALLRUN_SPEED = 255.0
+const WALLRUN_SPEED = 10.0
 const JUMP_VELOCITY = 4.5
 const SENSITIVITY = 0.003
 
@@ -59,17 +59,20 @@ func wall_run(direction):
 				jumped = true
 			
 func _physics_process(delta):
+	print (jumped)
 	if state == "normal":
 		speed = WALK_SPEED
 	if state == "sprinting":
 		speed = SPRINT_SPEED
+	if state == "crouching":
+		speed = CROUCH_SPEED
 	# Add the gravity.
 	#print(jumped)
 	if not is_on_floor():
 		velocity.y -= gravity * delta
 	if not is_on_wall():
 		#print("gravity normal")
-		if jumped == false:
+		if jumped == false and state != "crouching":
 			enter_normal_state()
 		if is_on_floor():
 			jumped = false
@@ -87,13 +90,13 @@ func _physics_process(delta):
 			enter_crouch_state()
 	else:
 		enter_normal_state()
+	
 	if jumped == true:
 		gravity = 9.8
 	# Handle sprint.
-	if Input.is_action_pressed("sprint") and not Input.is_action_pressed("crouch"):
+	if Input.is_action_pressed("sprint"):
 		enter_sprint_state()
-	if state == "crouching":
-		speed = CROUCH_SPEED
+
 	
 	
 	# Get the input direction and handle the movement/deceleration.
@@ -133,10 +136,10 @@ func enter_normal_state():
 
 func enter_crouch_state():
 	#print("entering crouch state")
-	var prev_state = state
 	state = "crouching"
 	speed = CROUCH_SPEED
 	$CrouchAnimation.play("crouch")
+	await $CrouchAnimation.animation_finished
 	
 
 func enter_sprint_state():
@@ -149,8 +152,7 @@ func enter_sprint_state():
 		speed = SPRINT_SPEED
 
 func enter_wall_state():
-	print("entering wall state")
-	var prev_state = state
+	#print("entering wall state")
 	state = "wallrunning"
 	speed = WALLRUN_SPEED
 

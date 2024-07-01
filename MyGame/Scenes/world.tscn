@@ -1583,7 +1583,6 @@ face_vertex_data = {
 
 [node name="CharacterBody3D" parent="." instance=ExtResource("1_ifomk")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.51535, -0.111263, -15.5423)
-state = null
 
 [node name="Cyclops" type="Node3D" parent="."]
 
