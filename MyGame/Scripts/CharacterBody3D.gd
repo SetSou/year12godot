@@ -3,7 +3,7 @@ extends CharacterBody3D
 var speed
 var gravity = 9.8
 var jumped = false
-var wall = false
+var wall = true
 const WALK_SPEED = 5.0
 const SPRINT_SPEED = 9.0
 const CROUCH_SPEED = 3.0
@@ -44,6 +44,7 @@ func wall_run(direction):
 			#print("gravity lower")
 			enter_wall_state()
 			gravity = 1
+	
 		if is_on_wall() and left_wall_cast.is_colliding() and velocity.y < 0:
 			#print("gravity lower")
 			enter_wall_state()
@@ -51,21 +52,21 @@ func wall_run(direction):
 	if Input.is_action_just_pressed("jump") and jumped == false and not is_on_floor():
 		if is_on_wall():
 			if left_wall_cast.is_colliding():
-				velocity = head.transform.basis *  Vector3.RIGHT * 7 + direction
+				velocity = head.transform.basis *  Vector3.RIGHT * 6 + direction
 				velocity.y += 4
 				jumped = true
 			if right_wall_cast.is_colliding():
-				velocity = head.transform.basis *  Vector3.LEFT * 7 + direction
+				velocity = head.transform.basis *  Vector3.LEFT * 6 + direction
 				velocity.y += 4
 				jumped = true
-	#if is_on_wall() and wall == false:
-	#	velocity.y /= 3
-	#	wall = true
-	#	print("wowowo")
-	#if jumped == true:
-	#	wall = false
+	if is_on_wall() and wall == false:
+		velocity.y /= 5
+		wall = true
+		print("wowowo")
+		
+	if jumped == true:
+		wall = false
 func _physics_process(delta):
-	print (jumped)
 	if state == "normal":
 		speed = WALK_SPEED
 	if state == "sprinting":
@@ -100,7 +101,7 @@ func _physics_process(delta):
 	if jumped == true:
 		gravity = 9.8
 	# Handle sprint.
-	if Input.is_action_pressed("sprint"):
+	if Input.is_action_pressed("sprint") and state != ("crouching"):
 		enter_sprint_state()
 
 	
