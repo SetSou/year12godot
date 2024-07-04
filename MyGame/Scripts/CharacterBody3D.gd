@@ -44,11 +44,14 @@ func wall_run(direction):
 			#print("gravity lower")
 			enter_wall_state()
 			gravity = 1
+			wall = true
 	
 		if is_on_wall() and left_wall_cast.is_colliding() and velocity.y < 0:
 			#print("gravity lower")
 			enter_wall_state()
 			gravity = 1
+			wall = true
+			
 	if Input.is_action_just_pressed("jump") and jumped == false and not is_on_floor():
 		if is_on_wall():
 			if left_wall_cast.is_colliding():
@@ -62,18 +65,18 @@ func wall_run(direction):
 	if is_on_wall() and wall == false:
 		velocity.y /= 5
 		wall = true
-		print("wowowo")
 		
 	if jumped == true:
 		wall = false
 func _physics_process(delta):
+	print(wall)
 	if state == "normal":
 		speed = WALK_SPEED
 	if state == "sprinting":
 		speed = SPRINT_SPEED
 	if state == "crouching":
 		speed = CROUCH_SPEED
-	# Add the gravity.
+	# Add the gravity
 	#print(jumped)
 	if not is_on_floor():
 		velocity.y -= gravity * delta
