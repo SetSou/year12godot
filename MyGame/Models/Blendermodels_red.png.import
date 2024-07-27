@@ -2,17 +2,20 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://d1h161t0v6hau"
-path.s3tc="res://.godot/imported/red.png-3cad0ca19141406d60f5fd2311159a86.s3tc.ctex"
+uid="uid://c7s2ue2iysiay"
+path.s3tc="res://.godot/imported/Blendermodels_red.png-8e3866570907e99538d1982d359b048d.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
 }
+generator_parameters={
+"md5": "671c567d75d6cffe7d16440771c026c5"
+}
 
 [deps]
 
-source_file="res://textures/red.png"
-dest_files=["res://.godot/imported/red.png-3cad0ca19141406d60f5fd2311159a86.s3tc.ctex"]
+source_file="res://Models/Blendermodels_red.png"
+dest_files=["res://.godot/imported/Blendermodels_red.png-8e3866570907e99538d1982d359b048d.s3tc.ctex"]
 
 [params]
 
