@@ -9,7 +9,7 @@ const SPRINT_SPEED = 9.0
 const CROUCH_SPEED = 3.0
 const CROUCH_SPRINT_SPEED = 4.0
 const WALLRUN_SPEED = 10.0
-const JUMP_VELOCITY = 4.5
+const JUMP_VELOCITY = 4.8
 const SENSITIVITY = 0.003
 
 const BOB_FREQ = 2
