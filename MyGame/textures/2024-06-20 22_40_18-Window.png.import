@@ -3,7 +3,7 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://cjctls0r0dpxs"
-path.s3tc="res://.godot/imported/2024-06-20 22_40_18-Window.png-5262046657f7de355c37c2561f307215.s3tc.ctex"
+path.s3tc="res://.godot/imported/2024-06-20 22_40_18-Window.png-ce601f64907bc4a6cbd69ed3cbc63664.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://Scenes/2024-06-20 22_40_18-Window.png"
-dest_files=["res://.godot/imported/2024-06-20 22_40_18-Window.png-5262046657f7de355c37c2561f307215.s3tc.ctex"]
+source_file="res://textures/2024-06-20 22_40_18-Window.png"
+dest_files=["res://.godot/imported/2024-06-20 22_40_18-Window.png-ce601f64907bc4a6cbd69ed3cbc63664.s3tc.ctex"]
 
 [params]
 

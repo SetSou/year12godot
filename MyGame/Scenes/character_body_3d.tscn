@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" path="res://Scripts/CharacterBody3D.gd" id="1_ujyip"]
 [ext_resource type="Script" path="res://addons/fpc/debug.gd" id="2_krj60"]
-[ext_resource type="Texture2D" uid="uid://cjctls0r0dpxs" path="res://Scenes/2024-06-20 22_40_18-Window.png" id="2_mr8pa"]
+[ext_resource type="Texture2D" uid="uid://cjctls0r0dpxs" path="res://textures/2024-06-20 22_40_18-Window.png" id="2_mr8pa"]
 [ext_resource type="Script" path="res://addons/fpc/EditorModule.gd" id="3_fduyy"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_f5xne"]
