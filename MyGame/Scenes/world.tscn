@@ -3087,7 +3087,7 @@ data = PackedVector3Array(-1, -1, -2, 1, -1, 2, 1, -1, -2, -1, -1, -2, -1, -1, 2
 [node name="World" type="Node3D"]
 
 [node name="CharacterBody3D" parent="." instance=ExtResource("1_ifomk")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.60298, -1.36463, -2.35311)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.60298, 1.20731, -2.35311)
 
 [node name="Cyclops" type="Node3D" parent="."]
 
@@ -3213,7 +3213,7 @@ skeleton = NodePath("")
 shape = SubResource("ConcavePolygonShape3D_wi8ff")
 
 [node name="WoodBoxSmallOrange 2" type="MeshInstance3D" parent="Blendermodels"]
-transform = Transform3D(0.590591, 0, 0, 0, 0.590591, 0, 0, 0, 0.590591, 21.9877, -0.64212, -0.966803)
+transform = Transform3D(0.579359, 0, 0.114632, 0, 0.590591, 0, -0.114632, 0, 0.579359, 21.9877, -0.64212, -0.966803)
 mesh = SubResource("ArrayMesh_c8ubq")
 skeleton = NodePath("")
 
@@ -3223,7 +3223,7 @@ skeleton = NodePath("")
 shape = SubResource("ConcavePolygonShape3D_6hd27")
 
 [node name="WoodBoxLongOrange 2" type="MeshInstance3D" parent="Blendermodels"]
-transform = Transform3D(0.590591, 0, 0, 0, 0.590591, 0, 0, 0, 0.590591, 21.9877, -0.64212, 1.08832)
+transform = Transform3D(0.58993, 0, 0.0279442, 0, 0.590591, 0, -0.0279442, 0, 0.58993, 21.9544, -0.64212, 1.02173)
 mesh = SubResource("ArrayMesh_j1fev")
 skeleton = NodePath("")
 
@@ -3233,7 +3233,7 @@ skeleton = NodePath("")
 shape = SubResource("ConcavePolygonShape3D_gccn6")
 
 [node name="WoodBoxSmallOrange 3" type="MeshInstance3D" parent="Blendermodels"]
-transform = Transform3D(0.590591, 0, 0, 0, 0.590591, 0, 0, 0, 0.590591, 21.9877, 0.53398, -0.966803)
+transform = Transform3D(0.585882, 0, -0.0744297, 0, 0.590591, 0, 0.0744297, 0, 0.585882, 21.6234, 0.53398, -1.08587)
 mesh = SubResource("ArrayMesh_c8ubq")
 skeleton = NodePath("")
 
@@ -3282,6 +3282,16 @@ skeleton = NodePath("")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Blendermodels/ContainerRed 3/StaticBody3D"]
 shape = SubResource("ConcavePolygonShape3D_ar6jj")
+
+[node name="WoodBoxLongOrange 3" type="MeshInstance3D" parent="Blendermodels"]
+transform = Transform3D(0.58993, 0, 0.0279442, 0, 0.590591, 0, -0.0279442, 0, 0.58993, 19.9187, 0.745665, 3.10192)
+mesh = SubResource("ArrayMesh_j1fev")
+skeleton = NodePath("")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Blendermodels/WoodBoxLongOrange 3"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Blendermodels/WoodBoxLongOrange 3/StaticBody3D"]
+shape = SubResource("ConcavePolygonShape3D_gccn6")
 
 [node name="OmniLight3D" type="OmniLight3D" parent="."]
 transform = Transform3D(-1, 0, 0, 0, 1, -8.74228e-08, 0, 8.74228e-08, 1, 0, 15.9412, -8.37906)
