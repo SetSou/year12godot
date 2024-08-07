@@ -1,0 +1,6 @@
+Code: ctlcdn
+Sounds: Valve
+Sprites: Jredalert, Millenia, Kimono, Thanez, Naky, MG, Kais, LAM, Dayofdefeat123, Teh Snake,
+         CadeOpreto, PillowBlaster, and ID Software
+Sprite Edit: ctlcdn
+Idea Base: Very loosely based on Dante's Ebony & Ivory pistols from Devil May Cry

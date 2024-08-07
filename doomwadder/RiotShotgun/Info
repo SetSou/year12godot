@@ -1,0 +1,13 @@
+--Information:
+
+Name: Riot Shotgun
+Class: 3
+Type: Hitscan, Projectile (secondary firemode)
+Palette: Custom
+Summon: RiotShotgun
+Ammo Type: Shell, Ricoshell (custom)
+Altfire: Yes, toggle mode
+Powered Mode: No
+Brightmaps: Yes
+Actor modification: No
+ACS: No

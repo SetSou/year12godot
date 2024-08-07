@@ -1,0 +1,15 @@
+Name: Afrit
+Difficulty: Hard
+Connections: None
+Summon: Afrit
+Melee: Yes
+Distance: Projectile
+Type: Demon
+Brightmaps: Yes
+Actor modification: No
+ACS: No
+
+
+A decently powerful flying monster with a fireball attack, a slower, stronger, explosive comet, and
+an arena-control attack where he lays a large carpet of fire across the ground for a short time.
+Doesn't have as much health as a player would expect, but still a nice challenge.

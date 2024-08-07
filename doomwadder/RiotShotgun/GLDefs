@@ -1,0 +1,22 @@
+PointLight ShotgunFlash1
+{
+Color 1.0 0.4 0.0
+Size 64
+}
+
+PointLight ShotgunFlash2
+{
+Color 1.0 0.4 0.0
+Size 96
+}
+
+PointLight PelletTracers
+{
+Color 1.0 0.4 0.0
+Size 24
+}
+
+object RubberPellets
+	{
+		Frame RPEL { Light PelletTracers }
+	}

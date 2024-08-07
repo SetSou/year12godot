@@ -1,0 +1,7 @@
+Name: Combat Knife
+Class: Level 1
+Type: Melee
+Palette: Doom
+Summon: Knife
+Ammotype: None
+AltFire: No

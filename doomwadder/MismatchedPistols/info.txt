@@ -1,0 +1,24 @@
+Name: Mismatched Pistols
+Class: 2 or 4
+Type: Hitscan
+Palette: Doom
+Summon: Pistols
+Ammo Type: Clip
+Altfire: Yes
+Powered Mode: No
+Brightmaps: None
+Actor Modifications: None
+ACS: None
+
+
+A pair of mismatched pistols, miraculously they use the same ammunition. The pistol on the right is
+rather accurate and hits with moderate force, taking most small demons down in a few shots. On the
+other hand, while the left pistol lacks in firepower it has a deadly, albeit inaccurate, 3-shot
+burst firemode. You are able to reload them at lightning speed, so reloading them, albeit tedious,
+shouldn't be much of an issue.
+
+
+CONTROLS:
+Fire - Spectre (Right Hand) (Can be changed to Left Hand in DECORATE)
+AltFire - VSP (Left Hand) (Can be changed to Right Hand in DECORATE)
+Reload - Reloads both guns simultaneously (optional, guns automatically reload when empty)

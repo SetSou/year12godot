@@ -1,0 +1,3 @@
+MacheteHitThing		DSMACHT2
+MacheteHitWall		DSMACHT3	
+MacheteSwing		DSMACHT1

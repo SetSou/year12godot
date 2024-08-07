@@ -1,0 +1,31 @@
+$random weapons/riotshotgunfire { RIOTSHT1 RIOTSHT2 RIOTSHT3 }
+	
+RIOTSHT1 RIOTSHT1
+RIOTSHT2 RIOTSHT2
+RIOTSHT3 RIOTSHT3
+
+$volume weapons/riotshotgunfire 0.8
+
+weapons/riotpumpdown	PUMP1
+
+weapons/riotpumpup	PUMP2
+
+weapons/riotraise	RIOTUP
+
+$volume weapons/riotpumpdown	0.8
+
+$volume weapons/riotpumpup	0.8
+
+$volume weapons/riotraise	0.8
+
+weapons/riotgunalt	RIOTALT
+
+$random weapons/riotricochet { RICO1 RICO2 RICO3 }
+
+RICO1 RICO1
+RICO2 RICO2
+RICO3 RICO3
+
+$limit weapons/riotricochet 1
+
+weapons/riotclick	NOAMMO

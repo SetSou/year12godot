@@ -1,0 +1,41 @@
+// SPECTRE SOUNDS
+Weapon/SpectreR1	BASRELO1
+Weapon/SpectreR2	BASRELO2
+Weapon/SpectreR3	BASRELO3
+
+SpF1	BASFIRE1
+SpF2	BASFIRE2
+SpF3	BASFIRE3
+$random Weapon/SpectreFire	{ SpF1 SpF2 SpF3 }
+
+// VSP SOUNDS
+Weapon/VSPR1		VSPRELO1
+Weapon/VSPR2		VSPRELO2
+Weapon/VSPR3		VSPRELO3
+
+VSF1	VSPFIRE1
+VSF2	VSPFIRE2
+VSF3	VSPFIRE3
+$random Weapon/VSPFire		{ VSF1 VSF2 VSF3 }
+
+// SHARED SOUNDS
+Weapon/AKPRaise		AKPRAISE
+
+Who1	WHOOSHY1
+Who2	WHOOSHY2
+Who3	WHOOSHY3
+Who4	WHOOSHY4
+$random Weapon/WhooshSFX	{ Who1 Who2 Who3 Who4 }
+
+// MELEE SOUNDS
+Hit1	MELEHIT1
+Hit2	MELEHIT2
+Hit3	MELEHIT3
+Hit4	MELEHIT4
+$random Weapon/MeleeHit		{ Hit1 Hit2 Hit3 Hit4 }
+
+Ber1	BERZHIT1
+Ber2	BERZHIT2
+Ber3	BERZHIT3
+Ber4	BERZHIT4
+$random Weapon/BerzHit		{ Ber1 Ber2 Ber3 Ber4 }
