@@ -1,0 +1,49 @@
+
+ACTOR HMachinegun : Weapon 602
+{ 
+  //$Category Weapons
+  //$Sprite HVMGW0
+  //$Title "Heavy Machinegun"
+	Weapon.Kickback 5
+	Weapon.AmmoType "Clip" 
+	Weapon.AmmoGive 75
+	Weapon.AmmoUse 1
+	Weapon.SlotNumber 4
+	Inventory.PickupSound "misc/w_pkup" 
+	Inventory.PickupMessage "Picked Up a Heavy Machinegun!"
+	Obituary "%o was Ripped a New one by %k and their Heavy Machinegun."
+	AttackSound "weapons/Machinegun"
+ 	Decal BulletChip
+	States 
+	{  
+	Ready: 
+		HVMG A 1 A_WeaponReady 
+		Loop 
+	Deselect: 
+		HVMG A 1 A_Lower 
+		Loop 
+	Select: 
+		HVMG A 1 A_Raise 
+		Loop 
+	Fire: 
+		HVMG B 0 A_GunFlash
+		HVMG B 1 
+		HVMG C 1 A_FireBullets(5, 3, 1, 8, "BulletPuff", 1)  
+		HVMG A 1
+                TNT1 A 0 A_refire
+		goto Ready 
+        Flash:
+		HVMG B 1 Bright A_Light1 
+		HVMG C 1 Bright A_Light0 
+             	Goto LightDone
+        Hold:
+		HVMG B 0 A_GunFlash
+		HVMG B 1 
+		HVMG C 1 A_FireBullets(5, 3, 1, 13, "BulletPuff", 1)  
+		HVMG A 1
+		goto Ready 
+	Spawn:
+		HVMG W -1
+		Stop
+		}
+	} 

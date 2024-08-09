@@ -1,7 +1,8 @@
-[gd_scene load_steps=12 format=3 uid="uid://bklenyncmwhyt"]
+[gd_scene load_steps=13 format=3 uid="uid://bklenyncmwhyt"]
 
 [ext_resource type="Script" path="res://Scripts/CharacterBody3D.gd" id="1_ujyip"]
 [ext_resource type="Texture2D" uid="uid://cjctls0r0dpxs" path="res://textures/2024-06-20 22_40_18-Window.png" id="2_mr8pa"]
+[ext_resource type="PackedScene" uid="uid://lfwci1lh34p0" path="res://Scenes/shotgun.tscn" id="3_612sj"]
 [ext_resource type="Script" path="res://addons/fpc/EditorModule.gd" id="3_fduyy"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_f5xne"]
@@ -183,12 +184,12 @@ collision_mask = 3
 [node name="Head" type="Node3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.5, 0)
 
-[node name="CanvasLayer" type="CanvasLayer" parent="Head"]
-
 [node name="Camera" type="Camera3D" parent="Head"]
 transform = Transform3D(1, 0, 0, 0, 0.999391, -0.0348995, 0, 0.0348995, 0.999391, 0, 0, 0)
 
 [node name="Weapons" type="Node3D" parent="Head/Camera"]
+
+[node name="Shotgun" parent="Head/Camera/Weapons" instance=ExtResource("3_612sj")]
 
 [node name="RightWallCast" type="RayCast3D" parent="Head"]
 transform = Transform3D(3.5, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)

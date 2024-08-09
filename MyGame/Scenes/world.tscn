@@ -3294,7 +3294,7 @@ skeleton = NodePath("")
 shape = SubResource("ConcavePolygonShape3D_gccn6")
 
 [node name="OmniLight3D" type="OmniLight3D" parent="."]
-transform = Transform3D(-1, 0, 0, 0, 1, -8.74228e-08, 0, 8.74228e-08, 1, 0, 15.9412, -8.37906)
+transform = Transform3D(1, 0, 0, 0, -1, 1.50996e-07, 0, -1.50996e-07, -1, 0, 15.9412, -8.37906)
 light_energy = 14.091
 light_size = 1.0
 light_specular = 1.0
