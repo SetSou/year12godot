@@ -1,0 +1,9 @@
+Name: M16
+Class: 4
+Type: Hitscan
+Palette: Doom
+Summon: M16
+Ammotype: Clip
+AltFire: No
+Powered Mode: No
+Added States: No

@@ -75,8 +75,10 @@ animations = [{
 position = Vector2(562, 379)
 scale = Vector2(3.06102, 3.06102)
 sprite_frames = SubResource("SpriteFrames_v0dc8")
-animation = &"idle"
+animation = &"shoot"
 autoplay = "idle"
+frame = 12
+frame_progress = 1.0
 
 [node name="RayCast3D" type="RayCast3D" parent="."]
-target_position = Vector3(0, 0, -30)
+target_position = Vector3(0, 0, -10)

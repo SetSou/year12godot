@@ -1,0 +1,26 @@
+[gd_scene load_steps=2 format=3 uid="uid://ds06xdh14ugyq"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_sob50"]
+animations = [{
+"frames": [],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}, {
+"frames": [],
+"loop": true,
+"name": &"shoot",
+"speed": 5.0
+}]
+
+[node name="M16" type="Node3D"]
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="CanvasLayer"]
+sprite_frames = SubResource("SpriteFrames_sob50")
+animation = &"idle"
+frame_progress = 0.808348
+
+[node name="RayCast3D" type="RayCast3D" parent="."]
+target_position = Vector3(0, 0, -10)
