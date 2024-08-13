@@ -1,26 +1,45 @@
-[gd_scene load_steps=2 format=3 uid="uid://ds06xdh14ugyq"]
+[gd_scene load_steps=6 format=3 uid="uid://ds06xdh14ugyq"]
 
-[sub_resource type="SpriteFrames" id="SpriteFrames_sob50"]
+[ext_resource type="Script" path="res://Scripts/gun.gd" id="1_j6af8"]
+[ext_resource type="Texture2D" uid="uid://bqx11xyoedxop" path="res://textures/m16output/m16ga0.png" id="2_bovd1"]
+[ext_resource type="Texture2D" uid="uid://cnapoxd6l8dtm" path="res://textures/m16output/m16fa0.png" id="3_qgets"]
+[ext_resource type="Texture2D" uid="uid://i55ficoa0oqu" path="res://textures/m16output/m16fb0.png" id="4_vfgup"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_qf3jt"]
 animations = [{
-"frames": [],
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_bovd1")
+}],
 "loop": true,
 "name": &"idle",
 "speed": 5.0
 }, {
-"frames": [],
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_qgets")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_vfgup")
+}],
 "loop": true,
 "name": &"shoot",
-"speed": 5.0
+"speed": 10.0
 }]
 
 [node name="M16" type="Node3D"]
+script = ExtResource("1_j6af8")
+Gun_Type = "Shotgun"
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="CanvasLayer"]
-sprite_frames = SubResource("SpriteFrames_sob50")
-animation = &"idle"
-frame_progress = 0.808348
+position = Vector2(540, 511)
+scale = Vector2(2.75521, 2.75521)
+sprite_frames = SubResource("SpriteFrames_qf3jt")
+animation = &"shoot"
+frame = 1
+frame_progress = 0.377409
 
 [node name="RayCast3D" type="RayCast3D" parent="."]
 target_position = Vector3(0, 0, -10)
