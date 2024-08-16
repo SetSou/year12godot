@@ -38,8 +38,7 @@ position = Vector2(540, 511)
 scale = Vector2(2.75521, 2.75521)
 sprite_frames = SubResource("SpriteFrames_qf3jt")
 animation = &"shoot"
-frame = 1
-frame_progress = 0.377409
+frame_progress = 0.941925
 
 [node name="RayCast3D" type="RayCast3D" parent="."]
 target_position = Vector3(0, 0, -10)

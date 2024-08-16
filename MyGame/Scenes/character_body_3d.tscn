@@ -191,6 +191,8 @@ transform = Transform3D(1, 0, 0, 0, 0.999391, -0.0348995, 0, 0.0348995, 0.999391
 
 [node name="Shotgun" parent="Head/Camera/Weapons" instance=ExtResource("3_612sj")]
 
+[node name="BuleltPoint" type="Marker3D" parent="Head/Camera/Weapons"]
+
 [node name="RightWallCast" type="RayCast3D" parent="Head"]
 transform = Transform3D(3.5, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
 target_position = Vector3(0.3, 0, 0)
