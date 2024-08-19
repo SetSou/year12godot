@@ -71,6 +71,9 @@ animations = [{
 [node name="Shotgun" type="Node3D"]
 script = ExtResource("1_ik0xe")
 Gun_Type = "Shotgun"
+Gun_Ammo = 8
+Gun_Max = 8
+Damage = 50.0
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
@@ -81,5 +84,28 @@ sprite_frames = SubResource("SpriteFrames_v0dc8")
 animation = &"shoot"
 autoplay = "idle"
 
-[node name="RayCast3D" type="RayCast3D" parent="."]
+[node name="Rays" type="Node3D" parent="."]
+
+[node name="RayCast3D" type="RayCast3D" parent="Rays"]
+target_position = Vector3(0, 0, -10)
+
+[node name="RayCast3D2" type="RayCast3D" parent="Rays"]
+target_position = Vector3(0, 0, -10)
+
+[node name="RayCast3D3" type="RayCast3D" parent="Rays"]
+target_position = Vector3(0, 0, -10)
+
+[node name="RayCast3D4" type="RayCast3D" parent="Rays"]
+target_position = Vector3(0, 0, -10)
+
+[node name="RayCast3D5" type="RayCast3D" parent="Rays"]
+target_position = Vector3(0, 0, -10)
+
+[node name="RayCast3D6" type="RayCast3D" parent="Rays"]
+target_position = Vector3(0, 0, -10)
+
+[node name="RayCast3D7" type="RayCast3D" parent="Rays"]
+target_position = Vector3(0, 0, -10)
+
+[node name="RayCast3D8" type="RayCast3D" parent="Rays"]
 target_position = Vector3(0, 0, -10)
