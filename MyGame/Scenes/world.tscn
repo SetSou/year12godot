@@ -1,4 +1,4 @@
-[gd_scene load_steps=313 format=4 uid="uid://da5jwxhjfspxt"]
+[gd_scene load_steps=314 format=4 uid="uid://da5jwxhjfspxt"]
 
 [ext_resource type="PackedScene" uid="uid://bklenyncmwhyt" path="res://Scenes/character_body_3d.tscn" id="1_ifomk"]
 [ext_resource type="Script" path="res://addons/cyclops_level_builder/nodes/cyclops_block.gd" id="2_ew27n"]
@@ -15,6 +15,7 @@
 [ext_resource type="Texture2D" uid="uid://dimesikiw5c1c" path="res://textures/MTCN6_2.png" id="13_wlhi1"]
 [ext_resource type="Texture2D" uid="uid://bsero1jwkmhbs" path="res://textures/MTCN3_12.png" id="14_6dshe"]
 [ext_resource type="Texture2D" uid="uid://fyknrljq840t" path="res://textures/MTCN6_1.png" id="15_pm7o6"]
+[ext_resource type="PackedScene" uid="uid://kyegclaibieh" path="res://Scenes/enemy.tscn" id="16_4ljuc"]
 
 [sub_resource type="Resource" id="Resource_iehqa"]
 script = ExtResource("3_w61vd")
@@ -3305,5 +3306,8 @@ omni_range = 40.387
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = SubResource("Environment_n8gtr")
+
+[node name="Enemy" parent="." instance=ExtResource("16_4ljuc")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11, 1, -5)
 
 [editable path="Blendermodels"]
