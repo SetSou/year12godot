@@ -9,7 +9,7 @@ extends Node3D
 
 func _process(delta: float) -> void:
 	if Gun_Type == "Shotgun":
-		if Input.is_action_pressed("shoot") and Gun_Ammo > 0:
+		if Input.is_action_just_pressed("shoot") and Gun_Ammo > 0 and $CanvasLayer/AnimatedSprite2D.animation == ("idle"):
 			$CanvasLayer/AnimatedSprite2D.play("shoot")
 			for ray in $Rays.get_children():
 				ray.rotation_degrees.x = randf_range(-7,7)
@@ -20,7 +20,7 @@ func _process(delta: float) -> void:
 						ray.get_collider().take_damage(Damage)
 			anim_fin()
 	elif Gun_Type == "M16":
-		if Input.is_action_just_pressed("shoot") and Gun_Ammo > 0:
+		if Input.is_action_pressed("shoot") and Gun_Ammo > 0 and $CanvasLayer/AnimatedSprite2D.animation == ("idle"):
 			$CanvasLayer/AnimatedSprite2D.play("shoot")
 			if $RayCast3D.is_colliding():
 				if $RayCast3D.get_collider().is_in_group("Enemy"):

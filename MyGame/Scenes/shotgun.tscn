@@ -78,7 +78,7 @@ Damage = 50.0
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="CanvasLayer"]
-position = Vector2(562, 379)
+position = Vector2(529, 379)
 scale = Vector2(3.06102, 3.06102)
 sprite_frames = SubResource("SpriteFrames_v0dc8")
 animation = &"shoot"

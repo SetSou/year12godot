@@ -69,7 +69,7 @@ func wall_run(direction):
 	if jumped == true:
 		wall = false
 func _physics_process(delta):
-	print(wall)
+	#print(wall)
 	if state == "normal":
 		speed = WALK_SPEED
 	if state == "sprinting":
