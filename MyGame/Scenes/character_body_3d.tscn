@@ -3,7 +3,7 @@
 [ext_resource type="Script" path="res://Scripts/CharacterBody3D.gd" id="1_ujyip"]
 [ext_resource type="Texture2D" uid="uid://cjctls0r0dpxs" path="res://textures/2024-06-20 22_40_18-Window.png" id="2_mr8pa"]
 [ext_resource type="Script" path="res://addons/fpc/EditorModule.gd" id="3_fduyy"]
-[ext_resource type="PackedScene" uid="uid://ds06xdh14ugyq" path="res://Scenes/m_16.tscn" id="3_y3or3"]
+[ext_resource type="PackedScene" uid="uid://lfwci1lh34p0" path="res://Scenes/shotgun.tscn" id="3_fqjc8"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_f5xne"]
 albedo_texture = ExtResource("2_mr8pa")
@@ -189,11 +189,9 @@ transform = Transform3D(1, 0, 0, 0, 0.999391, -0.0348995, 0, 0.0348995, 0.999391
 
 [node name="Weapons" type="Node3D" parent="Head/Camera"]
 
-[node name="M16" parent="Head/Camera/Weapons" instance=ExtResource("3_y3or3")]
-Ammo = 30
-Gun_Ammo = 30
-
 [node name="BulletPoint" type="Marker3D" parent="Head/Camera/Weapons"]
+
+[node name="Shotgun" parent="Head/Camera/Weapons" instance=ExtResource("3_fqjc8")]
 
 [node name="RightWallCast" type="RayCast3D" parent="Head"]
 transform = Transform3D(3.5, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)

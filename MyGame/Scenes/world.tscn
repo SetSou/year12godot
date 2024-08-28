@@ -3307,6 +3307,9 @@ omni_range = 40.387
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = SubResource("Environment_n8gtr")
 
+[node name="Enemy2" parent="." instance=ExtResource("16_4ljuc")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.7134, 7.50809, -16.0089)
+
 [node name="Enemy" parent="." instance=ExtResource("16_4ljuc")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11, 1, -5)
 
