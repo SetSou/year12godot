@@ -189,8 +189,6 @@ transform = Transform3D(1, 0, 0, 0, 0.999391, -0.0348995, 0, 0.0348995, 0.999391
 
 [node name="Weapons" type="Node3D" parent="Head/Camera"]
 
-[node name="BulletPoint" type="Marker3D" parent="Head/Camera/Weapons"]
-
 [node name="Shotgun" parent="Head/Camera/Weapons" instance=ExtResource("3_fqjc8")]
 
 [node name="RightWallCast" type="RayCast3D" parent="Head"]
