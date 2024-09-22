@@ -453,3 +453,4 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11, 1, -5)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.790825, 0, -5.67298)
 
 [editable path="Blendermodels"]
+[editable path="Map"]
