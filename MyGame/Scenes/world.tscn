@@ -447,5 +447,117 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11, 1, -5)
 [node name="Map" parent="." instance=ExtResource("12_6lr50")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.790825, 0, -5.67298)
 
+[node name="Text" parent="Map" index="3"]
+transform = Transform3D(-0.3745, 0.00640415, -2.23219e-08, 2.23252e-08, -8.45315e-16, -0.374555, -0.00640415, -0.3745, -3.81716e-10, -2.14491, 3.40072, 7.86898)
+
+[node name="Point" parent="Map" index="6"]
+transform = Transform3D(1, 0, 0, 0, 0, 1, 0, -1, 0, 0, 26.8269, -11.8473)
+light_energy = 3.475
+
+[node name="Point2" type="OmniLight3D" parent="Map"]
+transform = Transform3D(1, 0, 0, 0, 0, 1, 0, -1, 0, 0, 26.8269, -15.0044)
+light_energy = 3.475
+omni_range = 4096.0
+
+[node name="Point3" type="OmniLight3D" parent="Map"]
+transform = Transform3D(1, 0, 0, 0, 0, 1, 0, -1, 0, -3.41637, 26.8269, -11.8473)
+light_energy = 3.475
+omni_range = 4096.0
+
+[node name="Point4" type="OmniLight3D" parent="Map"]
+transform = Transform3D(1, 0, 0, 0, 0, 1, 0, -1, 0, -3.41637, 26.8269, -15.0044)
+light_energy = 3.475
+omni_range = 4096.0
+
+[node name="Point5" type="OmniLight3D" parent="Map"]
+transform = Transform3D(1, 0, 0, 0, 0, 1, 0, -1, 0, -6.82092, 26.8269, -11.8473)
+light_energy = 3.475
+omni_range = 4096.0
+
+[node name="Point6" type="OmniLight3D" parent="Map"]
+transform = Transform3D(1, 0, 0, 0, 0, 1, 0, -1, 0, -6.82092, 26.8269, -15.0044)
+light_energy = 3.475
+omni_range = 4096.0
+
+[node name="Point7" type="OmniLight3D" parent="Map"]
+transform = Transform3D(1, 0, 0, 0, 0, 1, 0, -1, 0, -10.2373, 26.8269, -11.8473)
+light_energy = 3.475
+omni_range = 4096.0
+
+[node name="Point8" type="OmniLight3D" parent="Map"]
+transform = Transform3D(1, 0, 0, 0, 0, 1, 0, -1, 0, -10.2373, 26.8269, -15.0044)
+light_energy = 3.475
+omni_range = 4096.0
+
+[node name="Point9" type="OmniLight3D" parent="Map"]
+transform = Transform3D(1, 0, 0, 0, 0, 1, 0, -1, 0, -13.6132, 26.8269, -11.8473)
+light_energy = 3.475
+omni_range = 4096.0
+
+[node name="Point10" type="OmniLight3D" parent="Map"]
+transform = Transform3D(1, 0, 0, 0, 0, 1, 0, -1, 0, -13.6132, 26.8269, -15.0044)
+light_energy = 3.475
+omni_range = 4096.0
+
+[node name="Point11" type="OmniLight3D" parent="Map"]
+transform = Transform3D(1, 0, 0, 0, 0, 1, 0, -1, 0, -17.0296, 26.8269, -11.8473)
+light_energy = 3.475
+omni_range = 4096.0
+
+[node name="Point12" type="OmniLight3D" parent="Map"]
+transform = Transform3D(1, 0, 0, 0, 0, 1, 0, -1, 0, -17.0296, 26.8269, -15.0044)
+light_energy = 3.475
+omni_range = 4096.0
+
+[node name="Point13" type="OmniLight3D" parent="Map"]
+transform = Transform3D(1, 0, 0, 0, 0, 1, 0, -1, 0, 6.91596, 26.8269, -11.8473)
+light_energy = 3.475
+omni_range = 4096.0
+
+[node name="Point14" type="OmniLight3D" parent="Map"]
+transform = Transform3D(1, 0, 0, 0, 0, 1, 0, -1, 0, 6.91596, 26.8269, -15.0044)
+light_energy = 3.475
+omni_range = 4096.0
+
+[node name="Point15" type="OmniLight3D" parent="Map"]
+transform = Transform3D(1, 0, 0, 0, 0, 1, 0, -1, 0, 3.4996, 26.8269, -11.8473)
+light_energy = 3.475
+omni_range = 4096.0
+
+[node name="Point16" type="OmniLight3D" parent="Map"]
+transform = Transform3D(1, 0, 0, 0, 0, 1, 0, -1, 0, 3.4996, 26.8269, -15.0044)
+light_energy = 3.475
+omni_range = 4096.0
+
+[node name="Point17" type="OmniLight3D" parent="Map"]
+transform = Transform3D(1, 0, 0, 0, 0, 1, 0, -1, 0, 13.7758, 26.8269, -11.8473)
+light_energy = 3.475
+omni_range = 4096.0
+
+[node name="Point18" type="OmniLight3D" parent="Map"]
+transform = Transform3D(1, 0, 0, 0, 0, 1, 0, -1, 0, 13.7758, 26.8269, -15.0044)
+light_energy = 3.475
+omni_range = 4096.0
+
+[node name="Point21" type="OmniLight3D" parent="Map"]
+transform = Transform3D(1, 0, 0, 0, 0, 1, 0, -1, 0, 17.1353, 26.8269, -11.8473)
+light_energy = 3.475
+omni_range = 4096.0
+
+[node name="Point22" type="OmniLight3D" parent="Map"]
+transform = Transform3D(1, 0, 0, 0, 0, 1, 0, -1, 0, 17.1353, 26.8269, -15.0044)
+light_energy = 3.475
+omni_range = 4096.0
+
+[node name="Point19" type="OmniLight3D" parent="Map"]
+transform = Transform3D(1, 0, 0, 0, 0, 1, 0, -1, 0, 10.3595, 26.8269, -11.8473)
+light_energy = 3.475
+omni_range = 4096.0
+
+[node name="Point20" type="OmniLight3D" parent="Map"]
+transform = Transform3D(1, 0, 0, 0, 0, 1, 0, -1, 0, 10.3595, 26.8269, -15.0044)
+light_energy = 3.475
+omni_range = 4096.0
+
 [editable path="Blendermodels"]
 [editable path="Map"]

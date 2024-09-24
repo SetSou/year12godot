@@ -7,7 +7,6 @@ var wall = true
 const WALK_SPEED = 4.0
 const SPRINT_SPEED = 9.0
 const CROUCH_SPEED = 3.0
-const CROUCH_SPRINT_SPEED = 4.0
 const WALLRUN_SPEED = 10.0
 const JUMP_VELOCITY = 4.8
 const SENSITIVITY = 0.003
@@ -80,6 +79,12 @@ func _physics_process(delta):
 	#print(jumped)
 	if not is_on_floor():
 		velocity.y -= gravity * delta
+		if not is_on_wall() and jumped == false:
+			gravity = 9.8
+	else:
+		if jumped == true:
+			jumped = false
+			gravity = 9.8
 	if not is_on_wall():
 		#print("gravity normal")
 		if jumped == false and state != "crouching":
@@ -94,6 +99,7 @@ func _physics_process(delta):
 	# Handle jump.
 	if Input.is_action_pressed("jump") and is_on_floor():
 		velocity.y = JUMP_VELOCITY
+		jumped = true
 	# Handle crouch.
 	if Input.is_action_pressed("crouch") and state != "sprinting":
 		if state != "crouching":
