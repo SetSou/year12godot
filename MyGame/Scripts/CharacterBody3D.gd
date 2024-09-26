@@ -99,7 +99,7 @@ func _physics_process(delta):
 	# Handle jump.
 	if Input.is_action_pressed("jump") and is_on_floor():
 		velocity.y = JUMP_VELOCITY
-		jumped = true
+
 	# Handle crouch.
 	if Input.is_action_pressed("crouch") and state != "sprinting":
 		if state != "crouching":
