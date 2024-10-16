@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dmja68vp0hgq2"
-path="res://.godot/imported/m16pa0.png-12fa059ee1ee1dcf6dfc98c4bb648e30.ctex"
+uid="uid://t8bmfiuwww3b"
+path="res://.godot/imported/MTWL1.png-c167b3b2da5038c3f28b93e408387e12.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://textures/m16output/m16pa0.png"
-dest_files=["res://.godot/imported/m16pa0.png-12fa059ee1ee1dcf6dfc98c4bb648e30.ctex"]
+source_file="res://textures/MTWL1.png"
+dest_files=["res://.godot/imported/MTWL1.png-c167b3b2da5038c3f28b93e408387e12.ctex"]
 
 [params]
 

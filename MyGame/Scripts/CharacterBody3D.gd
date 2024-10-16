@@ -44,8 +44,8 @@ func wall_run(direction):
 			enter_wall_state()
 			gravity = 1
 			wall = true
-			camera.rotate_z(0.1)
-			camera.rotation.z = clamp(camera.rotation.z, deg_to_rad(0), deg_to_rad(10))
+			#camera.rotate_z(0.1)
+			#camera.rotation.z = clamp(camera.rotation.z, deg_to_rad(0), deg_to_rad(10))
 	
 		if is_on_wall() and left_wall_cast.is_colliding() and velocity.y < 0:
 			#print("gravity lower")

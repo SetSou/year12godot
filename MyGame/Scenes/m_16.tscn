@@ -1,9 +1,9 @@
 [gd_scene load_steps=6 format=3 uid="uid://ds06xdh14ugyq"]
 
 [ext_resource type="Script" path="res://Scripts/gun.gd" id="1_xh6po"]
-[ext_resource type="Texture2D" uid="uid://bqx11xyoedxop" path="res://textures/M16Output/m16ga0.png" id="2_x2ald"]
-[ext_resource type="Texture2D" uid="uid://cnapoxd6l8dtm" path="res://textures/M16Output/m16fa0.png" id="3_1or7j"]
-[ext_resource type="Texture2D" uid="uid://i55ficoa0oqu" path="res://textures/M16Output/m16fb0.png" id="4_n7jhr"]
+[ext_resource type="Texture2D" uid="uid://bqx11xyoedxop" path="res://textures/m16output/m16ga0.png" id="2_x2ald"]
+[ext_resource type="Texture2D" uid="uid://cnapoxd6l8dtm" path="res://textures/m16output/m16fa0.png" id="3_1or7j"]
+[ext_resource type="Texture2D" uid="uid://i55ficoa0oqu" path="res://textures/m16output/m16fb0.png" id="4_n7jhr"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_qf3jt"]
 animations = [{
