@@ -19,7 +19,11 @@ mesh = SubResource("CapsuleMesh_l0tuq")
 skeleton = NodePath("../..")
 surface_material_override/0 = SubResource("StandardMaterial3D_cpa42")
 
+[node name="Aim" type="Node3D" parent="."]
+
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
 shape = SubResource("CapsuleShape3D_y6r2a")
 
 [node name="NavigationAgent3D" type="NavigationAgent3D" parent="."]
+
+[node name="RayCast3D" type="RayCast3D" parent="."]
