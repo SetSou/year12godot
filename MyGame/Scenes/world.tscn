@@ -622,7 +622,7 @@ background_mode = 2
 [node name="World" type="Node3D"]
 
 [node name="CharacterBody3D" parent="." instance=ExtResource("1_ifomk")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.60298, 1.20731, -2.35311)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.60298, 19.8798, -16.3775)
 
 [node name="Blendermodels" parent="." instance=ExtResource("8_8ol8k")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -34.733, 1.2372, -4.88865)

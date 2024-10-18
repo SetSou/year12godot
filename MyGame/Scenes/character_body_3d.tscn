@@ -1,9 +1,10 @@
-[gd_scene load_steps=13 format=3 uid="uid://bklenyncmwhyt"]
+[gd_scene load_steps=15 format=3 uid="uid://bklenyncmwhyt"]
 
 [ext_resource type="Script" path="res://Scripts/CharacterBody3D.gd" id="1_ujyip"]
 [ext_resource type="Texture2D" uid="uid://cjctls0r0dpxs" path="res://textures/2024-06-20 22_40_18-Window.png" id="2_mr8pa"]
 [ext_resource type="Script" path="res://addons/fpc/EditorModule.gd" id="3_fduyy"]
 [ext_resource type="PackedScene" uid="uid://lfwci1lh34p0" path="res://Scenes/shotgun.tscn" id="3_fqjc8"]
+[ext_resource type="Shader" path="res://Scenes/pixel.gdshader" id="5_3umem"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_f5xne"]
 albedo_texture = ExtResource("2_mr8pa")
@@ -156,6 +157,9 @@ _data = {
 
 [sub_resource type="SphereShape3D" id="SphereShape3D_7bbmr"]
 
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_pkq61"]
+shader = ExtResource("5_3umem")
+
 [node name="Character" type="CharacterBody3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
 script = ExtResource("1_ujyip")
@@ -209,3 +213,15 @@ target_position = Vector3(0.3, 0, 0)
 
 [node name="EditorModule" type="Node" parent="."]
 script = ExtResource("3_fduyy")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+layer = -1
+
+[node name="ColorRect" type="ColorRect" parent="CanvasLayer"]
+material = SubResource("ShaderMaterial_pkq61")
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 1
