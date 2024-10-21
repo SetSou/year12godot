@@ -97,11 +97,13 @@ func _physics_process(delta):
 			if not right_long_cast.is_colliding() and not left_long_cast.is_colliding():
 				jumped = false
 		gravity = 9.8
-
+	
 	# Handle jump.
 	if Input.is_action_pressed("jump") and is_on_floor():
 		velocity.y = JUMP_VELOCITY
-
+	# Handle DASH?????
+	if Input.is_action_pressed("dash"):
+		velocity.x = JUMP_VELOCITY
 	# Handle crouch.
 	if Input.is_action_pressed("crouch") and state != "sprinting":
 		if state != "crouching":

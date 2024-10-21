@@ -4,7 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://cjctls0r0dpxs" path="res://textures/2024-06-20 22_40_18-Window.png" id="2_mr8pa"]
 [ext_resource type="Script" path="res://addons/fpc/EditorModule.gd" id="3_fduyy"]
 [ext_resource type="PackedScene" uid="uid://lfwci1lh34p0" path="res://Scenes/shotgun.tscn" id="3_fqjc8"]
-[ext_resource type="Shader" path="res://Scenes/pixel.gdshader" id="5_3umem"]
+[ext_resource type="Shader" path="res://textures/pixel.gdshader" id="5_3umem"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_f5xne"]
 albedo_texture = ExtResource("2_mr8pa")
@@ -189,7 +189,6 @@ collision_mask = 3
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.5, 0)
 
 [node name="Camera" type="Camera3D" parent="Head" groups=["player"]]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
 
 [node name="Weapons" type="Node3D" parent="Head/Camera"]
 
@@ -215,7 +214,6 @@ target_position = Vector3(0.3, 0, 0)
 script = ExtResource("3_fduyy")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
-layer = -1
 
 [node name="ColorRect" type="ColorRect" parent="CanvasLayer"]
 material = SubResource("ShaderMaterial_pkq61")
