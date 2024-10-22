@@ -43,28 +43,28 @@ func set_state(state, override=false):
 	if not current_state == STATES.shooting or override:
 		current_state = state
 
-
-func _physics_process(delta):
-	raycast.global_position = global_position
-	raycast.target_position = player.global_position - global_position
-	
-
-	if raycast.is_colliding() and is_instance_valid(raycast.get_collider()):
-		if raycast.get_collider().is_in_group("player"):
-			spotted_player = true
-			$Aim.look_at(raycast.get_collider().global_position, Vector3.UP, true)
-			if raycast.global_transform.origin.distance_to(raycast.get_collision_point()) < shoot_range:
-				velocity = Vector3(0, 0, 0)
-				set_state(STATES.idle_shoot)
-			else:
-				move(delta)
-		else:
-			move(delta)
-	else:
-		move(delta)
-
-	mesh.rotation.y = atan2(player.global_position.x - global_position.x, player.global_position.z - global_position.z)
-	move_and_slide()
+#
+#func _physics_process(delta):
+	#raycast.global_position = global_position
+	#raycast.target_position = player.global_position - global_position
+	#
+#
+	#if raycast.is_colliding() and is_instance_valid(raycast.get_collider()):
+		#if raycast.get_collider().is_in_group("player"):
+			#spotted_player = true
+			#$Aim.look_at(raycast.get_collider().global_position, Vector3.UP, true)
+			#if raycast.global_transform.origin.distance_to(raycast.get_collision_point()) < shoot_range:
+				#velocity = Vector3(0, 0, 0)
+				#set_state(STATES.idle_shoot)
+			#else:
+				#move(delta)
+		#else:
+			#move(delta)
+	#else:
+		#move(delta)
+#
+	#mesh.rotation.y = atan2(player.global_position.x - global_position.x, player.global_position.z - global_position.z)
+	#move_and_slide()
 
 
 func _process(delta):
