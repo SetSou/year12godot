@@ -24,6 +24,7 @@ const FOV_CHANGE = 1.5
 @onready var left_wall_cast = $Head/LeftWallCast
 @onready var right_long_cast = $Head/RightLongCast
 @onready var left_long_cast = $Head/LeftLongCast
+@onready var guns = $Head/Camera/Weapons
 
 @export var state = "normal"
 
