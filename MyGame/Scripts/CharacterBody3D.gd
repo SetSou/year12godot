@@ -4,11 +4,12 @@ var speed
 var gravity = 9.8
 var jumped = false
 var wall = true
+var dead = false
 const WALK_SPEED = 4.0
 const SPRINT_SPEED = 9.0
 const CROUCH_SPEED = 3.0
 const WALLRUN_SPEED = 10.0
-const JUMP_VELOCITY = 4.8
+const JUMP_VELOCITY = 5.2
 const SENSITIVITY = 0.003
 
 const BOB_FREQ = 2
@@ -29,7 +30,7 @@ const FOV_CHANGE = 1.5
 @export var state = "normal"
 
 func _ready():
-	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
+	Input.mouse_mode = Input.MOUSE_MODE_CAPTURED
 	$CrouchAnimation.play("RESET")
 	
 func _unhandled_input(event):
@@ -70,6 +71,13 @@ func wall_run(direction):
 		
 	if jumped == true:
 		wall = false
+
+func _process(delta):
+	if Input.is_action_just_pressed("exit"):
+		get_tree().quit()
+	if dead:
+		return
+
 func _physics_process(delta):
 	#print(wall)
 	if state == "normal":
@@ -144,7 +152,7 @@ func _physics_process(delta):
 	
 	wall_run(direction)
 	move_and_slide()
-	
+
 
 func enter_normal_state():
 	#print("entering normal state")
@@ -183,3 +191,8 @@ func _headbob(time) -> Vector3:
 	pos.y = sin(time * BOB_FREQ) * BOB_AMP
 	pos.x = cos(time * BOB_FREQ / 2) * BOB_AMP
 	return pos
+
+func kill():
+	dead = true
+	$CanvasLayer/Deathscreen.show()
+	Input.mouse_mode = Input.MOUSE_MODE_VISIBLE

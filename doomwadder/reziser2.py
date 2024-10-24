@@ -9,7 +9,7 @@ class SpriteResizerApp:
 
         self.folder_path = None
         self.output_folder = None
-        
+
         self.preview_label = Label(root)
         self.preview_label.pack()
 
