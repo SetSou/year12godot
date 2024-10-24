@@ -73,7 +73,7 @@ script = ExtResource("1_ik0xe")
 Gun_Type = "Shotgun"
 Gun_Ammo = 8
 Gun_Max = 8
-Damage = 12.0
+Damage = 14.0
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 

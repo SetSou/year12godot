@@ -2,7 +2,6 @@
 
 [ext_resource type="Script" path="res://Scripts/CharacterBody3D.gd" id="1_ujyip"]
 [ext_resource type="Texture2D" uid="uid://cjctls0r0dpxs" path="res://textures/2024-06-20 22_40_18-Window.png" id="2_mr8pa"]
-[ext_resource type="Script" path="res://addons/fpc/EditorModule.gd" id="3_fduyy"]
 [ext_resource type="PackedScene" uid="uid://lfwci1lh34p0" path="res://Scenes/shotgun.tscn" id="3_fqjc8"]
 [ext_resource type="Shader" path="res://textures/pixel.gdshader" id="5_3umem"]
 [ext_resource type="FontFile" uid="uid://buidr2wtkj8we" path="res://textures/dogica/TTF/dogicapixel.ttf" id="6_k15u6"]
@@ -158,6 +157,57 @@ _data = {
 
 [sub_resource type="SphereShape3D" id="SphereShape3D_7bbmr"]
 
+[sub_resource type="GDScript" id="GDScript_jqtgv"]
+script/source = "@tool
+extends Node
+
+# This module affects runtime nad 
+
+
+#TODO: Add descriptions
+@export_category(\"Controller Editor Module\")
+@export var head_y_rotation : float = 0:
+	set(new_rotation):
+		head_y_rotation = new_rotation
+		HEAD.rotation.y = head_y_rotation
+		update_configuration_warnings()
+
+@export_group(\"Nodes\")
+@export var CHARACTER : CharacterBody3D
+@export var head_path : String = \"Head\" # From this nodes parent node
+#@export var CAMERA : Camera3D
+#@export var HEADBOB_ANIMATION : AnimationPlayer
+#@export var JUMP_ANIMATION : AnimationPlayer
+#@export var CROUCH_ANIMATION : AnimationPlayer
+#@export var COLLISION_MESH : CollisionShape3D
+
+var HEAD
+
+
+func _ready():
+	HEAD = get_node(\"../\" + head_path)
+	if Engine.is_editor_hint():
+		pass
+	else:
+		HEAD.rotation.y = head_y_rotation
+
+func _process(delta):
+	if Engine.is_editor_hint():
+		pass
+
+func _get_configuration_warnings():
+	var warnings = []
+
+	if head_y_rotation > 360:
+		warnings.append(\"The head rotation is greater than 360\")
+	
+	if head_y_rotation < 0:
+		warnings.append(\"The head rotation is less than 0\")
+
+	# Returning an empty array gives no warnings
+	return warnings
+"
+
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_pkq61"]
 shader = ExtResource("5_3umem")
 
@@ -214,7 +264,7 @@ transform = Transform3D(5, -5.53386e-08, -5.53386e-08, -4.37114e-07, -0.633, 0, 
 target_position = Vector3(0.3, 0, 0)
 
 [node name="EditorModule" type="Node" parent="."]
-script = ExtResource("3_fduyy")
+script = SubResource("GDScript_jqtgv")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
@@ -298,3 +348,5 @@ grow_horizontal = 2
 grow_vertical = 2
 theme_override_fonts/font = ExtResource("6_k15u6")
 text = "Restart"
+
+[connection signal="pressed" from="CanvasLayer/Deathscreen/Panel/Button" to="." method="_on_button_pressed"]

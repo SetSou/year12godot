@@ -24,6 +24,11 @@ GlobalAudioStreamPlayer="*res://Sounds/audio_stream_player.tscn"
 
 shapes/lossless_compression/force_png=false
 
+[display]
+
+window/size/mode=3
+window/stretch/mode="canvas_items"
+
 [editor_plugins]
 
 enabled=PackedStringArray("res://addons/cyclops_level_builder/plugin.cfg")

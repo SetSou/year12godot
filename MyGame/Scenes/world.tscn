@@ -1,4 +1,4 @@
-[gd_scene load_steps=89 format=4 uid="uid://da5jwxhjfspxt"]
+[gd_scene load_steps=92 format=4 uid="uid://da5jwxhjfspxt"]
 
 [ext_resource type="PackedScene" uid="uid://bklenyncmwhyt" path="res://Scenes/character_body_3d.tscn" id="1_ifomk"]
 [ext_resource type="Texture2D" uid="uid://cogr0kyi1dc5u" path="res://textures/WDWC1_1.png" id="5_1gw2d"]
@@ -18,6 +18,7 @@
 [ext_resource type="Texture2D" uid="uid://bsero1jwkmhbs" path="res://textures/MTCN3_12.png" id="14_6dshe"]
 [ext_resource type="Texture2D" uid="uid://fyknrljq840t" path="res://textures/MTCN6_1.png" id="15_pm7o6"]
 [ext_resource type="PackedScene" uid="uid://kyegclaibieh" path="res://Scenes/enemy.tscn" id="16_4ljuc"]
+[ext_resource type="Texture2D" uid="uid://dx17d5n5ax0xl" path="res://textures/space.jpg" id="17_3ny2b"]
 
 [sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_7nkx2"]
 data = PackedVector3Array(1, -1, 2, -1, 1, 2, 1, 1, 2, 1, -1, 2, -1, -1, 2, -1, 1, 2, -1, -1, -2, 1, 1, -2, -1, 1, -2, -1, -1, -2, 1, -1, -2, 1, 1, -2, -1, -1, -2, 1, -1, 2, 1, -1, -2, -1, -1, -2, -1, -1, 2, 1, -1, 2, 1, -1, -2, 1, 1, 2, 1, 1, -2, 1, -1, -2, 1, -1, 2, 1, 1, 2, 1, 1, -2, -1, 1, 2, -1, 1, -2, 1, 1, -2, 1, 1, 2, -1, 1, 2, -1, -1, 2, -1, 1, -2, -1, 1, 2, -1, -1, 2, -1, -1, -2, -1, 1, -2)
@@ -968,13 +969,21 @@ shadow_mesh = SubResource("ArrayMesh_nnrtd")
 [sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_ar6jj"]
 data = PackedVector3Array(-1, -1, -2, 1, -1, 2, 1, -1, -2, -1, -1, -2, -1, -1, 2, 1, -1, 2, 1, -1, -2, 1, 1, 2, 1, 1, -2, 1, -1, -2, 1, -1, 2, 1, 1, 2, 1, 1, -2, -1, 1, 2, -1, 1, -2, 1, 1, -2, 1, 1, 2, -1, 1, 2, -1, -1, 2, -1, 1, -2, -1, 1, 2, -1, -1, 2, -1, -1, -2, -1, 1, -2, 1, -1, 2, -1, 1, 2, 1, 1, 2, 1, -1, 2, -1, -1, 2, -1, 1, 2, -1, -1, -2, 1, 1, -2, -1, 1, -2, -1, -1, -2, 1, -1, -2, 1, 1, -2)
 
+[sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_l813r"]
+panorama = ExtResource("17_3ny2b")
+energy_multiplier = 0.1
+
+[sub_resource type="Sky" id="Sky_hgi8e"]
+sky_material = SubResource("PanoramaSkyMaterial_l813r")
+
 [sub_resource type="Environment" id="Environment_n8gtr"]
 background_mode = 2
+sky = SubResource("Sky_hgi8e")
 
 [node name="World" type="Node3D"]
 
 [node name="CharacterBody3D" parent="." instance=ExtResource("1_ifomk")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.742291, 9.28495, -28.6213)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.19272, 0.317108, -3.09781)
 
 [node name="Blendermodels" parent="." instance=ExtResource("8_8ol8k")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -34.733, 1.2372, -4.88865)
@@ -987,6 +996,66 @@ transform = Transform3D(1.40882, 0, 0, 0, 1.40882, 0, 0, 0, 1.40882, -27.1892, 0
 
 [node name="CollisionShape3D2" type="CollisionShape3D" parent="Blendermodels/ContainerBlack /StaticBody3D" index="1"]
 shape = SubResource("ConcavePolygonShape3D_7nkx2")
+
+[node name="ContainerOrange " parent="Blendermodels" index="2"]
+transform = Transform3D(1.40882, 0, 0, 0, 1.40882, 0, 0, 0, 1.40882, -17.7657, 0.176112, 0.150939)
+
+[node name="ContainerBlue " parent="Blendermodels" index="3"]
+transform = Transform3D(1.40882, 0, 0, 0, 1.40882, 0, 0, 0, 1.40882, -12.777, 0.176112, 0.150939)
+
+[node name="WoodBoxSmallOrange " parent="Blendermodels" index="4"]
+transform = Transform3D(0.65, 0, 0, 0, 0.65, 0, 0, 0, 0.65, -33.2001, -0.64212, 0.611698)
+
+[node name="StaticBody3D" parent="Blendermodels/WoodBoxSmallOrange " index="0"]
+transform = Transform3D(0.65, 0, 0, 0, 0.65, 0, 0, 0, 0.65, 0, 0, 0)
+
+[node name="CollisionShape3D" parent="Blendermodels/WoodBoxSmallOrange /StaticBody3D" index="0"]
+transform = Transform3D(0.65, 0, 0, 0, 0.65, 0, 0, 0, 0.65, 0, 0, 0)
+
+[node name="WoodBoxLongOrange " parent="Blendermodels" index="5"]
+transform = Transform3D(0.65, 0, 0, 0, 0.65, 0, 0, 0, 0.65, -33.2001, -0.64212, 2.66682)
+
+[node name="StaticBody3D" parent="Blendermodels/WoodBoxLongOrange " index="0"]
+transform = Transform3D(0.65, 0, 0, 0, 0.65, 0, 0, 0, 0.65, 0, 0, 0)
+
+[node name="CollisionShape3D" parent="Blendermodels/WoodBoxLongOrange /StaticBody3D" index="0"]
+transform = Transform3D(0.65, 0, 0, 0, 0.65, 0, 0, 0, 0.65, 0, 0, 0)
+
+[node name="WoodBoxSmallPink " parent="Blendermodels" index="6"]
+transform = Transform3D(0.65, 0, 0, 0, 0.65, 0, 0, 0, 0.65, -35.5625, -0.64212, 0.611698)
+
+[node name="StaticBody3D" parent="Blendermodels/WoodBoxSmallPink " index="0"]
+transform = Transform3D(0.65, 0, 0, 0, 0.65, 0, 0, 0, 0.65, 0, 0, 0)
+
+[node name="CollisionShape3D" parent="Blendermodels/WoodBoxSmallPink /StaticBody3D" index="0"]
+transform = Transform3D(0.65, 0, 0, 0, 0.65, 0, 0, 0, 0.65, 0, 0, 0)
+
+[node name="WoodBoxLongPink " parent="Blendermodels" index="7"]
+transform = Transform3D(0.65, 0, 0, 0, 0.65, 0, 0, 0, 0.65, -35.5625, -0.64212, 2.66682)
+
+[node name="StaticBody3D" parent="Blendermodels/WoodBoxLongPink " index="0"]
+transform = Transform3D(0.65, 0, 0, 0, 0.65, 0, 0, 0, 0.65, 0, 0, 0)
+
+[node name="CollisionShape3D" parent="Blendermodels/WoodBoxLongPink /StaticBody3D" index="0"]
+transform = Transform3D(0.65, 0, 0, 0, 0.65, 0, 0, 0, 0.65, 0, 0, 0)
+
+[node name="WoodBoxSmallBrown " parent="Blendermodels" index="8"]
+transform = Transform3D(0.65, 0, 0, 0, 0.65, 0, 0, 0, 0.65, -37.9249, -0.64212, 0.611698)
+
+[node name="StaticBody3D" parent="Blendermodels/WoodBoxSmallBrown " index="0"]
+transform = Transform3D(0.65, 0, 0, 0, 0.65, 0, 0, 0, 0.65, 0, 0, 0)
+
+[node name="CollisionShape3D" parent="Blendermodels/WoodBoxSmallBrown /StaticBody3D" index="0"]
+transform = Transform3D(0.65, 0, 0, 0, 0.65, 0, 0, 0, 0.65, 0, 0, 0)
+
+[node name="WoodBoxLongBrown " parent="Blendermodels" index="9"]
+transform = Transform3D(0.65, 0, 0, 0, 0.65, 0, 0, 0, 0.65, -37.9249, -0.64212, 2.66682)
+
+[node name="StaticBody3D" parent="Blendermodels/WoodBoxLongBrown " index="0"]
+transform = Transform3D(0.65, 0, 0, 0, 0.65, 0, 0, 0, 0.65, 0, 0, 0)
+
+[node name="CollisionShape3D" parent="Blendermodels/WoodBoxLongBrown /StaticBody3D" index="0"]
+transform = Transform3D(0.65, 0, 0, 0, 0.65, 0, 0, 0, 0.65, 0, 0, 0)
 
 [node name="ContainerBlack 7" type="MeshInstance3D" parent="Blendermodels"]
 transform = Transform3D(-0.0159084, 0, -1.40873, 0, 1.40882, 0, 1.40873, 0, -0.0159084, 28.6609, 0.176113, -29.3284)
@@ -1040,30 +1109,6 @@ shape = SubResource("ConcavePolygonShape3D_7nkx2")
 [node name="CollisionShape3D2" type="CollisionShape3D" parent="Blendermodels/ContainerBlack 17/StaticBody3D"]
 shape = SubResource("ConcavePolygonShape3D_7nkx2")
 
-[node name="ContainerOrange " parent="Blendermodels" index="6"]
-transform = Transform3D(1.40882, 0, 0, 0, 1.40882, 0, 0, 0, 1.40882, -17.7657, 0.176112, 0.150939)
-
-[node name="ContainerBlue " parent="Blendermodels" index="7"]
-transform = Transform3D(1.40882, 0, 0, 0, 1.40882, 0, 0, 0, 1.40882, -12.777, 0.176112, 0.150939)
-
-[node name="WoodBoxSmallOrange " parent="Blendermodels" index="8"]
-transform = Transform3D(0.65, 0, 0, 0, 0.65, 0, 0, 0, 0.65, -33.2001, -0.64212, 0.611698)
-
-[node name="StaticBody3D" parent="Blendermodels/WoodBoxSmallOrange " index="0"]
-transform = Transform3D(0.65, 0, 0, 0, 0.65, 0, 0, 0, 0.65, 0, 0, 0)
-
-[node name="CollisionShape3D" parent="Blendermodels/WoodBoxSmallOrange /StaticBody3D" index="0"]
-transform = Transform3D(0.65, 0, 0, 0, 0.65, 0, 0, 0, 0.65, 0, 0, 0)
-
-[node name="WoodBoxLongOrange " parent="Blendermodels" index="9"]
-transform = Transform3D(0.65, 0, 0, 0, 0.65, 0, 0, 0, 0.65, -33.2001, -0.64212, 2.66682)
-
-[node name="StaticBody3D" parent="Blendermodels/WoodBoxLongOrange " index="0"]
-transform = Transform3D(0.65, 0, 0, 0, 0.65, 0, 0, 0, 0.65, 0, 0, 0)
-
-[node name="CollisionShape3D" parent="Blendermodels/WoodBoxLongOrange /StaticBody3D" index="0"]
-transform = Transform3D(0.65, 0, 0, 0, 0.65, 0, 0, 0, 0.65, 0, 0, 0)
-
 [node name="WoodBoxLongOrange 4" type="MeshInstance3D" parent="Blendermodels"]
 transform = Transform3D(0.109675, 0, 0.64068, 0, 0.65, 0, -0.64068, 0, 0.109675, 1.9231, 7.86821, -16.9338)
 mesh = SubResource("ArrayMesh_q8652")
@@ -1076,15 +1121,6 @@ transform = Transform3D(0.65, 0, 0, 0, 0.65, 0, 0, 0, 0.65, 0, 0, 0)
 transform = Transform3D(1.54, 0, 0, 0, 1.54, 0, 0, 0, 1.54, 0, 0, 0)
 shape = SubResource("ConcavePolygonShape3D_jdaa4")
 
-[node name="WoodBoxSmallPink " parent="Blendermodels" index="11"]
-transform = Transform3D(0.65, 0, 0, 0, 0.65, 0, 0, 0, 0.65, -35.5625, -0.64212, 0.611698)
-
-[node name="StaticBody3D" parent="Blendermodels/WoodBoxSmallPink " index="0"]
-transform = Transform3D(0.65, 0, 0, 0, 0.65, 0, 0, 0, 0.65, 0, 0, 0)
-
-[node name="CollisionShape3D" parent="Blendermodels/WoodBoxSmallPink /StaticBody3D" index="0"]
-transform = Transform3D(0.65, 0, 0, 0, 0.65, 0, 0, 0, 0.65, 0, 0, 0)
-
 [node name="WoodBoxSmallPink 2" type="MeshInstance3D" parent="Blendermodels"]
 transform = Transform3D(0.65, 0, 0, 0, 0.65, 0, 0, 0, 0.65, 21.7037, -0.64212, 1.53128)
 mesh = SubResource("ArrayMesh_h85p6")
@@ -1096,15 +1132,6 @@ transform = Transform3D(0.65, 0, 0, 0, 0.65, 0, 0, 0, 0.65, 0, 0, 0)
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Blendermodels/WoodBoxSmallPink 2/StaticBody3D"]
 transform = Transform3D(0.65, 0, 0, 0, 0.65, 0, 0, 0, 0.65, 0, 0, 0)
 shape = SubResource("ConcavePolygonShape3D_ivtop")
-
-[node name="WoodBoxLongPink " parent="Blendermodels" index="13"]
-transform = Transform3D(0.65, 0, 0, 0, 0.65, 0, 0, 0, 0.65, -35.5625, -0.64212, 2.66682)
-
-[node name="StaticBody3D" parent="Blendermodels/WoodBoxLongPink " index="0"]
-transform = Transform3D(0.65, 0, 0, 0, 0.65, 0, 0, 0, 0.65, 0, 0, 0)
-
-[node name="CollisionShape3D" parent="Blendermodels/WoodBoxLongPink /StaticBody3D" index="0"]
-transform = Transform3D(0.65, 0, 0, 0, 0.65, 0, 0, 0, 0.65, 0, 0, 0)
 
 [node name="WoodBoxLongPink 2" type="MeshInstance3D" parent="Blendermodels"]
 transform = Transform3D(0.65, 0, 0, 0, 0.65, 0, 0, 0, 0.65, 38.0723, -0.574975, -17.3297)
@@ -1129,15 +1156,6 @@ transform = Transform3D(0.65, 0, 0, 0, 0.65, 0, 0, 0, 0.65, 0, 0, 0)
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Blendermodels/WoodBoxLongPink 3/StaticBody3D"]
 transform = Transform3D(1.54, 0, 0, 0, 1.54, 0, 0, 0, 1.54, 0, 0, 0)
 shape = SubResource("ConcavePolygonShape3D_lhhk6")
-
-[node name="WoodBoxSmallBrown " parent="Blendermodels" index="16"]
-transform = Transform3D(0.65, 0, 0, 0, 0.65, 0, 0, 0, 0.65, -37.9249, -0.64212, 0.611698)
-
-[node name="StaticBody3D" parent="Blendermodels/WoodBoxSmallBrown " index="0"]
-transform = Transform3D(0.65, 0, 0, 0, 0.65, 0, 0, 0, 0.65, 0, 0, 0)
-
-[node name="CollisionShape3D" parent="Blendermodels/WoodBoxSmallBrown /StaticBody3D" index="0"]
-transform = Transform3D(0.65, 0, 0, 0, 0.65, 0, 0, 0, 0.65, 0, 0, 0)
 
 [node name="WoodBoxSmallBrown 2" type="MeshInstance3D" parent="Blendermodels"]
 transform = Transform3D(0.65, 0, 0, 0, 0.65, 0, 0, 0, 0.65, 35.3534, 5.01751, -21.4241)
@@ -1164,7 +1182,7 @@ transform = Transform3D(1.55, 0, 0, 0, 1.55, 0, 0, 0, 1.55, 0, 0, 0)
 shape = SubResource("ConcavePolygonShape3D_mwoxv")
 
 [node name="WoodBoxSmallBrown 5" type="MeshInstance3D" parent="Blendermodels"]
-transform = Transform3D(0.65, 0, 0, 0, 0.65, 0, 0, 0, 0.65, 3.20739, 16.2987, -28.4556)
+transform = Transform3D(0.65, 0, 0, 0, 0.65, 0, 0, 0, 0.65, 3.20739, 16.2382, -28.4556)
 mesh = SubResource("ArrayMesh_jrkbm")
 skeleton = NodePath("")
 
@@ -1187,15 +1205,6 @@ transform = Transform3D(0.65, 0, 0, 0, 0.65, 0, 0, 0, 0.65, 0, 0, 0)
 transform = Transform3D(1.54, 0, 0, 0, 1.54, 0, 0, 0, 1.54, 0, 0, 0)
 shape = SubResource("ConcavePolygonShape3D_mwoxv")
 
-[node name="WoodBoxLongBrown " parent="Blendermodels" index="21"]
-transform = Transform3D(0.65, 0, 0, 0, 0.65, 0, 0, 0, 0.65, -37.9249, -0.64212, 2.66682)
-
-[node name="StaticBody3D" parent="Blendermodels/WoodBoxLongBrown " index="0"]
-transform = Transform3D(0.65, 0, 0, 0, 0.65, 0, 0, 0, 0.65, 0, 0, 0)
-
-[node name="CollisionShape3D" parent="Blendermodels/WoodBoxLongBrown /StaticBody3D" index="0"]
-transform = Transform3D(0.65, 0, 0, 0, 0.65, 0, 0, 0, 0.65, 0, 0, 0)
-
 [node name="WoodBoxLongBrown 2" type="MeshInstance3D" parent="Blendermodels"]
 transform = Transform3D(0.114446, 0, 0.639845, 0, 0.65, 0, -0.639845, 0, 0.114446, 34.7937, 2.24591, -18.0853)
 mesh = SubResource("ArrayMesh_2h06f")
@@ -1207,7 +1216,7 @@ skeleton = NodePath("")
 shape = SubResource("ConcavePolygonShape3D_spla0")
 
 [node name="WoodBoxLongBrown 3" type="MeshInstance3D" parent="Blendermodels"]
-transform = Transform3D(0.0393418, 0, 0.908332, 0, 0.055, 0, -0.648808, 0, 0.0550785, 3.05756, 12.7717, -26.6231)
+transform = Transform3D(0.152622, 0, 0.88456, 0, 0.055, 0, -0.631828, 0, 0.213671, 3.09572, 12.7717, -26.7245)
 mesh = SubResource("ArrayMesh_2h06f")
 skeleton = NodePath("")
 
@@ -1288,7 +1297,7 @@ skeleton = NodePath("")
 shape = SubResource("ConcavePolygonShape3D_w876a")
 
 [node name="ContainerBlue 25" type="MeshInstance3D" parent="Blendermodels"]
-transform = Transform3D(-1.39921, 0, 0.16427, 0, 1.40882, 0, -0.16427, 0, -1.39921, -4.92724, 8.57382, -30.5523)
+transform = Transform3D(-1.39012, 0, 0.228762, 0, 1.40882, 0, -0.228762, 0, -1.39012, -4.92724, 8.57382, -30.5523)
 mesh = SubResource("ArrayMesh_0cgko")
 skeleton = NodePath("")
 
@@ -1298,7 +1307,7 @@ skeleton = NodePath("")
 shape = SubResource("ConcavePolygonShape3D_w876a")
 
 [node name="ContainerBlue 6" type="MeshInstance3D" parent="Blendermodels"]
-transform = Transform3D(-0.00169643, 0, -1.40882, 0, 1.40882, 0, 1.40882, 0, -0.00169643, 3.56966, 14.2022, -28.7137)
+transform = Transform3D(-0.00169643, 0, -1.40882, 0, 1.40882, 0, 1.40882, 0, -0.00169643, 3.56966, 14.1746, -28.7137)
 mesh = SubResource("ArrayMesh_0cgko")
 skeleton = NodePath("")
 
@@ -1318,7 +1327,7 @@ skeleton = NodePath("")
 shape = SubResource("ConcavePolygonShape3D_h358m")
 
 [node name="ContainerRed 5" type="MeshInstance3D" parent="Blendermodels"]
-transform = Transform3D(-6.15815e-08, 0, 1.40882, 0, 1.40882, 0, -1.40882, 0, -6.15815e-08, 3.87174, 14.1923, -24.5752)
+transform = Transform3D(-6.15815e-08, 0, 1.40882, 0, 1.40882, 0, -1.40882, 0, -6.15815e-08, 3.87174, 14.2345, -24.5752)
 mesh = SubResource("ArrayMesh_7wuh1")
 skeleton = NodePath("")
 
@@ -1338,7 +1347,7 @@ skeleton = NodePath("")
 shape = SubResource("ConcavePolygonShape3D_g7vyb")
 
 [node name="ContainerOrange 4" type="MeshInstance3D" parent="Blendermodels"]
-transform = Transform3D(1.40882, 0, 0, 0, 1.40882, 0, 0, 0, 1.40882, 5.2597, 17.0523, -26.2585)
+transform = Transform3D(1.40882, 0, 0, 0, 1.40882, 0, 0, 0, 1.40882, 5.2597, 17.0017, -26.2585)
 mesh = SubResource("ArrayMesh_x5656")
 skeleton = NodePath("")
 
@@ -2074,7 +2083,7 @@ shape = SubResource("ConcavePolygonShape3D_7nkx2")
 shape = SubResource("ConcavePolygonShape3D_7nkx2")
 
 [node name="ContainerBlue 29" type="MeshInstance3D" parent="Blendermodels"]
-transform = Transform3D(1.40781, 0, -0.0532215, 0, 1.40882, 0, 0.0532215, 0, 1.40781, -4.98409, 3.01527, -30.6989)
+transform = Transform3D(1.40651, 0, -0.0805326, 0, 1.40882, 0, 0.0805326, 0, 1.40651, -4.90055, 3.01527, -30.6129)
 mesh = SubResource("ArrayMesh_0cgko")
 skeleton = NodePath("")
 
@@ -2095,7 +2104,7 @@ transform = Transform3D(1, 0, 2.98023e-08, 0, 1, 0, -2.98023e-08, 0, 1, 0, 0, 0)
 shape = SubResource("ConcavePolygonShape3D_046yb")
 
 [node name="ContainerBlack 34" type="MeshInstance3D" parent="Blendermodels"]
-transform = Transform3D(-1.4035, 0, 0.122321, 0, 1.40882, 0, -0.122321, 0, -1.4035, -4.82562, 5.79836, -30.5267)
+transform = Transform3D(-1.40148, 0, 0.143642, 0, 1.40882, 0, -0.143642, 0, -1.40148, -4.82562, 5.76667, -30.6424)
 mesh = SubResource("ArrayMesh_ej1r7")
 skeleton = NodePath("")
 
@@ -2595,6 +2604,31 @@ omni_range = 4096.0
 [node name="Point22" type="OmniLight3D" parent="Map"]
 transform = Transform3D(1, 0, 0, 0, 0, 1, 0, -1, 0, 17.1353, 26.8269, -15.0044)
 light_energy = 3.475
+omni_range = 4096.0
+
+[node name="Point28" type="OmniLight3D" parent="Map"]
+transform = Transform3D(1, 0, 0, 0, 0, 1, 0, -1, 0, 46.0212, 23.6409, -33.2485)
+light_energy = 2.2
+omni_range = 4096.0
+
+[node name="Point29" type="OmniLight3D" parent="Map"]
+transform = Transform3D(1, 0, 0, 0, 0, 1, 0, -1, 0, 55.9976, 23.6409, -33.2485)
+light_energy = 2.2
+omni_range = 4096.0
+
+[node name="Point30" type="OmniLight3D" parent="Map"]
+transform = Transform3D(1, 0, 0, 0, 0, 1, 0, -1, 0, 66.0085, 23.6409, -43.2842)
+light_energy = 2.2
+omni_range = 4096.0
+
+[node name="Point31" type="OmniLight3D" parent="Map"]
+transform = Transform3D(1, 0, 0, 0, 0, 1, 0, -1, 0, 75.9988, 23.6409, -33.2489)
+light_energy = 2.2
+omni_range = 4096.0
+
+[node name="Point32" type="OmniLight3D" parent="Map"]
+transform = Transform3D(1, 0, 0, 0, 0, 1, 0, -1, 0, 66.0121, 23.6409, -13.1948)
+light_energy = 2.2
 omni_range = 4096.0
 
 [node name="Point19" type="OmniLight3D" parent="Map"]

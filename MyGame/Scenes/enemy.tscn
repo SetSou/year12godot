@@ -1,6 +1,6 @@
 [gd_scene load_steps=19 format=3 uid="uid://kyegclaibieh"]
 
-[ext_resource type="Script" path="res://Scenes/enemy.gd" id="1_gm3u6"]
+[ext_resource type="Script" path="res://Scripts/enemy.gd" id="1_gm3u6"]
 [ext_resource type="Texture2D" uid="uid://bew50yuv4tj4y" path="res://textures/Robot/robotwalk.png" id="2_0w0tl"]
 [ext_resource type="Texture2D" uid="uid://cjfmdg838wdkn" path="res://textures/Robot/robotdeath.png" id="2_4vkpj"]
 [ext_resource type="AudioStream" uid="uid://c5jjriewtnhw4" path="res://Sounds/scoutdie.ogg" id="4_dsyjg"]

@@ -9,7 +9,7 @@ const WALK_SPEED = 4.0
 const SPRINT_SPEED = 9.0
 const CROUCH_SPEED = 3.0
 const WALLRUN_SPEED = 10.0
-const JUMP_VELOCITY = 5.2
+const JUMP_VELOCITY = 5.4
 const SENSITIVITY = 0.003
 
 const BOB_FREQ = 2
@@ -79,6 +79,8 @@ func _process(delta):
 		return
 
 func _physics_process(delta):
+	if dead == true:
+		return
 	#print(wall)
 	if state == "normal":
 		speed = WALK_SPEED
@@ -196,3 +198,7 @@ func kill():
 	dead = true
 	$CanvasLayer/Deathscreen.show()
 	Input.mouse_mode = Input.MOUSE_MODE_VISIBLE
+
+
+func _on_button_pressed():
+	get_tree().reload_current_scene()
