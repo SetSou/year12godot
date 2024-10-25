@@ -277,6 +277,7 @@ grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 1
 color = Color(1, 1, 1, 0.27451)
+metadata/_edit_use_anchors_ = true
 
 [node name="Crosshair" type="ColorRect" parent="CanvasLayer"]
 z_index = -1
