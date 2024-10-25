@@ -19,7 +19,7 @@
 [ext_resource type="Texture2D" uid="uid://fyknrljq840t" path="res://textures/MTCN6_1.png" id="15_pm7o6"]
 [ext_resource type="PackedScene" uid="uid://kyegclaibieh" path="res://Scenes/enemy.tscn" id="16_4ljuc"]
 [ext_resource type="Texture2D" uid="uid://dx17d5n5ax0xl" path="res://textures/space.jpg" id="17_3ny2b"]
-[ext_resource type="Shader" path="res://Scenes/world.gdshader" id="20_pl2e4"]
+[ext_resource type="Shader" path="res://textures/world.gdshader" id="20_pl2e4"]
 [ext_resource type="PackedScene" uid="uid://b8ly5tgjq6i70" path="res://Models/ship.blend" id="21_sfsie"]
 
 [sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_7nkx2"]
@@ -2653,6 +2653,11 @@ transform = Transform3D(1, 0, 0, 0, 0, 1, 0, -1, 0, 55.9976, 23.6409, -33.2485)
 light_energy = 2.2
 omni_range = 4096.0
 
+[node name="Point33" type="OmniLight3D" parent="Map"]
+transform = Transform3D(1, 0, 0, 0, 0, 1, 0, -1, 0, 55.9976, 23.6409, -13.2459)
+light_energy = 2.2
+omni_range = 4096.0
+
 [node name="Point30" type="OmniLight3D" parent="Map"]
 transform = Transform3D(1, 0, 0, 0, 0, 1, 0, -1, 0, 66.0085, 23.6409, -43.2842)
 light_energy = 2.2
@@ -2686,7 +2691,6 @@ surface_material_override/0 = SubResource("ShaderMaterial_6a00m")
 [node name="StaticBody3D" type="StaticBody3D" parent="Map/MeshInstance3D"]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Map/MeshInstance3D/StaticBody3D"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
 shape = SubResource("BoxShape3D_hbot5")
 
 [node name="ship" parent="." instance=ExtResource("21_sfsie")]
