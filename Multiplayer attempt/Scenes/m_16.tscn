@@ -1,0 +1,46 @@
+[gd_scene load_steps=6 format=3 uid="uid://ds06xdh14ugyq"]
+
+[ext_resource type="Script" uid="uid://cilitwaf4xwng" path="res://Scripts/gun.gd" id="1_xh6po"]
+[ext_resource type="Texture2D" uid="uid://bqx11xyoedxop" path="res://textures/m16output/m16ga0.png" id="2_x2ald"]
+[ext_resource type="Texture2D" uid="uid://cnapoxd6l8dtm" path="res://textures/m16output/m16fa0.png" id="3_1or7j"]
+[ext_resource type="Texture2D" uid="uid://i55ficoa0oqu" path="res://textures/m16output/m16fb0.png" id="4_n7jhr"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_qf3jt"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_x2ald")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_1or7j")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_n7jhr")
+}],
+"loop": false,
+"name": &"shoot",
+"speed": 10.0
+}]
+
+[node name="M16" type="Node3D"]
+script = ExtResource("1_xh6po")
+Gun_Type = "M16"
+Gun_Max = 30
+Damage = 20.0
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="CanvasLayer"]
+position = Vector2(546, 503)
+scale = Vector2(2.75521, 2.75521)
+sprite_frames = SubResource("SpriteFrames_qf3jt")
+animation = &"idle"
+autoplay = "idle"
+
+[node name="RayCast3D" type="RayCast3D" parent="."]
+target_position = Vector3(0, 0, -10)

@@ -1,0 +1,2752 @@
+[gd_scene load_steps=97 format=4 uid="uid://da5jwxhjfspxt"]
+
+[ext_resource type="Script" uid="uid://cyx61ppraeyji" path="res://Scenes/world.gd" id="1_1eeey"]
+[ext_resource type="Texture2D" uid="uid://cogr0kyi1dc5u" path="res://textures/WDWC1_1.png" id="5_1gw2d"]
+[ext_resource type="Texture2D" uid="uid://cp1btuoknna6r" path="res://textures/WDWC3_1.png" id="6_l434t"]
+[ext_resource type="Texture2D" uid="uid://ppmx27b3ac17" path="res://textures/WDWC1_3.png" id="6_oqpew"]
+[ext_resource type="Texture2D" uid="uid://544te46w36p" path="res://textures/WDWC3_3.png" id="7_tjx0w"]
+[ext_resource type="PackedScene" uid="uid://cgdbdlj6clr7h" path="res://Models/Blendermodels.blend" id="8_8ol8k"]
+[ext_resource type="Texture2D" uid="uid://bed2dop8ybunc" path="res://textures/MTCN6.png" id="9_vhxkd"]
+[ext_resource type="Texture2D" uid="uid://ce0qqhem5twu5" path="res://textures/MTCN3_15.png" id="9_wbr1f"]
+[ext_resource type="Texture2D" uid="uid://ccmbxcy2muc5o" path="res://textures/MTCN6_4.png" id="10_33mb5"]
+[ext_resource type="Texture2D" uid="uid://btj7dpk4wi6bu" path="res://textures/MTCN3_11.png" id="10_nv7yu"]
+[ext_resource type="PackedScene" uid="uid://bgvlv7o0pg4of" path="res://Models/Map.blend" id="12_6lr50"]
+[ext_resource type="Texture2D" uid="uid://k3w20nhtyk7n" path="res://textures/WDWC1.png" id="12_6vnht"]
+[ext_resource type="Texture2D" uid="uid://cx4akv3kyei7g" path="res://textures/MTCN3_13.png" id="12_m3ghj"]
+[ext_resource type="Texture2D" uid="uid://dk635h3djjcrf" path="res://textures/WDWC3.png" id="13_44ii5"]
+[ext_resource type="Texture2D" uid="uid://dimesikiw5c1c" path="res://textures/MTCN6_2.png" id="13_wlhi1"]
+[ext_resource type="Texture2D" uid="uid://bsero1jwkmhbs" path="res://textures/MTCN3_12.png" id="14_6dshe"]
+[ext_resource type="Texture2D" uid="uid://fyknrljq840t" path="res://textures/MTCN6_1.png" id="15_pm7o6"]
+[ext_resource type="Texture2D" uid="uid://dx17d5n5ax0xl" path="res://textures/space.jpg" id="17_3ny2b"]
+[ext_resource type="Shader" uid="uid://02sgep74gtaj" path="res://textures/world.gdshader" id="20_pl2e4"]
+[ext_resource type="PackedScene" uid="uid://b8ly5tgjq6i70" path="res://Models/ship.blend" id="21_sfsie"]
+[ext_resource type="FontFile" uid="uid://buidr2wtkj8we" path="res://textures/dogica/TTF/dogicapixel.ttf" id="22_k3qcd"]
+
+[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_7nkx2"]
+data = PackedVector3Array(1, -1, 2, -1, 1, 2, 1, 1, 2, 1, -1, 2, -1, -1, 2, -1, 1, 2, -1, -1, -2, 1, 1, -2, -1, 1, -2, -1, -1, -2, 1, -1, -2, 1, 1, -2, -1, -1, -2, 1, -1, 2, 1, -1, -2, -1, -1, -2, -1, -1, 2, 1, -1, 2, 1, -1, -2, 1, 1, 2, 1, 1, -2, 1, -1, -2, 1, -1, 2, 1, 1, 2, 1, 1, -2, -1, 1, 2, -1, 1, -2, 1, 1, -2, 1, 1, 2, -1, 1, 2, -1, -1, 2, -1, 1, -2, -1, 1, 2, -1, -1, 2, -1, -1, -2, -1, 1, -2)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_f5oev"]
+resource_name = "Material.002"
+cull_mode = 2
+albedo_texture = ExtResource("9_vhxkd")
+metallic = 0.540909
+texture_filter = 2
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_75ko8"]
+resource_name = "Material.003"
+cull_mode = 2
+albedo_texture = ExtResource("10_nv7yu")
+metallic = 0.672727
+texture_filter = 2
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_qnnct"]
+_surfaces = [{
+"aabb": AABB(-1, -1, -2, 2, 2, 4),
+"format": 34896613377,
+"index_count": 12,
+"index_data": PackedByteArray("AwAGAAIAAwAHAAYABQAAAAQABQABAAAA"),
+"name": "Material.002",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 8,
+"vertex_data": PackedByteArray("/////wAAAAD//wAAAAAAAP///////wAA//8AAP//AAAAAP//AAAAAAAAAAAAAAAAAAD/////AAAAAAAA//8AAA==")
+}, {
+"aabb": AABB(-1, -1, -2, 2, 2, 4),
+"format": 34896613377,
+"index_count": 24,
+"index_data": PackedByteArray("BQADAAEABQAHAAMAAQACAAAAAQADAAIAAAAGAAQAAAACAAYABwAEAAYABwAFAAQA"),
+"name": "Material.003",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 8,
+"vertex_data": PackedByteArray("/////wAAAAD//wAAAAAAAP///////wAA//8AAP//AAAAAP//AAAAAAAAAAAAAAAAAAD/////AAAAAAAA//8AAA==")
+}]
+blend_shape_mode = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_ej1r7"]
+resource_name = "Blendermodels_Cube_004"
+_surfaces = [{
+"aabb": AABB(-1, -1, -2, 2, 2, 4),
+"attribute_data": PackedByteArray("AAAAAAAA/////wAA////////AAD/////AAAAAAAA//8="),
+"format": 34896613399,
+"index_count": 12,
+"index_data": PackedByteArray("AwAGAAIAAwAHAAYABQAAAAQABQABAAAA"),
+"material": SubResource("StandardMaterial3D_f5oev"),
+"name": "Material.002",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 8,
+"vertex_data": PackedByteArray("/////wAA/////wAAAAD//////////wCA//8AAP//AIAAAP//AAD//wAAAAAAAP//AAD/////AIAAAAAA//8AgP9/////f////3////9/////f////3////9/////f///")
+}, {
+"aabb": AABB(-1, -1, -2, 2, 2, 4),
+"attribute_data": PackedByteArray("+v/X8v///3/6//Z////9/wGA1/L/f/9/AYD2f/9//f/6//Z//3//f/r/1/L/f///AYD2f/j//38BgNfy/v///w=="),
+"format": 34896613399,
+"index_count": 24,
+"index_data": PackedByteArray("CgAGAAIACgAOAAYAAwAFAAEAAwAHAAUAAAAMAAgAAAAEAAwADwAJAA0ADwALAAkA"),
+"material": SubResource("StandardMaterial3D_75ko8"),
+"name": "Material.003",
+"primitive": 3,
+"uv_scale": Vector4(2.00001, 2, 0, 0),
+"vertex_count": 16,
+"vertex_data": PackedByteArray("/////wAAVNX/////AAD/v///AAAAAFTV//8AAAAA/7////////9U1f////////+///8AAP//VNX//wAA////vwAA//8AAFTVAAD//wAA/78AAAAAAABU1QAAAAAAAP+/AAD/////VNUAAP//////vwAAAAD//1TVAAAAAP///79U1aoq/38AAFRVVFX/fwAAVNWqKv9/AABUVVRV/38AAFTVqir/f///VFVUVf9///9U1aoq/3///1RVVFX/f///")
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_qnnct")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_c0s6q"]
+resource_name = "Material.008"
+cull_mode = 2
+albedo_texture = ExtResource("12_6vnht")
+texture_filter = 2
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_tjpdo"]
+resource_name = "Material.009"
+cull_mode = 2
+albedo_texture = ExtResource("13_44ii5")
+texture_filter = 2
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_8cv1w"]
+_surfaces = [{
+"aabb": AABB(-1, -1, -1, 2, 2, 3),
+"format": 34896613377,
+"index_count": 18,
+"index_data": PackedByteArray("AgAHAAMAAgAGAAcABgAFAAcABgAEAAUABAABAAUABAAAAAEA"),
+"name": "Material.008",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 8,
+"vertex_data": PackedByteArray("AAAAAP//AAAAAP////8AAAAAAAAAAAAAAAD//wAAAAD//wAA//8AAP///////wAA//8AAAAAAAD/////AAAAAA==")
+}, {
+"aabb": AABB(-1, -1, -1, 2, 2, 3),
+"format": 34896613377,
+"index_count": 18,
+"index_data": PackedByteArray("AAADAAEAAAACAAMAAgAEAAYAAgAAAAQABwABAAMABwAFAAEA"),
+"name": "Material.009",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 8,
+"vertex_data": PackedByteArray("AAAAAP//AAAAAP////8AAAAAAAAAAAAAAAD//wAAAAD//wAA//8AAP///////wAA//8AAAAAAAD/////AAAAAA==")
+}]
+blend_shape_mode = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_q8652"]
+resource_name = "Blendermodels_Cube_008"
+_surfaces = [{
+"aabb": AABB(-1, -1, -1, 2, 2, 3),
+"attribute_data": PackedByteArray("BAD/f/r//3/6//9/BAD/fwQA+v8EAPr/+v/6/wQA/3/6//r/+v/6/wQA+v/6//9/"),
+"format": 34896613399,
+"index_count": 18,
+"index_data": PackedByteArray("AgAKAAMAAgAIAAoACQAHAAsACQAFAAcABAABAAYABAAAAAEA"),
+"material": SubResource("StandardMaterial3D_c0s6q"),
+"name": "Material.008",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 12,
+"vertex_data": PackedByteArray("AAAAAP///78AAP//////vwAAAAAAAP//AAD//wAA/////wAA////v///AAD///+//////////7//////////v///AAAAAP////8AAAAA/7//////AAD///////8AAP+/////////////P/+//z//v///////fwAA//////9/AAD/P/+//38AAP8//7//fwAA")
+}, {
+"aabb": AABB(-1, -1, -1, 2, 2, 3),
+"attribute_data": PackedByteArray("BAD6////////////////v/r/+v8AAP//AAD//wAA/78EAP+/////v/r//78AAP+/"),
+"format": 34896613399,
+"index_count": 18,
+"index_data": PackedByteArray("AQAHAAMAAQAFAAcABAAIAAoABAAAAAgACwACAAYACwAJAAIA"),
+"material": SubResource("StandardMaterial3D_tjpdo"),
+"name": "Material.009",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 12,
+"vertex_data": PackedByteArray("AAAAAP//VNUAAAAA////vwAA/////1TVAAD//////78AAAAAAABU1QAAAAAAAP+/AAD//wAAVNUAAP//AAD/v///AAD//1TV////////VNX//wAAAABU1f////8AAFTVVFVUVf9///+qqqqq/3///1RVVFX/f///qqqqqv9///9UVVRVqqqqqlRVVFWqqqqq")
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_8cv1w")
+
+[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_jdaa4"]
+data = PackedVector3Array(-1, -1, -1, 1, 1, -1, -1, 1, -1, -1, -1, -1, 1, -1, -1, 1, 1, -1, 1, -1, -1, 1, 1, 2, 1, 1, -1, 1, -1, -1, 1, -1, 2, 1, 1, 2, 1, -1, 2, -1, 1, 2, 1, 1, 2, 1, -1, 2, -1, -1, 2, -1, 1, 2, -1, -1, 2, -1, 1, -1, -1, 1, 2, -1, -1, 2, -1, -1, -1, -1, 1, -1, -1, -1, -1, 1, -1, 2, 1, -1, -1, -1, -1, -1, -1, -1, 2, 1, -1, 2, 1, 1, -1, -1, 1, 2, -1, 1, -1, 1, 1, -1, 1, 1, 2, -1, 1, 2)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_jbdku"]
+resource_name = "Material.010"
+cull_mode = 2
+albedo_texture = ExtResource("5_1gw2d")
+texture_filter = 2
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_glrsi"]
+_surfaces = [{
+"aabb": AABB(-1, -1, -1, 2, 2, 2),
+"format": 34896613377,
+"index_count": 36,
+"index_data": PackedByteArray("AAADAAEAAAACAAMAAgAHAAMAAgAGAAcABgAFAAcABgAEAAUABAABAAUABAAAAAEAAgAEAAYAAgAAAAQABwABAAMABwAFAAEA"),
+"name": "Material.010",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 8,
+"vertex_data": PackedByteArray("AAAAAP//AAAAAP////8AAAAAAAAAAAAAAAD//wAAAAD//wAA//8AAP///////wAA//8AAAAAAAD/////AAAAAA==")
+}]
+blend_shape_mode = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_h85p6"]
+resource_name = "Blendermodels_Cube_009"
+_surfaces = [{
+"aabb": AABB(-1, -1, -1, 2, 2, 2),
+"attribute_data": PackedByteArray("+v//fwQA+v/6//r/+v/6//r/+v/6//9/+v/6//r/+v8EAPr/+v//fwQA+v8EAP9/BAD/fwQA/38EAPr/BAD6//r//38EAP9/BAD6//r//3/6//r/BAD/fwQA/3/6//9/"),
+"format": 34896613399,
+"index_count": 36,
+"index_data": PackedByteArray("AgALAAUAAgAIAAsABgAVAAkABgASABUAFAARABcAFAAOABEADAADAA8ADAAAAAMABwANABMABwABAA0AFgAEAAoAFgAQAAQA"),
+"material": SubResource("StandardMaterial3D_jbdku"),
+"name": "Material.010",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 24,
+"vertex_data": PackedByteArray("AAAAAP////8AAAAA//9U1QAAAAD///+/AAD///////8AAP////9U1QAA//////+/AAAAAAAA//8AAAAAAABU1QAAAAAAAP+/AAD//wAA//8AAP//AABU1QAA//8AAP+///8AAP///////wAA//9U1f//AAD///+///////////////////9U1f////////+///8AAAAA/////wAAAABU1f//AAAAAP+//////wAA////////AABU1f////8AAP+//3//f1RVVFX/f////3//f6qqqqr/f////3///1RVVFX/f////3///6qqqqr/f////3//f1RVVFX/fwAA/3//f6qqqqr/fwAA/3///1RVVFX/fwAA/3///6qqqqr/fwAA")
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_glrsi")
+
+[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_ivtop"]
+data = PackedVector3Array(-1, -1, 1, -1, 1, -1, -1, 1, 1, -1, -1, 1, -1, -1, -1, -1, 1, -1, -1, -1, -1, 1, 1, -1, -1, 1, -1, -1, -1, -1, 1, -1, -1, 1, 1, -1, 1, -1, -1, 1, 1, 1, 1, 1, -1, 1, -1, -1, 1, -1, 1, 1, 1, 1, 1, -1, 1, -1, 1, 1, 1, 1, 1, 1, -1, 1, -1, -1, 1, -1, 1, 1, -1, -1, -1, 1, -1, 1, 1, -1, -1, -1, -1, -1, -1, -1, 1, 1, -1, 1, 1, 1, -1, -1, 1, 1, -1, 1, -1, 1, 1, -1, 1, 1, 1, -1, 1, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_4rhlr"]
+resource_name = "Material.011"
+cull_mode = 2
+albedo_texture = ExtResource("6_l434t")
+texture_filter = 2
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_ahxmw"]
+_surfaces = [{
+"aabb": AABB(-1, -1, -1, 2, 2, 3),
+"format": 34896613377,
+"index_count": 18,
+"index_data": PackedByteArray("AgAHAAMAAgAGAAcABgAFAAcABgAEAAUABAABAAUABAAAAAEA"),
+"name": "Material.010",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 8,
+"vertex_data": PackedByteArray("AAAAAP//AAAAAP////8AAAAAAAAAAAAAAAD//wAAAAD//wAA//8AAP///////wAA//8AAAAAAAD/////AAAAAA==")
+}, {
+"aabb": AABB(-1, -1, -1, 2, 2, 3),
+"format": 34896613377,
+"index_count": 18,
+"index_data": PackedByteArray("AAADAAEAAAACAAMAAgAEAAYAAgAAAAQABwABAAMABwAFAAEA"),
+"name": "Material.011",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 8,
+"vertex_data": PackedByteArray("AAAAAP//AAAAAP////8AAAAAAAAAAAAAAAD//wAAAAD//wAA//8AAP///////wAA//8AAAAAAAD/////AAAAAA==")
+}]
+blend_shape_mode = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_tua04"]
+resource_name = "Blendermodels_Cube_010"
+_surfaces = [{
+"aabb": AABB(-1, -1, -1, 2, 2, 3),
+"attribute_data": PackedByteArray("BAD/f/r//3/6//9/BAD/fwQA+v8EAPr/+v/6/wQA/3/6//r/+v/6/wQA+v/6//9/"),
+"format": 34896613399,
+"index_count": 18,
+"index_data": PackedByteArray("AgAKAAMAAgAIAAoACQAHAAsACQAFAAcABAABAAYABAAAAAEA"),
+"material": SubResource("StandardMaterial3D_jbdku"),
+"name": "Material.010",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 12,
+"vertex_data": PackedByteArray("AAAAAP///78AAP//////vwAAAAAAAP//AAD//wAA/////wAA////v///AAD///+//////////7//////////v///AAAAAP////8AAAAA/7//////AAD///////8AAP+/////////////P/+//z//v///////fwAA//////9/AAD/P/+//38AAP8//7//fwAA")
+}, {
+"aabb": AABB(-1, -1, -1, 2, 2, 3),
+"attribute_data": PackedByteArray("BAD6////////////////v/r/+v8AAP//AAD//wAA/78EAP+/////v/r//78AAP+/"),
+"format": 34896613399,
+"index_count": 18,
+"index_data": PackedByteArray("AQAHAAMAAQAFAAcABAAIAAoABAAAAAgACwACAAYACwAJAAIA"),
+"material": SubResource("StandardMaterial3D_4rhlr"),
+"name": "Material.011",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 12,
+"vertex_data": PackedByteArray("AAAAAP//VNUAAAAA////vwAA/////1TVAAD//////78AAAAAAABU1QAAAAAAAP+/AAD//wAAVNUAAP//AAD/v///AAD//1TV////////VNX//wAAAABU1f////8AAFTVVFVUVf9///+qqqqq/3///1RVVFX/f///qqqqqv9///9UVVRVqqqqqlRVVFWqqqqq")
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_ahxmw")
+
+[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_lhhk6"]
+data = PackedVector3Array(-1, -1, -1, 1, 1, -1, -1, 1, -1, -1, -1, -1, 1, -1, -1, 1, 1, -1, 1, -1, -1, 1, 1, 2, 1, 1, -1, 1, -1, -1, 1, -1, 2, 1, 1, 2, 1, -1, 2, -1, 1, 2, 1, 1, 2, 1, -1, 2, -1, -1, 2, -1, 1, 2, -1, -1, 2, -1, 1, -1, -1, 1, 2, -1, -1, 2, -1, -1, -1, -1, 1, -1, -1, -1, -1, 1, -1, 2, 1, -1, -1, -1, -1, -1, -1, -1, 2, 1, -1, 2, 1, 1, -1, -1, 1, 2, -1, 1, -1, 1, 1, -1, 1, 1, 2, -1, 1, 2)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ndgim"]
+resource_name = "Material.012"
+cull_mode = 2
+albedo_texture = ExtResource("6_oqpew")
+texture_filter = 2
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_fkh2j"]
+_surfaces = [{
+"aabb": AABB(-1, -1, -1, 2, 2, 2),
+"format": 34896613377,
+"index_count": 36,
+"index_data": PackedByteArray("AAADAAEAAAACAAMAAgAHAAMAAgAGAAcABgAFAAcABgAEAAUABAABAAUABAAAAAEAAgAEAAYAAgAAAAQABwABAAMABwAFAAEA"),
+"name": "Material.012",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 8,
+"vertex_data": PackedByteArray("AAAAAP//AAAAAP////8AAAAAAAAAAAAAAAD//wAAAAD//wAA//8AAP///////wAA//8AAAAAAAD/////AAAAAA==")
+}]
+blend_shape_mode = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_jrkbm"]
+resource_name = "Blendermodels_Cube_011"
+_surfaces = [{
+"aabb": AABB(-1, -1, -1, 2, 2, 2),
+"attribute_data": PackedByteArray("+v//fwQA+v/6//r/+v/6//r/+v/6//9/+v/6//r/+v8EAPr/+v//fwQA+v8EAP9/BAD/fwQA/38EAPr/BAD6//r//38EAP9/BAD6//r//3/6//r/BAD/fwQA/3/6//9/"),
+"format": 34896613399,
+"index_count": 36,
+"index_data": PackedByteArray("AgALAAUAAgAIAAsABgAVAAkABgASABUAFAARABcAFAAOABEADAADAA8ADAAAAAMABwANABMABwABAA0AFgAEAAoAFgAQAAQA"),
+"material": SubResource("StandardMaterial3D_ndgim"),
+"name": "Material.012",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 24,
+"vertex_data": PackedByteArray("AAAAAP////8AAAAA//9U1QAAAAD///+/AAD///////8AAP////9U1QAA//////+/AAAAAAAA//8AAAAAAABU1QAAAAAAAP+/AAD//wAA//8AAP//AABU1QAA//8AAP+///8AAP///////wAA//9U1f//AAD///+///////////////////9U1f////////+///8AAAAA/////wAAAABU1f//AAAAAP+//////wAA////////AABU1f////8AAP+//3//f1RVVFX/f////3//f6qqqqr/f////3///1RVVFX/f////3///6qqqqr/f////3//f1RVVFX/fwAA/3//f6qqqqr/fwAA/3///1RVVFX/fwAA/3///6qqqqr/fwAA")
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_fkh2j")
+
+[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_mwoxv"]
+data = PackedVector3Array(-1, -1, 1, -1, 1, -1, -1, 1, 1, -1, -1, 1, -1, -1, -1, -1, 1, -1, -1, -1, -1, 1, 1, -1, -1, 1, -1, -1, -1, -1, 1, -1, -1, 1, 1, -1, 1, -1, -1, 1, 1, 1, 1, 1, -1, 1, -1, -1, 1, -1, 1, 1, 1, 1, 1, -1, 1, -1, 1, 1, 1, 1, 1, 1, -1, 1, -1, -1, 1, -1, 1, 1, -1, -1, -1, 1, -1, 1, 1, -1, -1, -1, -1, -1, -1, -1, 1, 1, -1, 1, 1, 1, -1, -1, 1, 1, -1, 1, -1, 1, 1, -1, 1, 1, 1, -1, 1, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_wxrc0"]
+resource_name = "Material.013"
+cull_mode = 2
+albedo_texture = ExtResource("7_tjx0w")
+texture_filter = 2
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_afc4q"]
+_surfaces = [{
+"aabb": AABB(-1, -1, -1, 2, 2, 3),
+"format": 34896613377,
+"index_count": 18,
+"index_data": PackedByteArray("AgAHAAMAAgAGAAcABgAFAAcABgAEAAUABAABAAUABAAAAAEA"),
+"name": "Material.012",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 8,
+"vertex_data": PackedByteArray("AAAAAP//AAAAAP////8AAAAAAAAAAAAAAAD//wAAAAD//wAA//8AAP///////wAA//8AAAAAAAD/////AAAAAA==")
+}, {
+"aabb": AABB(-1, -1, -1, 2, 2, 3),
+"format": 34896613377,
+"index_count": 18,
+"index_data": PackedByteArray("AAADAAEAAAACAAMAAgAEAAYAAgAAAAQABwABAAMABwAFAAEA"),
+"name": "Material.013",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 8,
+"vertex_data": PackedByteArray("AAAAAP//AAAAAP////8AAAAAAAAAAAAAAAD//wAAAAD//wAA//8AAP///////wAA//8AAAAAAAD/////AAAAAA==")
+}]
+blend_shape_mode = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_2h06f"]
+resource_name = "Blendermodels_Cube_012"
+_surfaces = [{
+"aabb": AABB(-1, -1, -1, 2, 2, 3),
+"attribute_data": PackedByteArray("BAD/f/r//3/6//9/BAD/fwQA+v8EAPr/+v/6/wQA/3/6//r/+v/6/wQA+v/6//9/"),
+"format": 34896613399,
+"index_count": 18,
+"index_data": PackedByteArray("AgAKAAMAAgAIAAoACQAHAAsACQAFAAcABAABAAYABAAAAAEA"),
+"material": SubResource("StandardMaterial3D_ndgim"),
+"name": "Material.012",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 12,
+"vertex_data": PackedByteArray("AAAAAP///78AAP//////vwAAAAAAAP//AAD//wAA/////wAA////v///AAD///+//////////7//////////v///AAAAAP////8AAAAA/7//////AAD///////8AAP+/////////////P/+//z//v///////fwAA//////9/AAD/P/+//38AAP8//7//fwAA")
+}, {
+"aabb": AABB(-1, -1, -1, 2, 2, 3),
+"attribute_data": PackedByteArray("BAD6////////////////v/r/+v8AAP//AAD//wAA/78EAP+/////v/r//78AAP+/"),
+"format": 34896613399,
+"index_count": 18,
+"index_data": PackedByteArray("AQAHAAMAAQAFAAcABAAIAAoABAAAAAgACwACAAYACwAJAAIA"),
+"material": SubResource("StandardMaterial3D_wxrc0"),
+"name": "Material.013",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 12,
+"vertex_data": PackedByteArray("AAAAAP//VNUAAAAA////vwAA/////1TVAAD//////78AAAAAAABU1QAAAAAAAP+/AAD//wAAVNUAAP//AAD/v///AAD//1TV////////VNX//wAAAABU1f////8AAFTVVFVUVf9///+qqqqq/3///1RVVFX/f///qqqqqv9///9UVVRVqqqqqlRVVFWqqqqq")
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_afc4q")
+
+[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_spla0"]
+data = PackedVector3Array(-1, -1, -1, 1, 1, -1, -1, 1, -1, -1, -1, -1, 1, -1, -1, 1, 1, -1, 1, -1, -1, 1, 1, 2, 1, 1, -1, 1, -1, -1, 1, -1, 2, 1, 1, 2, 1, -1, 2, -1, 1, 2, 1, 1, 2, 1, -1, 2, -1, -1, 2, -1, 1, 2, -1, -1, 2, -1, 1, -1, -1, 1, 2, -1, -1, 2, -1, -1, -1, -1, 1, -1, -1, -1, -1, 1, -1, 2, 1, -1, -1, -1, -1, -1, -1, -1, 2, 1, -1, 2, 1, 1, -1, -1, 1, 2, -1, 1, -1, 1, 1, -1, 1, 1, 2, -1, 1, 2)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_1dnoo"]
+resource_name = "Material"
+cull_mode = 2
+albedo_texture = ExtResource("14_6dshe")
+metallic = 0.645669
+texture_filter = 2
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_thcw8"]
+resource_name = "Material.001"
+cull_mode = 2
+albedo_texture = ExtResource("15_pm7o6")
+metallic = 0.582677
+texture_filter = 2
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_5d5b8"]
+_surfaces = [{
+"aabb": AABB(-1, -1, -2, 2, 2, 4),
+"format": 34896613377,
+"index_count": 24,
+"index_data": PackedByteArray("BQADAAEABQAHAAMAAQACAAAAAQADAAIAAAAGAAQAAAACAAYABwAEAAYABwAFAAQA"),
+"name": "Material",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 8,
+"vertex_data": PackedByteArray("/////wAAAAD//wAAAAAAAP///////wAA//8AAP//AAAAAP//AAAAAAAAAAAAAAAAAAD/////AAAAAAAA//8AAA==")
+}, {
+"aabb": AABB(-1, -1, -2, 2, 2, 4),
+"format": 34896613377,
+"index_count": 12,
+"index_data": PackedByteArray("AwAGAAIAAwAHAAYABQAAAAQABQABAAAA"),
+"name": "Material.001",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 8,
+"vertex_data": PackedByteArray("/////wAAAAD//wAAAAAAAP///////wAA//8AAP//AAAAAP//AAAAAAAAAAAAAAAAAAD/////AAAAAAAA//8AAA==")
+}]
+blend_shape_mode = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_7wuh1"]
+resource_name = "Blendermodels_Cube"
+_surfaces = [{
+"aabb": AABB(-1, -1, -2, 2, 2, 4),
+"attribute_data": PackedByteArray("+v/X8v///3/6//Z////9/wGA1/L/f/9/AYD2f/9//f/6//Z//3//f/r/1/L/f///AYD2f/j//38BgNfy/v///w=="),
+"format": 34896613399,
+"index_count": 24,
+"index_data": PackedByteArray("CgAGAAIACgAOAAYAAwAFAAEAAwAHAAUAAAAMAAgAAAAEAAwADwAJAA0ADwALAAkA"),
+"material": SubResource("StandardMaterial3D_1dnoo"),
+"name": "Material",
+"primitive": 3,
+"uv_scale": Vector4(2.00001, 2, 0, 0),
+"vertex_count": 16,
+"vertex_data": PackedByteArray("/////wAAVNX/////AAD/v///AAAAAFTV//8AAAAA/7////////9U1f////////+///8AAP//VNX//wAA////vwAA//8AAFTVAAD//wAA/78AAAAAAABU1QAAAAAAAP+/AAD/////VNUAAP//////vwAAAAD//1TVAAAAAP///79U1aoq/38AAFRVVFX/fwAAVNWqKv9/AABUVVRV/38AAFTVqir/f///VFVUVf9///9U1aoq/3///1RVVFX/f///")
+}, {
+"aabb": AABB(-1, -1, -2, 2, 2, 4),
+"attribute_data": PackedByteArray("AAAAAAAA/////wAA////////AAD/////AAAAAAAA//8="),
+"format": 34896613399,
+"index_count": 12,
+"index_data": PackedByteArray("AwAGAAIAAwAHAAYABQAAAAQABQABAAAA"),
+"material": SubResource("StandardMaterial3D_thcw8"),
+"name": "Material.001",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 8,
+"vertex_data": PackedByteArray("/////wAA/////wAAAAD//////////wCA//8AAP//AIAAAP//AAD//wAAAAAAAP//AAD/////AIAAAAAA//8AgP9/////f////3////9/////f////3////9/////f///")
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_5d5b8")
+
+[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_g7vyb"]
+data = PackedVector3Array(-1, -1, -2, 1, -1, 2, 1, -1, -2, -1, -1, -2, -1, -1, 2, 1, -1, 2, 1, -1, -2, 1, 1, 2, 1, 1, -2, 1, -1, -2, 1, -1, 2, 1, 1, 2, 1, 1, -2, -1, 1, 2, -1, 1, -2, 1, 1, -2, 1, 1, 2, -1, 1, 2, -1, -1, 2, -1, 1, -2, -1, 1, 2, -1, -1, 2, -1, -1, -2, -1, 1, -2, 1, -1, 2, -1, 1, 2, 1, 1, 2, 1, -1, 2, -1, -1, 2, -1, 1, 2, -1, -1, -2, 1, 1, -2, -1, 1, -2, -1, -1, -2, 1, -1, -2, 1, 1, -2)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ql68a"]
+resource_name = "Material.004"
+cull_mode = 2
+albedo_texture = ExtResource("12_m3ghj")
+metallic = 0.574803
+texture_filter = 2
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_6h5g8"]
+resource_name = "Material.005"
+cull_mode = 2
+albedo_texture = ExtResource("13_wlhi1")
+metallic = 0.543307
+texture_filter = 2
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_ae1uu"]
+_surfaces = [{
+"aabb": AABB(-1, -1, -2, 2, 2, 4),
+"format": 34896613377,
+"index_count": 18,
+"index_data": PackedByteArray("BQADAAEABQAHAAMAAQACAAAAAQADAAIAAAAGAAQAAAACAAYA"),
+"name": "Material.004",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 8,
+"vertex_data": PackedByteArray("/////wAAAAD//wAAAAAAAP///////wAA//8AAP//AAAAAP//AAAAAAAAAAAAAAAAAAD/////AAAAAAAA//8AAA==")
+}, {
+"aabb": AABB(-1, -1, -2, 2, 2, 4),
+"format": 34896613377,
+"index_count": 18,
+"index_data": PackedByteArray("AwAGAAIAAwAHAAYABQAAAAQABQABAAAABwAEAAYABwAFAAQA"),
+"name": "Material.005",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 8,
+"vertex_data": PackedByteArray("/////wAAAAD//wAAAAAAAP///////wAA//8AAP//AAAAAP//AAAAAAAAAAAAAAAAAAD/////AAAAAAAA//8AAA==")
+}]
+blend_shape_mode = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_x5656"]
+resource_name = "Blendermodels_Cube_005"
+_surfaces = [{
+"aabb": AABB(-1, -1, -2, 2, 2, 4),
+"attribute_data": PackedByteArray("+v/Y8v///3/6//Z//////wGA2PL/f/9/AYD2f/9////6//Z/+v/Y8gGA9n8BgNjy"),
+"format": 34896613399,
+"index_count": 18,
+"index_data": PackedByteArray("CQAGAAIACQALAAYAAwAFAAEAAwAHAAUAAAAKAAgAAAAEAAoA"),
+"material": SubResource("StandardMaterial3D_ql68a"),
+"name": "Material.004",
+"primitive": 3,
+"uv_scale": Vector4(2.00001, 1.9999, 0, 0),
+"vertex_count": 12,
+"vertex_data": PackedByteArray("/////wAAVNX/////AAD/v///AAAAAFTV//8AAAAA/7////////9U1f////////+///8AAP//VNX//wAA////vwAA//8AAFTVAAAAAAAAVNUAAP////9U1QAAAAD//1TVVNWqKv9/AABUVVRV/38AAFTVqir/fwAAVFVUVf9/AABU1aoqVFVUVVTVqipUVVRV")
+}, {
+"aabb": AABB(-1, -1, -2, 2, 2, 4),
+"attribute_data": PackedByteArray("AAAAAAAA/////wAA////////AAAAAAAA/////wAA//8AAAAA8v8AAAAA////////"),
+"format": 34896613399,
+"index_count": 18,
+"index_data": PackedByteArray("AwAIAAIAAwAKAAgABgAAAAQABgABAAAACwAFAAkACwAHAAUA"),
+"material": SubResource("StandardMaterial3D_6h5g8"),
+"name": "Material.005",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 12,
+"vertex_data": PackedByteArray("/////wAA/////wAAAAD//////////wCA//8AAP//AIAAAP//AAD//wAA//8AAP+/AAAAAAAA//8AAAAAAAD/vwAA/////wCAAAD//////78AAAAA//8AgAAAAAD///+//3////9/////f////3////9/////f////3////9/////f////3////9/////f///")
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_ae1uu")
+
+[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_hgr8n"]
+data = PackedVector3Array(-1, -1, -2, 1, -1, 2, 1, -1, -2, -1, -1, -2, -1, -1, 2, 1, -1, 2, 1, -1, -2, 1, 1, 2, 1, 1, -2, 1, -1, -2, 1, -1, 2, 1, 1, 2, 1, 1, -2, -1, 1, 2, -1, 1, -2, 1, 1, -2, 1, 1, 2, -1, 1, 2, 1, -1, 2, -1, 1, 2, 1, 1, 2, 1, -1, 2, -1, -1, 2, -1, 1, 2, -1, -1, -2, 1, 1, -2, -1, 1, -2, -1, -1, -2, 1, -1, -2, 1, 1, -2, -1, -1, 2, -1, 1, -2, -1, 1, 2, -1, -1, 2, -1, -1, -2, -1, 1, -2)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_dllit"]
+resource_name = "Material.006"
+cull_mode = 2
+albedo_texture = ExtResource("9_wbr1f")
+metallic = 0.522727
+texture_filter = 2
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_1fw44"]
+resource_name = "Material.007"
+cull_mode = 2
+albedo_texture = ExtResource("10_33mb5")
+metallic = 0.572727
+texture_filter = 2
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_t36ip"]
+_surfaces = [{
+"aabb": AABB(-1, -1, -2, 2, 2, 4),
+"format": 34896613377,
+"index_count": 24,
+"index_data": PackedByteArray("BQADAAEABQAHAAMAAQACAAAAAQADAAIAAAAGAAQAAAACAAYABwAEAAYABwAFAAQA"),
+"name": "Material.006",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 8,
+"vertex_data": PackedByteArray("/////wAAAAD//wAAAAAAAP///////wAA//8AAP//AAAAAP//AAAAAAAAAAAAAAAAAAD/////AAAAAAAA//8AAA==")
+}, {
+"aabb": AABB(-1, -1, -2, 2, 2, 4),
+"format": 34896613377,
+"index_count": 12,
+"index_data": PackedByteArray("AwAGAAIAAwAHAAYABQAAAAQABQABAAAA"),
+"name": "Material.007",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 8,
+"vertex_data": PackedByteArray("/////wAAAAD//wAAAAAAAP///////wAA//8AAP//AAAAAP//AAAAAAAAAAAAAAAAAAD/////AAAAAAAA//8AAA==")
+}]
+blend_shape_mode = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_0cgko"]
+resource_name = "Blendermodels_Cube_006"
+_surfaces = [{
+"aabb": AABB(-1, -1, -2, 2, 2, 4),
+"attribute_data": PackedByteArray("+v/X8v///3/6//Z////9/wGA1/L/f/9/AYD2f/9//f/6//Z//3//f/r/1/L/f///AYD2f/j//38BgNfy/v///w=="),
+"format": 34896613399,
+"index_count": 24,
+"index_data": PackedByteArray("CgAGAAIACgAOAAYAAwAFAAEAAwAHAAUAAAAMAAgAAAAEAAwADwAJAA0ADwALAAkA"),
+"material": SubResource("StandardMaterial3D_dllit"),
+"name": "Material.006",
+"primitive": 3,
+"uv_scale": Vector4(2.00001, 2, 0, 0),
+"vertex_count": 16,
+"vertex_data": PackedByteArray("/////wAAVNX/////AAD/v///AAAAAFTV//8AAAAA/7////////9U1f////////+///8AAP//VNX//wAA////vwAA//8AAFTVAAD//wAA/78AAAAAAABU1QAAAAAAAP+/AAD/////VNUAAP//////vwAAAAD//1TVAAAAAP///79U1aoq/38AAFRVVFX/fwAAVNWqKv9/AABUVVRV/38AAFTVqir/f///VFVUVf9///9U1aoq/3///1RVVFX/f///")
+}, {
+"aabb": AABB(-1, -1, -2, 2, 2, 4),
+"attribute_data": PackedByteArray("AAAAAAAA/////wAA////////AAD/////AAAAAAAA//8="),
+"format": 34896613399,
+"index_count": 12,
+"index_data": PackedByteArray("AwAGAAIAAwAHAAYABQAAAAQABQABAAAA"),
+"material": SubResource("StandardMaterial3D_1fw44"),
+"name": "Material.007",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 8,
+"vertex_data": PackedByteArray("/////wAA/////wAAAAD//////////wCA//8AAP//AIAAAP//AAD//wAAAAAAAP//AAD/////AIAAAAAA//8AgP9/////f////3////9/////f////3////9/////f///")
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_t36ip")
+
+[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_w876a"]
+data = PackedVector3Array(-1, -1, -2, 1, -1, 2, 1, -1, -2, -1, -1, -2, -1, -1, 2, 1, -1, 2, 1, -1, -2, 1, 1, 2, 1, 1, -2, 1, -1, -2, 1, -1, 2, 1, 1, 2, 1, 1, -2, -1, 1, 2, -1, 1, -2, 1, 1, -2, 1, 1, 2, -1, 1, 2, -1, -1, 2, -1, 1, -2, -1, 1, 2, -1, -1, 2, -1, -1, -2, -1, 1, -2, 1, -1, 2, -1, 1, 2, 1, 1, 2, 1, -1, 2, -1, -1, 2, -1, 1, 2, -1, -1, -2, 1, 1, -2, -1, 1, -2, -1, -1, -2, 1, -1, -2, 1, 1, -2)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_b1r41"]
+resource_name = "Material.002"
+cull_mode = 2
+albedo_texture = ExtResource("9_vhxkd")
+metallic = 0.540909
+texture_filter = 2
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_rdov3"]
+resource_name = "Material.003"
+cull_mode = 2
+albedo_texture = ExtResource("10_nv7yu")
+metallic = 0.672727
+texture_filter = 2
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_y2wvb"]
+_surfaces = [{
+"aabb": AABB(-1, -1, -2, 2, 2, 4),
+"format": 34896613377,
+"index_count": 12,
+"index_data": PackedByteArray("AwAGAAIAAwAHAAYABQAAAAQABQABAAAA"),
+"name": "Material.002",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 8,
+"vertex_data": PackedByteArray("/////wAAAAD//wAAAAAAAP///////wAA//8AAP//AAAAAP//AAAAAAAAAAAAAAAAAAD/////AAAAAAAA//8AAA==")
+}, {
+"aabb": AABB(-1, -1, -2, 2, 2, 4),
+"format": 34896613377,
+"index_count": 24,
+"index_data": PackedByteArray("BQADAAEABQAHAAMAAQACAAAAAQADAAIAAAAGAAQAAAACAAYABwAEAAYABwAFAAQA"),
+"name": "Material.003",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 8,
+"vertex_data": PackedByteArray("/////wAAAAD//wAAAAAAAP///////wAA//8AAP//AAAAAP//AAAAAAAAAAAAAAAAAAD/////AAAAAAAA//8AAA==")
+}]
+blend_shape_mode = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_hr24s"]
+resource_name = "Blendermodels_Cube_004"
+_surfaces = [{
+"aabb": AABB(-1, -1, -2, 2, 2, 4),
+"attribute_data": PackedByteArray("AAAAAAAA/////wAA////////AAD/////AAAAAAAA//8="),
+"format": 34896613399,
+"index_count": 12,
+"index_data": PackedByteArray("AwAGAAIAAwAHAAYABQAAAAQABQABAAAA"),
+"material": SubResource("StandardMaterial3D_b1r41"),
+"name": "Material.002",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 8,
+"vertex_data": PackedByteArray("/////wAA/////wAAAAD//////////wCA//8AAP//AIAAAP//AAD//wAAAAAAAP//AAD/////AIAAAAAA//8AgP9/////f////3////9/////f////3////9/////f///")
+}, {
+"aabb": AABB(-1, -1, -2, 2, 2, 4),
+"attribute_data": PackedByteArray("+v/X8v///3/6//Z////9/wGA1/L/f/9/AYD2f/9//f/6//Z//3//f/r/1/L/f///AYD2f/j//38BgNfy/v///w=="),
+"format": 34896613399,
+"index_count": 24,
+"index_data": PackedByteArray("CgAGAAIACgAOAAYAAwAFAAEAAwAHAAUAAAAMAAgAAAAEAAwADwAJAA0ADwALAAkA"),
+"material": SubResource("StandardMaterial3D_rdov3"),
+"name": "Material.003",
+"primitive": 3,
+"uv_scale": Vector4(2.00001, 2, 0, 0),
+"vertex_count": 16,
+"vertex_data": PackedByteArray("/////wAAVNX/////AAD/v///AAAAAFTV//8AAAAA/7////////9U1f////////+///8AAP//VNX//wAA////vwAA//8AAFTVAAD//wAA/78AAAAAAABU1QAAAAAAAP+/AAD/////VNUAAP//////vwAAAAD//1TVAAAAAP///79U1aoq/38AAFRVVFX/fwAAVNWqKv9/AABUVVRV/38AAFTVqir/f///VFVUVf9///9U1aoq/3///1RVVFX/f///")
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_y2wvb")
+
+[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_h358m"]
+data = PackedVector3Array(1, -1, 2, -1, 1, 2, 1, 1, 2, 1, -1, 2, -1, -1, 2, -1, 1, 2, -1, -1, -2, 1, 1, -2, -1, 1, -2, -1, -1, -2, 1, -1, -2, 1, 1, -2, -1, -1, -2, 1, -1, 2, 1, -1, -2, -1, -1, -2, -1, -1, 2, 1, -1, 2, 1, -1, -2, 1, 1, 2, 1, 1, -2, 1, -1, -2, 1, -1, 2, 1, 1, 2, 1, 1, -2, -1, 1, 2, -1, 1, -2, 1, 1, -2, 1, 1, 2, -1, 1, 2, -1, -1, 2, -1, 1, -2, -1, 1, 2, -1, -1, 2, -1, -1, -2, -1, 1, -2)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_pftex"]
+resource_name = "Material.006"
+cull_mode = 2
+albedo_texture = ExtResource("9_wbr1f")
+metallic = 0.522727
+texture_filter = 2
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_gdgum"]
+resource_name = "Material.007"
+cull_mode = 2
+albedo_texture = ExtResource("10_33mb5")
+metallic = 0.572727
+texture_filter = 2
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_genmc"]
+_surfaces = [{
+"aabb": AABB(-1, -1, -2, 2.00001, 2.00001, 4),
+"format": 34896613377,
+"index_count": 24,
+"index_data": PackedByteArray("BQADAAEABQAHAAMAAQACAAAAAQADAAIAAAAGAAQAAAACAAYABwAEAAYABwAFAAQA"),
+"name": "Material.006",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 8,
+"vertex_data": PackedByteArray("/v/+/wAAAAD+/wAAAAAAAP7//v///wAA/v8AAP//AAAAAP7/AAAAAAAAAAAAAAAAAAD+////AAAAAAAA//8AAA==")
+}, {
+"aabb": AABB(-1, -1, -2, 2.00001, 2.00001, 4),
+"format": 34896613377,
+"index_count": 12,
+"index_data": PackedByteArray("AwAGAAIAAwAHAAYABQAAAAQABQABAAAA"),
+"name": "Material.007",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 8,
+"vertex_data": PackedByteArray("/v/+/wAAAAD+/wAAAAAAAP7//v///wAA/v8AAP//AAAAAP7/AAAAAAAAAAAAAAAAAAD+////AAAAAAAA//8AAA==")
+}]
+blend_shape_mode = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_a5gk3"]
+resource_name = "Blendermodels_Cube_006"
+_surfaces = [{
+"aabb": AABB(-1, -1, -2, 2.00001, 2.00001, 4),
+"attribute_data": PackedByteArray("+v/X8v///3/6//Z////9/wGA1/L/f/9/AYD2f/9//f/6//Z//3//f/r/1/L/f///AYD2f/j//38BgNfy/v///w=="),
+"format": 34896613399,
+"index_count": 24,
+"index_data": PackedByteArray("CgAGAAIACgAOAAYAAwAFAAEAAwAHAAUAAAAMAAgAAAAEAAwADwAJAA0ADwALAAkA"),
+"material": SubResource("StandardMaterial3D_pftex"),
+"name": "Material.006",
+"primitive": 3,
+"uv_scale": Vector4(2.00001, 2, 0, 0),
+"vertex_count": 16,
+"vertex_data": PackedByteArray("/v/+/wAAVNX+//7/AAD/v/7/AAAAAFTV/v8AAAAA/7/+//7///9U1f7//v////+//v8AAP//VNX+/wAA////vwAA/v8AAFTVAAD+/wAA/78AAAAAAABU1QAAAAAAAP+/AAD+////VNUAAP7/////vwAAAAD//1TVAAAAAP///79U1aoq/38AAFRVVFX/fwAAVNWqKv9/AABUVVRV/38AAFTVqir/f///VFVUVf9///9U1aoq/3///1RVVFX/f///")
+}, {
+"aabb": AABB(-1, -1, -2, 2.00001, 2.00001, 4),
+"attribute_data": PackedByteArray("AAAAAAAA/////wAA////////AAD/////AAAAAAAA//8="),
+"format": 34896613399,
+"index_count": 12,
+"index_data": PackedByteArray("AwAGAAIAAwAHAAYABQAAAAQABQABAAAA"),
+"material": SubResource("StandardMaterial3D_gdgum"),
+"name": "Material.007",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 8,
+"vertex_data": PackedByteArray("/v/+/wAA///+/wAAAAD///7//v///wCA/v8AAP//AIAAAP7/AAD//wAAAAAAAP//AAD+////AIAAAAAA//8AgP9/////f////3////9/////f////3////9/////f///")
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_genmc")
+
+[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_wi8ff"]
+data = PackedVector3Array(-1, -1, -2, 1, -1, 2, 1, -1, -2, -1, -1, -2, -1, -1, 2, 1, -1, 2, 1, -1, -2, 1, 1, 2, 1, 1, -2, 1, -1, -2, 1, -1, 2, 1, 1, 2, 1, 1, -2, -1, 1, 2, -1, 1, -2, 1, 1, -2, 1, 1, 2, -1, 1, 2, -1, -1, 2, -1, 1, -2, -1, 1, 2, -1, -1, 2, -1, -1, -2, -1, 1, -2, 1, -1, 2, -1, 1, 2, 1, 1, 2, 1, -1, 2, -1, -1, 2, -1, 1, 2, -1, -1, -2, 1, 1, -2, -1, 1, -2, -1, -1, -2, 1, -1, -2, 1, 1, -2)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_h2pbx"]
+resource_name = "Material.008"
+cull_mode = 2
+albedo_texture = ExtResource("12_6vnht")
+texture_filter = 2
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_krlt0"]
+resource_name = "Material.009"
+cull_mode = 2
+albedo_texture = ExtResource("13_44ii5")
+texture_filter = 2
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_bwfjl"]
+_surfaces = [{
+"aabb": AABB(-1, -1, -1, 2, 2, 3.00001),
+"format": 34896613377,
+"index_count": 18,
+"index_data": PackedByteArray("AgAHAAMAAgAGAAcABgAFAAcABgAEAAUABAABAAUABAAAAAEA"),
+"name": "Material.008",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 8,
+"vertex_data": PackedByteArray("AAAAAP7/AAAAAP///v8AAAAAAAAAAAAAAAD//wAAAAD//wAA/v8AAP/////+/wAA//8AAAAAAAD/////AAAAAA==")
+}, {
+"aabb": AABB(-1, -1, -1, 2, 2, 3.00001),
+"format": 34896613377,
+"index_count": 18,
+"index_data": PackedByteArray("AAADAAEAAAACAAMAAgAEAAYAAgAAAAQABwABAAMABwAFAAEA"),
+"name": "Material.009",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 8,
+"vertex_data": PackedByteArray("AAAAAP7/AAAAAP///v8AAAAAAAAAAAAAAAD//wAAAAD//wAA/v8AAP/////+/wAA//8AAAAAAAD/////AAAAAA==")
+}]
+blend_shape_mode = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_j1fev"]
+resource_name = "Blendermodels_Cube_008"
+_surfaces = [{
+"aabb": AABB(-1, -1, -1, 2, 2, 3.00001),
+"attribute_data": PackedByteArray("BAD/f/r//3/6//9/BAD/fwQA+v8EAPr/+v/6/wQA/3/6//r/+v/6/wQA+v/6//9/"),
+"format": 34896613399,
+"index_count": 18,
+"index_data": PackedByteArray("AgAKAAMAAgAIAAoACQAHAAsACQAFAAcABAABAAYABAAAAAEA"),
+"material": SubResource("StandardMaterial3D_h2pbx"),
+"name": "Material.008",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 12,
+"vertex_data": PackedByteArray("AAAAAP7//78AAP///v//vwAAAAAAAP//AAD//wAA/////wAA/v//v///AAD+//+///////7//7///////v//v///AAAAAP////8AAAAA/7//////AAD///////8AAP+/////////////P/+//z//v///////fwAA//////9/AAD/P/+//38AAP8//7//fwAA")
+}, {
+"aabb": AABB(-1, -1, -1, 2, 2, 3.00001),
+"attribute_data": PackedByteArray("BAD6////////////////v/r/+v8AAP//AAD//wAA/78EAP+/////v/r//78AAP+/"),
+"format": 34896613399,
+"index_count": 18,
+"index_data": PackedByteArray("AQAHAAMAAQAFAAcABAAIAAoABAAAAAgACwACAAYACwAJAAIA"),
+"material": SubResource("StandardMaterial3D_krlt0"),
+"name": "Material.009",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 12,
+"vertex_data": PackedByteArray("AAAAAP7/VNUAAAAA/v//vwAA///+/1TVAAD///7//78AAAAAAABU1QAAAAAAAP+/AAD//wAAVNUAAP//AAD/v///AAD+/1TV//////7/VNX//wAAAABU1f////8AAFTVVFVUVf9///+qqqqq/3///1RVVFX/f///qqqqqv9///9UVVRVqqqqqlRVVFWqqqqq")
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_bwfjl")
+
+[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_gccn6"]
+data = PackedVector3Array(-1, -1, -1, 1, 1, -1, -1, 1, -1, -1, -1, -1, 1, -1, -1, 1, 1, -1, 1, -1, -1, 1, 1, 2, 1, 1, -1, 1, -1, -1, 1, -1, 2, 1, 1, 2, 1, -1, 2, -1, 1, 2, 1, 1, 2, 1, -1, 2, -1, -1, 2, -1, 1, 2, -1, -1, 2, -1, 1, -1, -1, 1, 2, -1, -1, 2, -1, -1, -1, -1, 1, -1, -1, -1, -1, 1, -1, 2, 1, -1, -1, -1, -1, -1, -1, -1, 2, 1, -1, 2, 1, 1, -1, -1, 1, 2, -1, 1, -1, 1, 1, -1, 1, 1, 2, -1, 1, 2)
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_6ghgm"]
+_surfaces = [{
+"aabb": AABB(-1, -1, -1, 2, 2, 2.00001),
+"format": 34896613377,
+"index_count": 36,
+"index_data": PackedByteArray("AAADAAEAAAACAAMAAgAHAAMAAgAGAAcABgAFAAcABgAEAAUABAABAAUABAAAAAEAAgAEAAYAAgAAAAQABwABAAMABwAFAAEA"),
+"name": "Material.008",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 8,
+"vertex_data": PackedByteArray("AAAAAP7/AAAAAP///v8AAAAAAAAAAAAAAAD//wAAAAD//wAA/v8AAP/////+/wAA//8AAAAAAAD/////AAAAAA==")
+}]
+blend_shape_mode = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_c8ubq"]
+resource_name = "Blendermodels_Cube_007"
+_surfaces = [{
+"aabb": AABB(-1, -1, -1, 2, 2, 2.00001),
+"attribute_data": PackedByteArray("+v//fwQA+v/6//r/+v/6//r/+v/6//9/+v/6//r/+v8EAPr/+v//fwQA+v8EAP9/BAD/fwQA/38EAPr/BAD6//r//38EAP9/BAD6//r//3/6//r/BAD/fwQA/3/6//9/"),
+"format": 34896613399,
+"index_count": 36,
+"index_data": PackedByteArray("AgALAAUAAgAIAAsABgAVAAkABgASABUAFAARABcAFAAOABEADAADAA8ADAAAAAMABwANABMABwABAA0AFgAEAAoAFgAQAAQA"),
+"material": SubResource("StandardMaterial3D_h2pbx"),
+"name": "Material.008",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 24,
+"vertex_data": PackedByteArray("AAAAAP7///8AAAAA/v9U1QAAAAD+//+/AAD///7///8AAP///v9U1QAA///+//+/AAAAAAAA//8AAAAAAABU1QAAAAAAAP+/AAD//wAA//8AAP//AABU1QAA//8AAP+///8AAP7//////wAA/v9U1f//AAD+//+///////7//////////v9U1f/////+//+///8AAAAA/////wAAAABU1f//AAAAAP+//////wAA////////AABU1f////8AAP+//3//f1RVVFX/f////3//f6qqqqr/f////3///1RVVFX/f////3///6qqqqr/f////3//f1RVVFX/fwAA/3//f6qqqqr/fwAA/3///1RVVFX/fwAA/3///6qqqqr/fwAA")
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_6ghgm")
+
+[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_6hd27"]
+data = PackedVector3Array(-1, -1, 1, -1, 1, -1, -1, 1, 1, -1, -1, 1, -1, -1, -1, -1, 1, -1, -1, -1, -1, 1, 1, -1, -1, 1, -1, -1, -1, -1, 1, -1, -1, 1, 1, -1, 1, -1, -1, 1, 1, 1, 1, 1, -1, 1, -1, -1, 1, -1, 1, 1, 1, 1, 1, -1, 1, -1, 1, 1, 1, 1, 1, 1, -1, 1, -1, -1, 1, -1, 1, 1, -1, -1, -1, 1, -1, 1, 1, -1, -1, -1, -1, -1, -1, -1, 1, 1, -1, 1, 1, 1, -1, -1, 1, 1, -1, 1, -1, 1, 1, -1, 1, 1, 1, -1, 1, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_jcf4l"]
+resource_name = "Material.004"
+cull_mode = 2
+albedo_texture = ExtResource("12_m3ghj")
+metallic = 0.574803
+texture_filter = 2
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_3dyxv"]
+resource_name = "Material.005"
+cull_mode = 2
+albedo_texture = ExtResource("13_wlhi1")
+metallic = 0.543307
+texture_filter = 2
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_ch8yb"]
+_surfaces = [{
+"aabb": AABB(-1, -1, -2, 2.00001, 2.00001, 4),
+"format": 34896613377,
+"index_count": 18,
+"index_data": PackedByteArray("BQADAAEABQAHAAMAAQACAAAAAQADAAIAAAAGAAQAAAACAAYA"),
+"name": "Material.004",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 8,
+"vertex_data": PackedByteArray("/v/+/wAAAAD+/wAAAAAAAP7//v///wAA/v8AAP//AAAAAP7/AAAAAAAAAAAAAAAAAAD+////AAAAAAAA//8AAA==")
+}, {
+"aabb": AABB(-1, -1, -2, 2.00001, 2.00001, 4),
+"format": 34896613377,
+"index_count": 18,
+"index_data": PackedByteArray("AwAGAAIAAwAHAAYABQAAAAQABQABAAAABwAEAAYABwAFAAQA"),
+"name": "Material.005",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 8,
+"vertex_data": PackedByteArray("/v/+/wAAAAD+/wAAAAAAAP7//v///wAA/v8AAP//AAAAAP7/AAAAAAAAAAAAAAAAAAD+////AAAAAAAA//8AAA==")
+}]
+blend_shape_mode = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_xxvi5"]
+resource_name = "Blendermodels_Cube_005"
+_surfaces = [{
+"aabb": AABB(-1, -1, -2, 2.00001, 2.00001, 4),
+"attribute_data": PackedByteArray("+v/Y8v///3/6//Z//////wGA2PL/f/9/AYD2f/9////6//Z/+v/Y8gGA9n8BgNjy"),
+"format": 34896613399,
+"index_count": 18,
+"index_data": PackedByteArray("CQAGAAIACQALAAYAAwAFAAEAAwAHAAUAAAAKAAgAAAAEAAoA"),
+"material": SubResource("StandardMaterial3D_jcf4l"),
+"name": "Material.004",
+"primitive": 3,
+"uv_scale": Vector4(2.00001, 1.9999, 0, 0),
+"vertex_count": 12,
+"vertex_data": PackedByteArray("/v/+/wAAVNX+//7/AAD/v/7/AAAAAFTV/v8AAAAA/7/+//7///9U1f7//v////+//v8AAP//VNX+/wAA////vwAA/v8AAFTVAAAAAAAAVNUAAP7///9U1QAAAAD//1TVVNWqKv9/AABUVVRV/38AAFTVqir/fwAAVFVUVf9/AABU1aoqVFVUVVTVqipUVVRV")
+}, {
+"aabb": AABB(-1, -1, -2, 2.00001, 2.00001, 4),
+"attribute_data": PackedByteArray("AAAAAAAA/////wAA////////AAAAAAAA/////wAA//8AAAAA8v8AAAAA////////"),
+"format": 34896613399,
+"index_count": 18,
+"index_data": PackedByteArray("AwAIAAIAAwAKAAgABgAAAAQABgABAAAACwAFAAkACwAHAAUA"),
+"material": SubResource("StandardMaterial3D_3dyxv"),
+"name": "Material.005",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 12,
+"vertex_data": PackedByteArray("/v/+/wAA///+/wAAAAD///7//v///wCA/v8AAP//AIAAAP7/AAD//wAA/v8AAP+/AAAAAAAA//8AAAAAAAD/vwAA/v///wCAAAD+/////78AAAAA//8AgAAAAAD///+//3////9/////f////3////9/////f////3////9/////f////3////9/////f///")
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_ch8yb")
+
+[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_046yb"]
+data = PackedVector3Array(-1, -1, -2, 1, -1, 2, 1, -1, -2, -1, -1, -2, -1, -1, 2, 1, -1, 2, 1, -1, -2, 1, 1, 2, 1, 1, -2, 1, -1, -2, 1, -1, 2, 1, 1, 2, 1, 1, -2, -1, 1, 2, -1, 1, -2, 1, 1, -2, 1, 1, 2, -1, 1, 2, 1, -1, 2, -1, 1, 2, 1, 1, 2, 1, -1, 2, -1, -1, 2, -1, 1, 2, -1, -1, -2, 1, 1, -2, -1, 1, -2, -1, -1, -2, 1, -1, -2, 1, 1, -2, -1, -1, 2, -1, 1, -2, -1, 1, 2, -1, -1, 2, -1, -1, -2, -1, 1, -2)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_p6c67"]
+resource_name = "Material"
+cull_mode = 2
+albedo_texture = ExtResource("14_6dshe")
+metallic = 0.645669
+texture_filter = 2
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_5xk32"]
+resource_name = "Material.001"
+cull_mode = 2
+albedo_texture = ExtResource("15_pm7o6")
+metallic = 0.582677
+texture_filter = 2
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_nnrtd"]
+_surfaces = [{
+"aabb": AABB(-1, -1, -2, 2.00001, 2.00001, 4),
+"format": 34896613377,
+"index_count": 24,
+"index_data": PackedByteArray("BQADAAEABQAHAAMAAQACAAAAAQADAAIAAAAGAAQAAAACAAYABwAEAAYABwAFAAQA"),
+"name": "Material",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 8,
+"vertex_data": PackedByteArray("/v/+/wAAAAD+/wAAAAAAAP7//v///wAA/v8AAP//AAAAAP7/AAAAAAAAAAAAAAAAAAD+////AAAAAAAA//8AAA==")
+}, {
+"aabb": AABB(-1, -1, -2, 2.00001, 2.00001, 4),
+"format": 34896613377,
+"index_count": 12,
+"index_data": PackedByteArray("AwAGAAIAAwAHAAYABQAAAAQABQABAAAA"),
+"name": "Material.001",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 8,
+"vertex_data": PackedByteArray("/v/+/wAAAAD+/wAAAAAAAP7//v///wAA/v8AAP//AAAAAP7/AAAAAAAAAAAAAAAAAAD+////AAAAAAAA//8AAA==")
+}]
+blend_shape_mode = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_vve5t"]
+resource_name = "Blendermodels_Cube"
+_surfaces = [{
+"aabb": AABB(-1, -1, -2, 2.00001, 2.00001, 4),
+"attribute_data": PackedByteArray("+v/X8v///3/6//Z////9/wGA1/L/f/9/AYD2f/9//f/6//Z//3//f/r/1/L/f///AYD2f/j//38BgNfy/v///w=="),
+"format": 34896613399,
+"index_count": 24,
+"index_data": PackedByteArray("CgAGAAIACgAOAAYAAwAFAAEAAwAHAAUAAAAMAAgAAAAEAAwADwAJAA0ADwALAAkA"),
+"material": SubResource("StandardMaterial3D_p6c67"),
+"name": "Material",
+"primitive": 3,
+"uv_scale": Vector4(2.00001, 2, 0, 0),
+"vertex_count": 16,
+"vertex_data": PackedByteArray("/v/+/wAAVNX+//7/AAD/v/7/AAAAAFTV/v8AAAAA/7/+//7///9U1f7//v////+//v8AAP//VNX+/wAA////vwAA/v8AAFTVAAD+/wAA/78AAAAAAABU1QAAAAAAAP+/AAD+////VNUAAP7/////vwAAAAD//1TVAAAAAP///79U1aoq/38AAFRVVFX/fwAAVNWqKv9/AABUVVRV/38AAFTVqir/f///VFVUVf9///9U1aoq/3///1RVVFX/f///")
+}, {
+"aabb": AABB(-1, -1, -2, 2.00001, 2.00001, 4),
+"attribute_data": PackedByteArray("AAAAAAAA/////wAA////////AAD/////AAAAAAAA//8="),
+"format": 34896613399,
+"index_count": 12,
+"index_data": PackedByteArray("AwAGAAIAAwAHAAYABQAAAAQABQABAAAA"),
+"material": SubResource("StandardMaterial3D_5xk32"),
+"name": "Material.001",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 8,
+"vertex_data": PackedByteArray("/v/+/wAA///+/wAAAAD///7//v///wCA/v8AAP//AIAAAP7/AAD//wAAAAAAAP//AAD+////AIAAAAAA//8AgP9/////f////3////9/////f////3////9/////f///")
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_nnrtd")
+
+[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_ar6jj"]
+data = PackedVector3Array(-1, -1, -2, 1, -1, 2, 1, -1, -2, -1, -1, -2, -1, -1, 2, 1, -1, 2, 1, -1, -2, 1, 1, 2, 1, 1, -2, 1, -1, -2, 1, -1, 2, 1, 1, 2, 1, 1, -2, -1, 1, 2, -1, 1, -2, 1, 1, -2, 1, 1, 2, -1, 1, 2, -1, -1, 2, -1, 1, -2, -1, 1, 2, -1, -1, 2, -1, -1, -2, -1, 1, -2, 1, -1, 2, -1, 1, 2, 1, 1, 2, 1, -1, 2, -1, -1, 2, -1, 1, 2, -1, -1, -2, 1, 1, -2, -1, 1, -2, -1, -1, -2, 1, -1, -2, 1, 1, -2)
+
+[sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_l813r"]
+panorama = ExtResource("17_3ny2b")
+energy_multiplier = 0.1
+
+[sub_resource type="Sky" id="Sky_dym12"]
+sky_material = SubResource("PanoramaSkyMaterial_l813r")
+
+[sub_resource type="Environment" id="Environment_n8gtr"]
+background_mode = 2
+sky = SubResource("Sky_dym12")
+
+[sub_resource type="BoxMesh" id="BoxMesh_nkdt6"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_6a00m"]
+render_priority = 0
+shader = ExtResource("20_pl2e4")
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_hbot5"]
+
+[node name="World" type="Node3D"]
+script = ExtResource("1_1eeey")
+
+[node name="Blendermodels" parent="." instance=ExtResource("8_8ol8k")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -34.733, 1.2372, -4.88865)
+
+[node name="ContainerRed " parent="Blendermodels" index="0"]
+transform = Transform3D(1.40882, 0, 0, 0, 1.40882, 0, 0, 0, 1.40882, -22.5971, 0.176112, 0.150939)
+
+[node name="ContainerBlack " parent="Blendermodels" index="1"]
+transform = Transform3D(1.40882, 0, 0, 0, 1.40882, 0, 0, 0, 1.40882, -27.1892, 0.176112, 0.150939)
+
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="Blendermodels/ContainerBlack /StaticBody3D" index="1"]
+shape = SubResource("ConcavePolygonShape3D_7nkx2")
+
+[node name="ContainerOrange " parent="Blendermodels" index="2"]
+transform = Transform3D(1.40882, 0, 0, 0, 1.40882, 0, 0, 0, 1.40882, -17.7657, 0.176112, 0.150939)
+
+[node name="ContainerBlue " parent="Blendermodels" index="3"]
+transform = Transform3D(1.40882, 0, 0, 0, 1.40882, 0, 0, 0, 1.40882, -12.777, 0.176112, 0.150939)
+
+[node name="WoodBoxSmallOrange " parent="Blendermodels" index="4"]
+transform = Transform3D(0.65, 0, 0, 0, 0.65, 0, 0, 0, 0.65, -33.2001, -0.64212, 0.611698)
+
+[node name="StaticBody3D" parent="Blendermodels/WoodBoxSmallOrange " index="0"]
+transform = Transform3D(0.65, 0, 0, 0, 0.65, 0, 0, 0, 0.65, 0, 0, 0)
+
+[node name="CollisionShape3D" parent="Blendermodels/WoodBoxSmallOrange /StaticBody3D" index="0"]
+transform = Transform3D(0.65, 0, 0, 0, 0.65, 0, 0, 0, 0.65, 0, 0, 0)
+
+[node name="WoodBoxLongOrange " parent="Blendermodels" index="5"]
+transform = Transform3D(0.65, 0, 0, 0, 0.65, 0, 0, 0, 0.65, -33.2001, -0.64212, 2.66682)
+
+[node name="StaticBody3D" parent="Blendermodels/WoodBoxLongOrange " index="0"]
+transform = Transform3D(0.65, 0, 0, 0, 0.65, 0, 0, 0, 0.65, 0, 0, 0)
+
+[node name="CollisionShape3D" parent="Blendermodels/WoodBoxLongOrange /StaticBody3D" index="0"]
+transform = Transform3D(0.65, 0, 0, 0, 0.65, 0, 0, 0, 0.65, 0, 0, 0)
+
+[node name="WoodBoxSmallPink " parent="Blendermodels" index="6"]
+transform = Transform3D(0.65, 0, 0, 0, 0.65, 0, 0, 0, 0.65, -35.5625, -0.64212, 0.611698)
+
+[node name="StaticBody3D" parent="Blendermodels/WoodBoxSmallPink " index="0"]
+transform = Transform3D(0.65, 0, 0, 0, 0.65, 0, 0, 0, 0.65, 0, 0, 0)
+
+[node name="CollisionShape3D" parent="Blendermodels/WoodBoxSmallPink /StaticBody3D" index="0"]
+transform = Transform3D(0.65, 0, 0, 0, 0.65, 0, 0, 0, 0.65, 0, 0, 0)
+
+[node name="WoodBoxLongPink " parent="Blendermodels" index="7"]
+transform = Transform3D(0.65, 0, 0, 0, 0.65, 0, 0, 0, 0.65, -35.5625, -0.64212, 2.66682)
+
+[node name="StaticBody3D" parent="Blendermodels/WoodBoxLongPink " index="0"]
+transform = Transform3D(0.65, 0, 0, 0, 0.65, 0, 0, 0, 0.65, 0, 0, 0)
+
+[node name="CollisionShape3D" parent="Blendermodels/WoodBoxLongPink /StaticBody3D" index="0"]
+transform = Transform3D(0.65, 0, 0, 0, 0.65, 0, 0, 0, 0.65, 0, 0, 0)
+
+[node name="WoodBoxSmallBrown " parent="Blendermodels" index="8"]
+transform = Transform3D(0.65, 0, 0, 0, 0.65, 0, 0, 0, 0.65, -37.9249, -0.64212, 0.611698)
+
+[node name="StaticBody3D" parent="Blendermodels/WoodBoxSmallBrown " index="0"]
+transform = Transform3D(0.65, 0, 0, 0, 0.65, 0, 0, 0, 0.65, 0, 0, 0)
+
+[node name="CollisionShape3D" parent="Blendermodels/WoodBoxSmallBrown /StaticBody3D" index="0"]
+transform = Transform3D(0.65, 0, 0, 0, 0.65, 0, 0, 0, 0.65, 0, 0, 0)
+
+[node name="WoodBoxLongBrown " parent="Blendermodels" index="9"]
+transform = Transform3D(0.65, 0, 0, 0, 0.65, 0, 0, 0, 0.65, -37.9249, -0.64212, 2.66682)
+
+[node name="StaticBody3D" parent="Blendermodels/WoodBoxLongBrown " index="0"]
+transform = Transform3D(0.65, 0, 0, 0, 0.65, 0, 0, 0, 0.65, 0, 0, 0)
+
+[node name="CollisionShape3D" parent="Blendermodels/WoodBoxLongBrown /StaticBody3D" index="0"]
+transform = Transform3D(0.65, 0, 0, 0, 0.65, 0, 0, 0, 0.65, 0, 0, 0)
+
+[node name="ContainerBlack 7" type="MeshInstance3D" parent="Blendermodels"]
+transform = Transform3D(-0.0159084, 0, -1.40873, 0, 1.40882, 0, 1.40873, 0, -0.0159084, 28.6609, 0.176113, -29.3284)
+mesh = SubResource("ArrayMesh_ej1r7")
+skeleton = NodePath("")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Blendermodels/ContainerBlack 7"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Blendermodels/ContainerBlack 7/StaticBody3D"]
+shape = SubResource("ConcavePolygonShape3D_7nkx2")
+
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="Blendermodels/ContainerBlack 7/StaticBody3D"]
+shape = SubResource("ConcavePolygonShape3D_7nkx2")
+
+[node name="ContainerBlack 13" type="MeshInstance3D" parent="Blendermodels"]
+transform = Transform3D(-0.0202356, 0, -1.40867, 0, 1.40882, 0, 1.40867, 0, -0.0202356, 35.6116, 0.176113, -25.5196)
+mesh = SubResource("ArrayMesh_ej1r7")
+skeleton = NodePath("")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Blendermodels/ContainerBlack 13"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Blendermodels/ContainerBlack 13/StaticBody3D"]
+shape = SubResource("ConcavePolygonShape3D_7nkx2")
+
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="Blendermodels/ContainerBlack 13/StaticBody3D"]
+shape = SubResource("ConcavePolygonShape3D_7nkx2")
+
+[node name="ContainerBlack 8" type="MeshInstance3D" parent="Blendermodels"]
+transform = Transform3D(-0.129546, 0, -1.40285, 0, 1.40882, 0, 1.40285, 0, -0.129546, 34.3971, 2.95344, -28.9855)
+mesh = SubResource("ArrayMesh_ej1r7")
+skeleton = NodePath("")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Blendermodels/ContainerBlack 8"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Blendermodels/ContainerBlack 8/StaticBody3D"]
+shape = SubResource("ConcavePolygonShape3D_7nkx2")
+
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="Blendermodels/ContainerBlack 8/StaticBody3D"]
+shape = SubResource("ConcavePolygonShape3D_7nkx2")
+
+[node name="ContainerBlack 17" type="MeshInstance3D" parent="Blendermodels"]
+transform = Transform3D(-0.195047, 0, -1.39525, 0, 1.40882, 0, 1.39525, 0, -0.195047, 34.2944, 2.95344, -20.2459)
+mesh = SubResource("ArrayMesh_ej1r7")
+skeleton = NodePath("")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Blendermodels/ContainerBlack 17"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Blendermodels/ContainerBlack 17/StaticBody3D"]
+shape = SubResource("ConcavePolygonShape3D_7nkx2")
+
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="Blendermodels/ContainerBlack 17/StaticBody3D"]
+shape = SubResource("ConcavePolygonShape3D_7nkx2")
+
+[node name="WoodBoxLongOrange 4" type="MeshInstance3D" parent="Blendermodels"]
+transform = Transform3D(0.109675, 0, 0.64068, 0, 0.65, 0, -0.64068, 0, 0.109675, 1.9231, 7.86821, -16.9338)
+mesh = SubResource("ArrayMesh_q8652")
+skeleton = NodePath("")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Blendermodels/WoodBoxLongOrange 4"]
+transform = Transform3D(0.65, 0, 0, 0, 0.65, 0, 0, 0, 0.65, 0, 0, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Blendermodels/WoodBoxLongOrange 4/StaticBody3D"]
+transform = Transform3D(1.54, 0, 0, 0, 1.54, 0, 0, 0, 1.54, 0, 0, 0)
+shape = SubResource("ConcavePolygonShape3D_jdaa4")
+
+[node name="WoodBoxSmallPink 2" type="MeshInstance3D" parent="Blendermodels"]
+transform = Transform3D(0.65, 0, 0, 0, 0.65, 0, 0, 0, 0.65, 21.7037, -0.64212, 1.53128)
+mesh = SubResource("ArrayMesh_h85p6")
+skeleton = NodePath("")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Blendermodels/WoodBoxSmallPink 2"]
+transform = Transform3D(0.65, 0, 0, 0, 0.65, 0, 0, 0, 0.65, 0, 0, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Blendermodels/WoodBoxSmallPink 2/StaticBody3D"]
+transform = Transform3D(0.65, 0, 0, 0, 0.65, 0, 0, 0, 0.65, 0, 0, 0)
+shape = SubResource("ConcavePolygonShape3D_ivtop")
+
+[node name="WoodBoxLongPink 2" type="MeshInstance3D" parent="Blendermodels"]
+transform = Transform3D(0.640569, 0, -0.110323, 0, 0.65, 0, 0.110323, 0, 0.640569, 38.3538, -0.574975, -18.5662)
+mesh = SubResource("ArrayMesh_tua04")
+skeleton = NodePath("")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Blendermodels/WoodBoxLongPink 2"]
+transform = Transform3D(0.65, 0, 0, 0, 0.65, 0, 0, 0, 0.65, 0, 0, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Blendermodels/WoodBoxLongPink 2/StaticBody3D"]
+transform = Transform3D(1.54, 0, 0, 0, 1.54, 0, 0, 0, 1.54, 0, 0, 0)
+shape = SubResource("ConcavePolygonShape3D_lhhk6")
+
+[node name="WoodBoxLongPink 3" type="MeshInstance3D" parent="Blendermodels"]
+transform = Transform3D(0.646758, 0, 0.06484, 0, 0.65, 0, -0.06484, 0, 0.646758, 28.1771, 13.4726, -29.9542)
+mesh = SubResource("ArrayMesh_tua04")
+skeleton = NodePath("")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Blendermodels/WoodBoxLongPink 3"]
+transform = Transform3D(0.65, 0, 0, 0, 0.65, 0, 0, 0, 0.65, 0, 0, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Blendermodels/WoodBoxLongPink 3/StaticBody3D"]
+transform = Transform3D(1.54, 0, 0, 0, 1.54, 0, 0, 0, 1.54, 0, 0, 0)
+shape = SubResource("ConcavePolygonShape3D_lhhk6")
+
+[node name="WoodBoxSmallBrown 2" type="MeshInstance3D" parent="Blendermodels"]
+transform = Transform3D(0.65, 0, 0, 0, 0.65, 0, 0, 0, 0.65, 35.3534, 5.01751, -21.4241)
+mesh = SubResource("ArrayMesh_jrkbm")
+skeleton = NodePath("")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Blendermodels/WoodBoxSmallBrown 2"]
+transform = Transform3D(0.65, 0, 0, 0, 0.65, 0, 0, 0, 0.65, 0, 0, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Blendermodels/WoodBoxSmallBrown 2/StaticBody3D"]
+transform = Transform3D(1.54, 0, 0, 0, 1.54, 0, 0, 0, 1.54, 0, 0, 0)
+shape = SubResource("ConcavePolygonShape3D_mwoxv")
+
+[node name="WoodBoxSmallBrown 4" type="MeshInstance3D" parent="Blendermodels"]
+transform = Transform3D(0.65, 0, 0, 0, 0.65, 0, 0, 0, 0.65, 7.6695, 10.621, -29.4248)
+mesh = SubResource("ArrayMesh_jrkbm")
+skeleton = NodePath("")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Blendermodels/WoodBoxSmallBrown 4"]
+transform = Transform3D(0.65, 0, 0, 0, 0.65, 0, 0, 0, 0.65, 0, 0, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Blendermodels/WoodBoxSmallBrown 4/StaticBody3D"]
+transform = Transform3D(1.55, 0, 0, 0, 1.55, 0, 0, 0, 1.55, 0, 0, 0)
+shape = SubResource("ConcavePolygonShape3D_mwoxv")
+
+[node name="WoodBoxSmallBrown 5" type="MeshInstance3D" parent="Blendermodels"]
+transform = Transform3D(0.65, 0, 0, 0, 0.65, 0, 0, 0, 0.65, 3.20739, 16.2382, -28.4556)
+mesh = SubResource("ArrayMesh_jrkbm")
+skeleton = NodePath("")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Blendermodels/WoodBoxSmallBrown 5"]
+transform = Transform3D(0.65, 0, 0, 0, 0.65, 0, 0, 0, 0.65, 0, 0, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Blendermodels/WoodBoxSmallBrown 5/StaticBody3D"]
+transform = Transform3D(1.54, 0, 0, 0, 1.54, 0, 0, 0, 1.54, 0, 0, 0)
+shape = SubResource("ConcavePolygonShape3D_mwoxv")
+
+[node name="WoodBoxSmallBrown 3" type="MeshInstance3D" parent="Blendermodels"]
+transform = Transform3D(0.647689, 0, -0.0547636, 0, 0.65, 0, 0.0547636, 0, 0.647689, 33.4665, 10.6402, -31.3906)
+mesh = SubResource("ArrayMesh_jrkbm")
+skeleton = NodePath("")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Blendermodels/WoodBoxSmallBrown 3"]
+transform = Transform3D(0.65, 0, 0, 0, 0.65, 0, 0, 0, 0.65, 0, 0, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Blendermodels/WoodBoxSmallBrown 3/StaticBody3D"]
+transform = Transform3D(1.54, 0, 0, 0, 1.54, 0, 0, 0, 1.54, 0, 0, 0)
+shape = SubResource("ConcavePolygonShape3D_mwoxv")
+
+[node name="WoodBoxLongBrown 2" type="MeshInstance3D" parent="Blendermodels"]
+transform = Transform3D(0.114446, 0, 0.639845, 0, 0.65, 0, -0.639845, 0, 0.114446, 34.7937, 2.24591, -18.0853)
+mesh = SubResource("ArrayMesh_2h06f")
+skeleton = NodePath("")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Blendermodels/WoodBoxLongBrown 2"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Blendermodels/WoodBoxLongBrown 2/StaticBody3D"]
+shape = SubResource("ConcavePolygonShape3D_spla0")
+
+[node name="WoodBoxLongBrown 3" type="MeshInstance3D" parent="Blendermodels"]
+transform = Transform3D(0.152622, 0, 0.88456, 0, 0.055, 0, -0.631828, 0, 0.213671, 3.09572, 12.7717, -26.7245)
+mesh = SubResource("ArrayMesh_2h06f")
+skeleton = NodePath("")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Blendermodels/WoodBoxLongBrown 3"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Blendermodels/WoodBoxLongBrown 3/StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, -1.11759e-08, 0, 1, 0, 0, 0)
+shape = SubResource("ConcavePolygonShape3D_spla0")
+
+[node name="ContainerRed 4" type="MeshInstance3D" parent="Blendermodels"]
+transform = Transform3D(1.40882, 0, 0, 0, 1.40882, 0, 0, 0, 1.40882, 5.2998, 5.73787, -26.0338)
+mesh = SubResource("ArrayMesh_7wuh1")
+skeleton = NodePath("")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Blendermodels/ContainerRed 4"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Blendermodels/ContainerRed 4/StaticBody3D"]
+shape = SubResource("ConcavePolygonShape3D_g7vyb")
+
+[node name="ContainerRed 25" type="MeshInstance3D" parent="Blendermodels"]
+transform = Transform3D(0.0899574, 0, 1.40594, 0, 1.40882, 0, -1.40594, 0, 0.0899574, 4.28736, 0.320461, -30.7355)
+mesh = SubResource("ArrayMesh_7wuh1")
+skeleton = NodePath("")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Blendermodels/ContainerRed 25"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Blendermodels/ContainerRed 25/StaticBody3D"]
+shape = SubResource("ConcavePolygonShape3D_g7vyb")
+
+[node name="ContainerRed 15" type="MeshInstance3D" parent="Blendermodels"]
+transform = Transform3D(-0.189225, 0, -1.39605, 0, 1.40882, 0, 1.39605, 0, -0.189225, 34.69, 5.73787, -32.0389)
+mesh = SubResource("ArrayMesh_7wuh1")
+skeleton = NodePath("")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Blendermodels/ContainerRed 15"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Blendermodels/ContainerRed 15/StaticBody3D"]
+shape = SubResource("ConcavePolygonShape3D_g7vyb")
+
+[node name="ContainerOrange 3" type="MeshInstance3D" parent="Blendermodels"]
+transform = Transform3D(-6.15815e-08, 0, 1.40882, 0, 1.40882, 0, -1.40882, 0, -6.15815e-08, 3.84095, 2.94371, -27.5812)
+mesh = SubResource("ArrayMesh_x5656")
+skeleton = NodePath("")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Blendermodels/ContainerOrange 3"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Blendermodels/ContainerOrange 3/StaticBody3D"]
+shape = SubResource("ConcavePolygonShape3D_hgr8n")
+
+[node name="ContainerOrange 5" type="MeshInstance3D" parent="Blendermodels"]
+transform = Transform3D(1.40882, 0, 0, 0, 1.40882, 0, 0, 0, 1.40882, 5.2597, 0.169408, -26.2585)
+mesh = SubResource("ArrayMesh_x5656")
+skeleton = NodePath("")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Blendermodels/ContainerOrange 5"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Blendermodels/ContainerOrange 5/StaticBody3D"]
+shape = SubResource("ConcavePolygonShape3D_hgr8n")
+
+[node name="ContainerOrange 6" type="MeshInstance3D" parent="Blendermodels"]
+transform = Transform3D(1.40334, 0, -0.124134, 0, 1.40882, 0, 0.124134, 0, 1.40334, 0.96138, 11.3912, -26.2585)
+mesh = SubResource("ArrayMesh_x5656")
+skeleton = NodePath("")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Blendermodels/ContainerOrange 6"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Blendermodels/ContainerOrange 6/StaticBody3D"]
+shape = SubResource("ConcavePolygonShape3D_hgr8n")
+
+[node name="ContainerBlue 4" type="MeshInstance3D" parent="Blendermodels"]
+transform = Transform3D(-0.106955, 0, -1.40475, 0, 1.40882, 0, 1.40475, 0, -0.106955, 3.88758, 8.57382, -27.5499)
+mesh = SubResource("ArrayMesh_0cgko")
+skeleton = NodePath("")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Blendermodels/ContainerBlue 4"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Blendermodels/ContainerBlue 4/StaticBody3D"]
+shape = SubResource("ConcavePolygonShape3D_w876a")
+
+[node name="ContainerBlue 25" type="MeshInstance3D" parent="Blendermodels"]
+transform = Transform3D(-1.39012, 0, 0.228762, 0, 1.40882, 0, -0.228762, 0, -1.39012, -4.92724, 8.57382, -30.5523)
+mesh = SubResource("ArrayMesh_0cgko")
+skeleton = NodePath("")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Blendermodels/ContainerBlue 25"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Blendermodels/ContainerBlue 25/StaticBody3D"]
+shape = SubResource("ConcavePolygonShape3D_w876a")
+
+[node name="ContainerBlue 6" type="MeshInstance3D" parent="Blendermodels"]
+transform = Transform3D(-0.00169643, 0, -1.40882, 0, 1.40882, 0, 1.40882, 0, -0.00169643, 3.56966, 14.1746, -28.7137)
+mesh = SubResource("ArrayMesh_0cgko")
+skeleton = NodePath("")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Blendermodels/ContainerBlue 6"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Blendermodels/ContainerBlue 6/StaticBody3D"]
+shape = SubResource("ConcavePolygonShape3D_w876a")
+
+[node name="ContainerBlack 2" type="MeshInstance3D" parent="Blendermodels"]
+transform = Transform3D(1.40882, 0, 0, 0, 1.40882, 0, 0, 0, 1.40882, 2.48188, 0.176112, -26.24)
+mesh = SubResource("ArrayMesh_hr24s")
+skeleton = NodePath("")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Blendermodels/ContainerBlack 2"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Blendermodels/ContainerBlack 2/StaticBody3D"]
+shape = SubResource("ConcavePolygonShape3D_h358m")
+
+[node name="ContainerRed 5" type="MeshInstance3D" parent="Blendermodels"]
+transform = Transform3D(-6.15815e-08, 0, 1.40882, 0, 1.40882, 0, -1.40882, 0, -6.15815e-08, 3.87174, 14.2345, -24.5752)
+mesh = SubResource("ArrayMesh_7wuh1")
+skeleton = NodePath("")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Blendermodels/ContainerRed 5"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Blendermodels/ContainerRed 5/StaticBody3D"]
+shape = SubResource("ConcavePolygonShape3D_g7vyb")
+
+[node name="ContainerRed 6" type="MeshInstance3D" parent="Blendermodels"]
+transform = Transform3D(-6.15815e-08, 0, 1.40882, 0, 1.40882, 0, -1.40882, 0, -6.15815e-08, 3.87174, 8.5728, -24.4977)
+mesh = SubResource("ArrayMesh_7wuh1")
+skeleton = NodePath("")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Blendermodels/ContainerRed 6"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Blendermodels/ContainerRed 6/StaticBody3D"]
+shape = SubResource("ConcavePolygonShape3D_g7vyb")
+
+[node name="ContainerOrange 4" type="MeshInstance3D" parent="Blendermodels"]
+transform = Transform3D(1.40882, 0, 0, 0, 1.40882, 0, 0, 0, 1.40882, 5.2597, 17.0017, -26.2585)
+mesh = SubResource("ArrayMesh_x5656")
+skeleton = NodePath("")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Blendermodels/ContainerOrange 4"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Blendermodels/ContainerOrange 4/StaticBody3D"]
+shape = SubResource("ConcavePolygonShape3D_hgr8n")
+
+[node name="ContainerBlue 5" type="MeshInstance3D" parent="Blendermodels"]
+transform = Transform3D(-1.40238, 0, -0.134589, 0, 1.40882, 0, 0.134589, 0, -1.40238, 2.30869, 17.064, -24.879)
+mesh = SubResource("ArrayMesh_0cgko")
+skeleton = NodePath("")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Blendermodels/ContainerBlue 5"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Blendermodels/ContainerBlue 5/StaticBody3D"]
+shape = SubResource("ConcavePolygonShape3D_w876a")
+
+[node name="ContainerBlue 7" type="MeshInstance3D" parent="Blendermodels"]
+transform = Transform3D(-6.15816e-08, 0, 1.40882, 0, 1.40882, 0, -1.40882, 0, -6.15816e-08, 3.88758, 2.83338, -24.7117)
+mesh = SubResource("ArrayMesh_0cgko")
+skeleton = NodePath("")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Blendermodels/ContainerBlue 7"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Blendermodels/ContainerBlue 7/StaticBody3D"]
+shape = SubResource("ConcavePolygonShape3D_w876a")
+
+[node name="ContainerBlue 9" type="MeshInstance3D" parent="Blendermodels"]
+transform = Transform3D(-0.149511, 0, 1.40086, 0, 1.40882, 0, -1.40086, 0, -0.149511, 22.7509, 3.01527, -29.1833)
+mesh = SubResource("ArrayMesh_0cgko")
+skeleton = NodePath("")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Blendermodels/ContainerBlue 9"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Blendermodels/ContainerBlue 9/StaticBody3D"]
+shape = SubResource("ConcavePolygonShape3D_w876a")
+
+[node name="ContainerBlue 13" type="MeshInstance3D" parent="Blendermodels"]
+transform = Transform3D(0.154303, 0, 1.40034, 0, 1.40882, 0, -1.40034, 0, 0.154303, 34.1983, 3.01527, -32.1627)
+mesh = SubResource("ArrayMesh_0cgko")
+skeleton = NodePath("")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Blendermodels/ContainerBlue 13"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Blendermodels/ContainerBlue 13/StaticBody3D"]
+shape = SubResource("ConcavePolygonShape3D_w876a")
+
+[node name="ContainerBlue 12" type="MeshInstance3D" parent="Blendermodels"]
+transform = Transform3D(-0.149511, 0, 1.40086, 0, 1.40882, 0, -1.40086, 0, -0.149511, 24.7738, 14.2173, -29.076)
+mesh = SubResource("ArrayMesh_0cgko")
+skeleton = NodePath("")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Blendermodels/ContainerBlue 12"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Blendermodels/ContainerBlue 12/StaticBody3D"]
+shape = SubResource("ConcavePolygonShape3D_w876a")
+
+[node name="ContainerBlue 10" type="MeshInstance3D" parent="Blendermodels"]
+transform = Transform3D(0.190468, 0, 1.39589, 0, 1.40882, 0, -1.39589, 0, 0.190468, 34.4757, 5.74581, -29.167)
+mesh = SubResource("ArrayMesh_0cgko")
+skeleton = NodePath("")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Blendermodels/ContainerBlue 10"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Blendermodels/ContainerBlue 10/StaticBody3D"]
+shape = SubResource("ConcavePolygonShape3D_w876a")
+
+[node name="ContainerBlue 11" type="MeshInstance3D" parent="Blendermodels"]
+transform = Transform3D(0.148387, 0, 1.40098, 0, 1.40882, 0, -1.40098, 0, 0.148387, 34.441, 8.55493, -29.1809)
+mesh = SubResource("ArrayMesh_0cgko")
+skeleton = NodePath("")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Blendermodels/ContainerBlue 11"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Blendermodels/ContainerBlue 11/StaticBody3D"]
+shape = SubResource("ConcavePolygonShape3D_w876a")
+
+[node name="ContainerBlack 28" type="MeshInstance3D" parent="Blendermodels"]
+transform = Transform3D(-0.129742, 0, -1.40283, 0, 1.40882, 0, 1.40283, 0, -0.129742, 4.17055, 2.95344, -30.862)
+mesh = SubResource("ArrayMesh_ej1r7")
+skeleton = NodePath("")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Blendermodels/ContainerBlack 28"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Blendermodels/ContainerBlack 28/StaticBody3D"]
+shape = SubResource("ConcavePolygonShape3D_7nkx2")
+
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="Blendermodels/ContainerBlack 28/StaticBody3D"]
+shape = SubResource("ConcavePolygonShape3D_7nkx2")
+
+[node name="ContainerBlue 23" type="MeshInstance3D" parent="Blendermodels"]
+transform = Transform3D(0.190468, 0, 1.39589, 0, 1.40882, 0, -1.39589, 0, 0.190468, 4.25925, 5.7458, -30.8314)
+mesh = SubResource("ArrayMesh_0cgko")
+skeleton = NodePath("")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Blendermodels/ContainerBlue 23"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Blendermodels/ContainerBlue 23/StaticBody3D"]
+shape = SubResource("ConcavePolygonShape3D_w876a")
+
+[node name="ContainerBlue 24" type="MeshInstance3D" parent="Blendermodels"]
+transform = Transform3D(0.148387, 0, 1.40098, 0, 1.40882, 0, -1.40098, 0, 0.148387, 5.13648, 8.55493, -30.3924)
+mesh = SubResource("ArrayMesh_0cgko")
+skeleton = NodePath("")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Blendermodels/ContainerBlue 24"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Blendermodels/ContainerBlue 24/StaticBody3D"]
+shape = SubResource("ConcavePolygonShape3D_w876a")
+
+[node name="ContainerBlack 3" type="MeshInstance3D" parent="Blendermodels"]
+transform = Transform3D(1.39919, 0, -0.164417, 0, 1.40882, 0, 0.164417, 0, 1.39919, 6.23892, 11.3695, -26.0311)
+mesh = SubResource("ArrayMesh_hr24s")
+skeleton = NodePath("")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Blendermodels/ContainerBlack 3"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Blendermodels/ContainerBlack 3/StaticBody3D"]
+shape = SubResource("ConcavePolygonShape3D_h358m")
+
+[node name="ContainerBlack 4" type="MeshInstance3D" parent="Blendermodels"]
+transform = Transform3D(1.40882, 0, 0, 0, 1.40882, 0, 0, 0, 1.40882, 2.48188, 5.75158, -26.24)
+mesh = SubResource("ArrayMesh_hr24s")
+skeleton = NodePath("")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Blendermodels/ContainerBlack 4"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Blendermodels/ContainerBlack 4/StaticBody3D"]
+shape = SubResource("ConcavePolygonShape3D_h358m")
+
+[node name="ContainerRed 22" type="MeshInstance3D" parent="Blendermodels"]
+transform = Transform3D(1.40882, 0, 0, 0, 1.40882, 0, 0, 0, 1.40882, 69.3509, 5.73787, -31.0185)
+mesh = SubResource("ArrayMesh_7wuh1")
+skeleton = NodePath("")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Blendermodels/ContainerRed 22"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Blendermodels/ContainerRed 22/StaticBody3D"]
+shape = SubResource("ConcavePolygonShape3D_g7vyb")
+
+[node name="ContainerOrange 21" type="MeshInstance3D" parent="Blendermodels"]
+transform = Transform3D(-6.15815e-08, 0, 1.40882, 0, 1.40882, 0, -1.40882, 0, -6.15815e-08, 67.892, 2.94371, -32.5658)
+mesh = SubResource("ArrayMesh_x5656")
+skeleton = NodePath("")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Blendermodels/ContainerOrange 21"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Blendermodels/ContainerOrange 21/StaticBody3D"]
+shape = SubResource("ConcavePolygonShape3D_hgr8n")
+
+[node name="ContainerBlue 21" type="MeshInstance3D" parent="Blendermodels"]
+transform = Transform3D(-0.106955, 0, -1.40475, 0, 1.40882, 0, 1.40475, 0, -0.106955, 67.9386, 8.57382, -32.8726)
+mesh = SubResource("ArrayMesh_0cgko")
+skeleton = NodePath("")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Blendermodels/ContainerBlue 21"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Blendermodels/ContainerBlue 21/StaticBody3D"]
+shape = SubResource("ConcavePolygonShape3D_w876a")
+
+[node name="ContainerBlack 24" type="MeshInstance3D" parent="Blendermodels"]
+transform = Transform3D(1.40882, 0, 0, 0, 1.40882, 0, 0, 0, 1.40882, 66.5329, 0.176112, -31.2246)
+mesh = SubResource("ArrayMesh_hr24s")
+skeleton = NodePath("")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Blendermodels/ContainerBlack 24"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Blendermodels/ContainerBlack 24/StaticBody3D"]
+shape = SubResource("ConcavePolygonShape3D_h358m")
+
+[node name="ContainerBlack 36" type="MeshInstance3D" parent="Blendermodels"]
+transform = Transform3D(1.40882, 0, 0, 0, 1.40882, 0, 0, 0, 1.40882, 71.0091, 0.176112, 5.03831)
+mesh = SubResource("ArrayMesh_hr24s")
+skeleton = NodePath("")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Blendermodels/ContainerBlack 36"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Blendermodels/ContainerBlack 36/StaticBody3D"]
+shape = SubResource("ConcavePolygonShape3D_h358m")
+
+[node name="ContainerBlack 26" type="MeshInstance3D" parent="Blendermodels"]
+transform = Transform3D(1.40882, 0, 0, 0, 1.40882, 0, 0, 0, 1.40882, 69.3913, 0.176112, -31.2246)
+mesh = SubResource("ArrayMesh_hr24s")
+skeleton = NodePath("")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Blendermodels/ContainerBlack 26"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Blendermodels/ContainerBlack 26/StaticBody3D"]
+shape = SubResource("ConcavePolygonShape3D_h358m")
+
+[node name="ContainerRed 23" type="MeshInstance3D" parent="Blendermodels"]
+transform = Transform3D(-6.15815e-08, 0, 1.40882, 0, 1.40882, 0, -1.40882, 0, -6.15815e-08, 67.9228, 8.5728, -29.8204)
+mesh = SubResource("ArrayMesh_7wuh1")
+skeleton = NodePath("")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Blendermodels/ContainerRed 23"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Blendermodels/ContainerRed 23/StaticBody3D"]
+shape = SubResource("ConcavePolygonShape3D_g7vyb")
+
+[node name="ContainerBlue 22" type="MeshInstance3D" parent="Blendermodels"]
+transform = Transform3D(-6.15816e-08, 0, 1.40882, 0, 1.40882, 0, -1.40882, 0, -6.15816e-08, 67.9386, 2.83338, -29.6964)
+mesh = SubResource("ArrayMesh_0cgko")
+skeleton = NodePath("")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Blendermodels/ContainerBlue 22"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Blendermodels/ContainerBlue 22/StaticBody3D"]
+shape = SubResource("ConcavePolygonShape3D_w876a")
+
+[node name="ContainerBlack 25" type="MeshInstance3D" parent="Blendermodels"]
+transform = Transform3D(1.40882, 0, 0, 0, 1.40882, 0, 0, 0, 1.40882, 66.5329, 5.75158, -31.2246)
+mesh = SubResource("ArrayMesh_hr24s")
+skeleton = NodePath("")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Blendermodels/ContainerBlack 25"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Blendermodels/ContainerBlack 25/StaticBody3D"]
+shape = SubResource("ConcavePolygonShape3D_h358m")
+
+[node name="ContainerRed 16" type="MeshInstance3D" parent="Blendermodels"]
+transform = Transform3D(0.430857, 0, -1.34132, 0, 1.40882, 0, 1.34132, 0, 0.430857, -0.982361, 5.73787, 4.43864)
+mesh = SubResource("ArrayMesh_7wuh1")
+skeleton = NodePath("")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Blendermodels/ContainerRed 16"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Blendermodels/ContainerRed 16/StaticBody3D"]
+shape = SubResource("ConcavePolygonShape3D_g7vyb")
+
+[node name="ContainerOrange 15" type="MeshInstance3D" parent="Blendermodels"]
+transform = Transform3D(1.34132, 0, 0.430857, 0, 1.40882, 0, -0.430857, 0, 1.34132, 0.0447388, 2.94371, 2.57646)
+mesh = SubResource("ArrayMesh_x5656")
+skeleton = NodePath("")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Blendermodels/ContainerOrange 15"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Blendermodels/ContainerOrange 15/StaticBody3D"]
+shape = SubResource("ConcavePolygonShape3D_hgr8n")
+
+[node name="ContainerOrange 16" type="MeshInstance3D" parent="Blendermodels"]
+transform = Transform3D(0.430857, 0, -1.34132, 0, 1.40882, 0, 1.34132, 0, 0.430857, -0.780704, 0.169408, 4.33175)
+mesh = SubResource("ArrayMesh_x5656")
+skeleton = NodePath("")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Blendermodels/ContainerOrange 16"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Blendermodels/ContainerOrange 16/StaticBody3D"]
+shape = SubResource("ConcavePolygonShape3D_hgr8n")
+
+[node name="ContainerOrange 17" type="MeshInstance3D" parent="Blendermodels"]
+transform = Transform3D(0.430857, 0, -1.34132, 0, 1.40882, 0, 1.34132, 0, 0.430857, -1.64941, 11.3912, 1.62733)
+mesh = SubResource("ArrayMesh_x5656")
+skeleton = NodePath("")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Blendermodels/ContainerOrange 17"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Blendermodels/ContainerOrange 17/StaticBody3D"]
+shape = SubResource("ConcavePolygonShape3D_hgr8n")
+
+[node name="ContainerBlue 15" type="MeshInstance3D" parent="Blendermodels"]
+transform = Transform3D(-1.37016, 0, -0.327783, 0, 1.40882, 0, 0.327783, 0, -1.37016, 0.351093, 8.57382, 2.52702)
+mesh = SubResource("ArrayMesh_0cgko")
+skeleton = NodePath("")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Blendermodels/ContainerBlue 15"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Blendermodels/ContainerBlue 15/StaticBody3D"]
+shape = SubResource("ConcavePolygonShape3D_w876a")
+
+[node name="ContainerBlue 16" type="MeshInstance3D" parent="Blendermodels"]
+transform = Transform3D(-1.34184, 0, -0.429241, 0, 1.40882, 0, 0.429241, 0, -1.34184, 0.147285, 14.23, 2.50414)
+mesh = SubResource("ArrayMesh_0cgko")
+skeleton = NodePath("")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Blendermodels/ContainerBlue 16"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Blendermodels/ContainerBlue 16/StaticBody3D"]
+shape = SubResource("ConcavePolygonShape3D_w876a")
+
+[node name="ContainerBlack 18" type="MeshInstance3D" parent="Blendermodels"]
+transform = Transform3D(0.430857, 0, -1.34132, 0, 1.40882, 0, 1.34132, 0, 0.430857, -1.64785, 0.176112, 1.69268)
+mesh = SubResource("ArrayMesh_hr24s")
+skeleton = NodePath("")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Blendermodels/ContainerBlack 18"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Blendermodels/ContainerBlack 18/StaticBody3D"]
+shape = SubResource("ConcavePolygonShape3D_h358m")
+
+[node name="ContainerRed 17" type="MeshInstance3D" parent="Blendermodels"]
+transform = Transform3D(1.34132, 0, 0.430857, 0, 1.40882, 0, -0.430857, 0, 1.34132, -2.55972, 14.2271, 3.44539)
+mesh = SubResource("ArrayMesh_7wuh1")
+skeleton = NodePath("")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Blendermodels/ContainerRed 17"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Blendermodels/ContainerRed 17/StaticBody3D"]
+shape = SubResource("ConcavePolygonShape3D_g7vyb")
+
+[node name="ContainerRed 18" type="MeshInstance3D" parent="Blendermodels"]
+transform = Transform3D(1.34132, 0, 0.430857, 0, 1.40882, 0, -0.430857, 0, 1.34132, -2.55972, 8.5728, 3.44539)
+mesh = SubResource("ArrayMesh_7wuh1")
+skeleton = NodePath("")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Blendermodels/ContainerRed 18"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Blendermodels/ContainerRed 18/StaticBody3D"]
+shape = SubResource("ConcavePolygonShape3D_g7vyb")
+
+[node name="ContainerBlue 17" type="MeshInstance3D" parent="Blendermodels"]
+transform = Transform3D(1.34132, 0, 0.430857, 0, 1.40882, 0, -0.430857, 0, 1.34132, -2.67297, 2.83338, 3.49841)
+mesh = SubResource("ArrayMesh_0cgko")
+skeleton = NodePath("")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Blendermodels/ContainerBlue 17"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Blendermodels/ContainerBlue 17/StaticBody3D"]
+shape = SubResource("ConcavePolygonShape3D_w876a")
+
+[node name="ContainerBlack 19" type="MeshInstance3D" parent="Blendermodels"]
+transform = Transform3D(0.430857, 0, -1.34132, 0, 1.40882, 0, 1.34132, 0, 0.430857, -0.779877, 11.4031, 4.39481)
+mesh = SubResource("ArrayMesh_hr24s")
+skeleton = NodePath("")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Blendermodels/ContainerBlack 19"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Blendermodels/ContainerBlack 19/StaticBody3D"]
+shape = SubResource("ConcavePolygonShape3D_h358m")
+
+[node name="ContainerBlack 20" type="MeshInstance3D" parent="Blendermodels"]
+transform = Transform3D(0.430857, 0, -1.34132, 0, 1.40882, 0, 1.34132, 0, 0.430857, -1.64785, 5.75158, 1.69268)
+mesh = SubResource("ArrayMesh_hr24s")
+skeleton = NodePath("")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Blendermodels/ContainerBlack 20"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Blendermodels/ContainerBlack 20/StaticBody3D"]
+shape = SubResource("ConcavePolygonShape3D_h358m")
+
+[node name="ContainerRed 19" type="MeshInstance3D" parent="Blendermodels"]
+transform = Transform3D(-1.40882, 0, -0.00181961, 0, 1.40882, 0, 0.00181961, 0, -1.40882, -3.38448, 5.73787, -3.96605)
+mesh = SubResource("ArrayMesh_7wuh1")
+skeleton = NodePath("")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Blendermodels/ContainerRed 19"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Blendermodels/ContainerRed 19/StaticBody3D"]
+shape = SubResource("ConcavePolygonShape3D_g7vyb")
+
+[node name="ContainerOrange 18" type="MeshInstance3D" parent="Blendermodels"]
+transform = Transform3D(0.00181979, 0, -1.40882, 0, 1.40882, 0, 1.40882, 0, 0.00181979, -1.92363, 2.94371, -2.42054)
+mesh = SubResource("ArrayMesh_x5656")
+skeleton = NodePath("")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Blendermodels/ContainerOrange 18"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Blendermodels/ContainerOrange 18/StaticBody3D"]
+shape = SubResource("ConcavePolygonShape3D_hgr8n")
+
+[node name="ContainerOrange 19" type="MeshInstance3D" parent="Blendermodels"]
+transform = Transform3D(-1.40882, 0, -0.00181961, 0, 1.40882, 0, 0.00181961, 0, -1.40882, -3.34409, 0.169408, -3.74142)
+mesh = SubResource("ArrayMesh_x5656")
+skeleton = NodePath("")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Blendermodels/ContainerOrange 19"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Blendermodels/ContainerOrange 19/StaticBody3D"]
+shape = SubResource("ConcavePolygonShape3D_hgr8n")
+
+[node name="ContainerOrange 20" type="MeshInstance3D" parent="Blendermodels"]
+transform = Transform3D(-1.40882, 0, -0.00181961, 0, 1.40882, 0, 0.00181961, 0, -1.40882, -0.503571, 11.3912, -3.74509)
+mesh = SubResource("ArrayMesh_x5656")
+skeleton = NodePath("")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Blendermodels/ContainerOrange 20"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Blendermodels/ContainerOrange 20/StaticBody3D"]
+shape = SubResource("ConcavePolygonShape3D_hgr8n")
+
+[node name="ContainerBlue 18" type="MeshInstance3D" parent="Blendermodels"]
+transform = Transform3D(0.105141, 0, 1.40489, 0, 1.40882, 0, -1.40489, 0, 0.105141, -1.96987, 8.57382, -2.11369)
+mesh = SubResource("ArrayMesh_0cgko")
+skeleton = NodePath("")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Blendermodels/ContainerBlue 18"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Blendermodels/ContainerBlue 18/StaticBody3D"]
+shape = SubResource("ConcavePolygonShape3D_w876a")
+
+[node name="ContainerBlue 19" type="MeshInstance3D" parent="Blendermodels"]
+transform = Transform3D(-0.000123322, 0, 1.40882, 0, 1.40882, 0, -1.40882, 0, -0.000123322, -1.88599, 14.23, -2.30084)
+mesh = SubResource("ArrayMesh_0cgko")
+skeleton = NodePath("")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Blendermodels/ContainerBlue 19"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Blendermodels/ContainerBlue 19/StaticBody3D"]
+shape = SubResource("ConcavePolygonShape3D_w876a")
+
+[node name="ContainerBlack 21" type="MeshInstance3D" parent="Blendermodels"]
+transform = Transform3D(-1.40882, 0, -0.00181961, 0, 1.40882, 0, 0.00181961, 0, -1.40882, -0.566292, 0.176112, -3.7635)
+mesh = SubResource("ArrayMesh_hr24s")
+skeleton = NodePath("")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Blendermodels/ContainerBlack 21"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Blendermodels/ContainerBlack 21/StaticBody3D"]
+shape = SubResource("ConcavePolygonShape3D_h358m")
+
+[node name="ContainerRed 20" type="MeshInstance3D" parent="Blendermodels"]
+transform = Transform3D(0.00181967, 0, -1.40882, 0, 1.40882, 0, 1.40882, 0, 0.00181967, -1.95797, 14.2271, -5.16591)
+mesh = SubResource("ArrayMesh_7wuh1")
+skeleton = NodePath("")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Blendermodels/ContainerRed 20"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Blendermodels/ContainerRed 20/StaticBody3D"]
+shape = SubResource("ConcavePolygonShape3D_g7vyb")
+
+[node name="ContainerRed 21" type="MeshInstance3D" parent="Blendermodels"]
+transform = Transform3D(0.00181967, 0, -1.40882, 0, 1.40882, 0, 1.40882, 0, 0.00181967, -1.95797, 8.5728, -5.16591)
+mesh = SubResource("ArrayMesh_7wuh1")
+skeleton = NodePath("")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Blendermodels/ContainerRed 21"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Blendermodels/ContainerRed 21/StaticBody3D"]
+shape = SubResource("ConcavePolygonShape3D_g7vyb")
+
+[node name="ContainerBlue 20" type="MeshInstance3D" parent="Blendermodels"]
+transform = Transform3D(0.00181967, 0, -1.40882, 0, 1.40882, 0, 1.40882, 0, 0.00181967, -1.97396, 2.83338, -5.28994)
+mesh = SubResource("ArrayMesh_0cgko")
+skeleton = NodePath("")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Blendermodels/ContainerBlue 20"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Blendermodels/ContainerBlue 20/StaticBody3D"]
+shape = SubResource("ConcavePolygonShape3D_w876a")
+
+[node name="ContainerBlack 22" type="MeshInstance3D" parent="Blendermodels"]
+transform = Transform3D(-1.40882, 0, -0.00181961, 0, 1.40882, 0, 0.00181961, 0, -1.40882, -3.4044, 11.4031, -3.75984)
+mesh = SubResource("ArrayMesh_hr24s")
+skeleton = NodePath("")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Blendermodels/ContainerBlack 22"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Blendermodels/ContainerBlack 22/StaticBody3D"]
+shape = SubResource("ConcavePolygonShape3D_h358m")
+
+[node name="ContainerBlack 23" type="MeshInstance3D" parent="Blendermodels"]
+transform = Transform3D(-1.40882, 0, -0.00181961, 0, 1.40882, 0, 0.00181961, 0, -1.40882, -0.566292, 5.75158, -3.7635)
+mesh = SubResource("ArrayMesh_hr24s")
+skeleton = NodePath("")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Blendermodels/ContainerBlack 23"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Blendermodels/ContainerBlack 23/StaticBody3D"]
+shape = SubResource("ConcavePolygonShape3D_h358m")
+
+[node name="ContainerBlack 30" type="MeshInstance3D" parent="Blendermodels"]
+transform = Transform3D(-0.0255214, 0, -1.40859, 0, 1.40882, 0, 1.40859, 0, -0.0255214, 1.22478, 5.83277, -34.2056)
+mesh = SubResource("ArrayMesh_hr24s")
+skeleton = NodePath("")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Blendermodels/ContainerBlack 30"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Blendermodels/ContainerBlack 30/StaticBody3D"]
+shape = SubResource("ConcavePolygonShape3D_h358m")
+
+[node name="ContainerRed 7" type="MeshInstance3D" parent="Blendermodels"]
+transform = Transform3D(-0.290408, 0, -1.37856, 0, 1.40882, 0, 1.37856, 0, -0.290408, 15.3622, 5.73787, -22.9658)
+mesh = SubResource("ArrayMesh_7wuh1")
+skeleton = NodePath("")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Blendermodels/ContainerRed 7"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Blendermodels/ContainerRed 7/StaticBody3D"]
+shape = SubResource("ConcavePolygonShape3D_g7vyb")
+
+[node name="ContainerRed 28" type="MeshInstance3D" parent="Blendermodels"]
+transform = Transform3D(-1.29548, 0, -0.553637, 0, 1.40882, 0, 0.553637, 0, -1.29548, 9.14834, 5.73787, -31.5778)
+mesh = SubResource("ArrayMesh_7wuh1")
+skeleton = NodePath("")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Blendermodels/ContainerRed 28"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Blendermodels/ContainerRed 28/StaticBody3D"]
+shape = SubResource("ConcavePolygonShape3D_g7vyb")
+
+[node name="ContainerRed 8" type="MeshInstance3D" parent="Blendermodels"]
+transform = Transform3D(-0.069852, 0, -1.40709, 0, 1.40882, 0, 1.40709, 0, -0.069852, 28.6391, 2.99205, -29.2647)
+mesh = SubResource("ArrayMesh_7wuh1")
+skeleton = NodePath("")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Blendermodels/ContainerRed 8"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Blendermodels/ContainerRed 8/StaticBody3D"]
+shape = SubResource("ConcavePolygonShape3D_g7vyb")
+
+[node name="ContainerRed 12" type="MeshInstance3D" parent="Blendermodels"]
+transform = Transform3D(-0.195924, 0, -1.39513, 0, 1.40882, 0, 1.39513, 0, -0.195924, 35.3337, 2.99205, -22.9694)
+mesh = SubResource("ArrayMesh_7wuh1")
+skeleton = NodePath("")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Blendermodels/ContainerRed 12"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Blendermodels/ContainerRed 12/StaticBody3D"]
+shape = SubResource("ConcavePolygonShape3D_g7vyb")
+
+[node name="ContainerBlack 11" type="MeshInstance3D" parent="Blendermodels"]
+transform = Transform3D(0.0639082, 0, -1.40737, 0, 1.40882, 0, 1.40737, 0, 0.0639082, 22.971, 11.437, -29.2341)
+mesh = SubResource("ArrayMesh_ej1r7")
+skeleton = NodePath("")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Blendermodels/ContainerBlack 11"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Blendermodels/ContainerBlack 11/StaticBody3D"]
+shape = SubResource("ConcavePolygonShape3D_7nkx2")
+
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="Blendermodels/ContainerBlack 11/StaticBody3D"]
+shape = SubResource("ConcavePolygonShape3D_7nkx2")
+
+[node name="ContainerRed 10" type="MeshInstance3D" parent="Blendermodels"]
+transform = Transform3D(0.0319624, 0, -1.40846, 0, 1.40882, 0, 1.40846, 0, 0.0319624, 28.645, 11.411, -29.4151)
+mesh = SubResource("ArrayMesh_7wuh1")
+skeleton = NodePath("")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Blendermodels/ContainerRed 10"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Blendermodels/ContainerRed 10/StaticBody3D"]
+shape = SubResource("ConcavePolygonShape3D_g7vyb")
+
+[node name="ContainerOrange 7" type="MeshInstance3D" parent="Blendermodels"]
+transform = Transform3D(1.37856, 0, -0.290408, 0, 1.40882, 0, 0.290408, 0, 1.37856, 17.7072, 2.94371, -24.0743)
+mesh = SubResource("ArrayMesh_x5656")
+skeleton = NodePath("")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Blendermodels/ContainerOrange 7"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Blendermodels/ContainerOrange 7/StaticBody3D"]
+shape = SubResource("ConcavePolygonShape3D_hgr8n")
+
+[node name="ContainerOrange 11" type="MeshInstance3D" parent="Blendermodels"]
+transform = Transform3D(-0.245922, 0, -1.38719, 0, 1.40882, 0, 1.38719, 0, -0.245922, 35.5425, 3.01383, -25.9103)
+mesh = SubResource("ArrayMesh_x5656")
+skeleton = NodePath("")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Blendermodels/ContainerOrange 11"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Blendermodels/ContainerOrange 11/StaticBody3D"]
+shape = SubResource("ConcavePolygonShape3D_hgr8n")
+
+[node name="ContainerOrange 12" type="MeshInstance3D" parent="Blendermodels"]
+transform = Transform3D(-0.173132, 0, -1.39814, 0, 1.40882, 0, 1.39814, 0, -0.173132, 35.4188, 5.83621, -26.2252)
+mesh = SubResource("ArrayMesh_x5656")
+skeleton = NodePath("")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Blendermodels/ContainerOrange 12"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Blendermodels/ContainerOrange 12/StaticBody3D"]
+shape = SubResource("ConcavePolygonShape3D_hgr8n")
+
+[node name="ContainerOrange 8" type="MeshInstance3D" parent="Blendermodels"]
+transform = Transform3D(-0.290408, 0, -1.37856, 0, 1.40882, 0, 1.37856, 0, -0.290408, 15.5903, 0.169408, -22.9587)
+mesh = SubResource("ArrayMesh_x5656")
+skeleton = NodePath("")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Blendermodels/ContainerOrange 8"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Blendermodels/ContainerOrange 8/StaticBody3D"]
+shape = SubResource("ConcavePolygonShape3D_hgr8n")
+
+[node name="ContainerBlack 5" type="MeshInstance3D" parent="Blendermodels"]
+transform = Transform3D(-0.290408, 0, -1.37856, 0, 1.40882, 0, 1.37856, 0, -0.290408, 16.1448, 0.176112, -25.6807)
+mesh = SubResource("ArrayMesh_hr24s")
+skeleton = NodePath("")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Blendermodels/ContainerBlack 5"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Blendermodels/ContainerBlack 5/StaticBody3D"]
+shape = SubResource("ConcavePolygonShape3D_h358m")
+
+[node name="ContainerBlue 8" type="MeshInstance3D" parent="Blendermodels"]
+transform = Transform3D(1.37856, 0, -0.290408, 0, 1.40882, 0, 0.290408, 0, 1.37856, 14.7314, 2.98189, -24.6202)
+mesh = SubResource("ArrayMesh_0cgko")
+skeleton = NodePath("")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Blendermodels/ContainerBlue 8"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Blendermodels/ContainerBlue 8/StaticBody3D"]
+shape = SubResource("ConcavePolygonShape3D_w876a")
+
+[node name="ContainerBlack 6" type="MeshInstance3D" parent="Blendermodels"]
+transform = Transform3D(-0.290408, 0, -1.37856, 0, 1.40882, 0, 1.37856, 0, -0.290408, 16.1448, 5.75158, -25.6807)
+mesh = SubResource("ArrayMesh_hr24s")
+skeleton = NodePath("")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Blendermodels/ContainerBlack 6"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Blendermodels/ContainerBlack 6/StaticBody3D"]
+shape = SubResource("ConcavePolygonShape3D_h358m")
+
+[node name="ContainerBlue 2" type="MeshInstance3D" parent="Blendermodels"]
+transform = Transform3D(1.40882, 0, 0, 0, 1.40882, 0, 0, 0, 1.40882, 19.5413, 0.176113, 2.64824)
+mesh = SubResource("ArrayMesh_a5gk3")
+skeleton = NodePath("")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Blendermodels/ContainerBlue 2"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Blendermodels/ContainerBlue 2/StaticBody3D"]
+shape = SubResource("ConcavePolygonShape3D_wi8ff")
+
+[node name="WoodBoxLongOrange 2" type="MeshInstance3D" parent="Blendermodels"]
+transform = Transform3D(0.619878, 0, -0.195578, 0, 0.65, 0, 0.195578, 0, 0.619878, 22.5859, -0.561859, 3.13581)
+mesh = SubResource("ArrayMesh_j1fev")
+skeleton = NodePath("")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Blendermodels/WoodBoxLongOrange 2"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Blendermodels/WoodBoxLongOrange 2/StaticBody3D"]
+shape = SubResource("ConcavePolygonShape3D_gccn6")
+
+[node name="WoodBoxLongOrange 3" type="MeshInstance3D" parent="Blendermodels"]
+transform = Transform3D(0.619878, 0, -0.195578, 0, 0.65, 0, 0.195578, 0, 0.619878, 37.3528, 7.87308, -31.976)
+mesh = SubResource("ArrayMesh_j1fev")
+skeleton = NodePath("")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Blendermodels/WoodBoxLongOrange 3"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Blendermodels/WoodBoxLongOrange 3/StaticBody3D"]
+shape = SubResource("ConcavePolygonShape3D_gccn6")
+
+[node name="WoodBoxSmallOrange 3" type="MeshInstance3D" parent="Blendermodels"]
+transform = Transform3D(0.644818, 0, -0.0819168, 0, 0.65, 0, 0.0819168, 0, 0.644818, 21.7018, 0.661658, 1.47238)
+mesh = SubResource("ArrayMesh_c8ubq")
+skeleton = NodePath("")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Blendermodels/WoodBoxSmallOrange 3"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Blendermodels/WoodBoxSmallOrange 3/StaticBody3D"]
+shape = SubResource("ConcavePolygonShape3D_6hd27")
+
+[node name="WoodBoxSmallOrange 4" type="MeshInstance3D" parent="Blendermodels"]
+transform = Transform3D(-0.271356, 0, 0.590649, 0, 0.65, 0, -0.590649, 0, -0.271356, 32.1328, 4.9643, -20.2848)
+mesh = SubResource("ArrayMesh_c8ubq")
+skeleton = NodePath("")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Blendermodels/WoodBoxSmallOrange 4"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Blendermodels/WoodBoxSmallOrange 4/StaticBody3D"]
+shape = SubResource("ConcavePolygonShape3D_6hd27")
+
+[node name="WoodBoxSmallOrange 5" type="MeshInstance3D" parent="Blendermodels"]
+transform = Transform3D(0.0165387, 0, 0.64979, 0, 0.65, 0, -0.64979, 0, 0.0165387, 0.12278, 13.464, -28.8257)
+mesh = SubResource("ArrayMesh_c8ubq")
+skeleton = NodePath("")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Blendermodels/WoodBoxSmallOrange 5"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Blendermodels/WoodBoxSmallOrange 5/StaticBody3D"]
+shape = SubResource("ConcavePolygonShape3D_6hd27")
+
+[node name="ContainerOrange 2" type="MeshInstance3D" parent="Blendermodels"]
+transform = Transform3D(0.12575, 0, -1.4032, 0, 1.40882, 0, 1.4032, 0, 0.12575, 22.8674, 0.186196, -29.0972)
+mesh = SubResource("ArrayMesh_xxvi5")
+skeleton = NodePath("")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Blendermodels/ContainerOrange 2"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Blendermodels/ContainerOrange 2/StaticBody3D"]
+transform = Transform3D(1, 0, 2.98023e-08, 0, 1, 0, -2.98023e-08, 0, 1, 0, 0, 0)
+shape = SubResource("ConcavePolygonShape3D_046yb")
+
+[node name="ContainerOrange 14" type="MeshInstance3D" parent="Blendermodels"]
+transform = Transform3D(-0.191566, 0, -1.39574, 0, 1.40882, 0, 1.39574, 0, -0.191566, 34.5296, 0.186196, -16.9783)
+mesh = SubResource("ArrayMesh_xxvi5")
+skeleton = NodePath("")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Blendermodels/ContainerOrange 14"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Blendermodels/ContainerOrange 14/StaticBody3D"]
+transform = Transform3D(1, 0, 2.98023e-08, 0, 1, 0, -2.98023e-08, 0, 1, 0, 0, 0)
+shape = SubResource("ConcavePolygonShape3D_046yb")
+
+[node name="ContainerOrange 9" type="MeshInstance3D" parent="Blendermodels"]
+transform = Transform3D(-0.0949888, 0, -1.40562, 0, 1.40882, 0, 1.40562, 0, -0.0949888, 34.3817, 0.186197, -29.1078)
+mesh = SubResource("ArrayMesh_xxvi5")
+skeleton = NodePath("")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Blendermodels/ContainerOrange 9"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Blendermodels/ContainerOrange 9/StaticBody3D"]
+transform = Transform3D(1, 0, 2.98023e-08, 0, 1, 0, -2.98023e-08, 0, 1, 0, 0, 0)
+shape = SubResource("ConcavePolygonShape3D_046yb")
+
+[node name="ContainerBlack 9" type="MeshInstance3D" parent="Blendermodels"]
+transform = Transform3D(0.0805083, 0, -1.40652, 0, 1.40882, 0, 1.40652, 0, 0.0805083, 22.8986, 5.79836, -29.3649)
+mesh = SubResource("ArrayMesh_ej1r7")
+skeleton = NodePath("")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Blendermodels/ContainerBlack 9"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Blendermodels/ContainerBlack 9/StaticBody3D"]
+shape = SubResource("ConcavePolygonShape3D_7nkx2")
+
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="Blendermodels/ContainerBlack 9/StaticBody3D"]
+shape = SubResource("ConcavePolygonShape3D_7nkx2")
+
+[node name="ContainerBlue 26" type="MeshInstance3D" parent="Blendermodels"]
+transform = Transform3D(0.352574, 0, 1.36399, 0, 1.40882, 0, -1.36399, 0, 0.352574, 1.43471, 3.01527, -15.2236)
+mesh = SubResource("ArrayMesh_0cgko")
+skeleton = NodePath("")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Blendermodels/ContainerBlue 26"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Blendermodels/ContainerBlue 26/StaticBody3D"]
+shape = SubResource("ConcavePolygonShape3D_w876a")
+
+[node name="ContainerOrange 24" type="MeshInstance3D" parent="Blendermodels"]
+transform = Transform3D(-0.37564, 0, -1.35782, 0, 1.40882, 0, 1.35782, 0, -0.37564, 1.51351, 0.186196, -15.102)
+mesh = SubResource("ArrayMesh_xxvi5")
+skeleton = NodePath("")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Blendermodels/ContainerOrange 24"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Blendermodels/ContainerOrange 24/StaticBody3D"]
+transform = Transform3D(1, 0, 2.98023e-08, 0, 1, 0, -2.98023e-08, 0, 1, 0, 0, 0)
+shape = SubResource("ConcavePolygonShape3D_046yb")
+
+[node name="ContainerBlack 31" type="MeshInstance3D" parent="Blendermodels"]
+transform = Transform3D(-0.419159, 0, -1.34502, 0, 1.40882, 0, 1.34502, 0, -0.419159, 1.6368, 5.79836, -15.3416)
+mesh = SubResource("ArrayMesh_ej1r7")
+skeleton = NodePath("")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Blendermodels/ContainerBlack 31"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Blendermodels/ContainerBlack 31/StaticBody3D"]
+shape = SubResource("ConcavePolygonShape3D_7nkx2")
+
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="Blendermodels/ContainerBlack 31/StaticBody3D"]
+shape = SubResource("ConcavePolygonShape3D_7nkx2")
+
+[node name="ContainerBlue 29" type="MeshInstance3D" parent="Blendermodels"]
+transform = Transform3D(1.40651, 0, -0.0805326, 0, 1.40882, 0, 0.0805326, 0, 1.40651, -4.90055, 3.01527, -30.6129)
+mesh = SubResource("ArrayMesh_0cgko")
+skeleton = NodePath("")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Blendermodels/ContainerBlue 29"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Blendermodels/ContainerBlue 29/StaticBody3D"]
+shape = SubResource("ConcavePolygonShape3D_w876a")
+
+[node name="ContainerOrange 26" type="MeshInstance3D" parent="Blendermodels"]
+transform = Transform3D(-1.40672, 0, 0.0770726, 0, 1.40882, 0, -0.0770726, 0, -1.40672, -5.086, 0.186196, -30.596)
+mesh = SubResource("ArrayMesh_xxvi5")
+skeleton = NodePath("")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Blendermodels/ContainerOrange 26"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Blendermodels/ContainerOrange 26/StaticBody3D"]
+transform = Transform3D(1, 0, 2.98023e-08, 0, 1, 0, -2.98023e-08, 0, 1, 0, 0, 0)
+shape = SubResource("ConcavePolygonShape3D_046yb")
+
+[node name="ContainerBlack 34" type="MeshInstance3D" parent="Blendermodels"]
+transform = Transform3D(-1.40148, 0, 0.143642, 0, 1.40882, 0, -0.143642, 0, -1.40148, -4.82562, 5.76667, -30.6424)
+mesh = SubResource("ArrayMesh_ej1r7")
+skeleton = NodePath("")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Blendermodels/ContainerBlack 34"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Blendermodels/ContainerBlack 34/StaticBody3D"]
+shape = SubResource("ConcavePolygonShape3D_7nkx2")
+
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="Blendermodels/ContainerBlack 34/StaticBody3D"]
+shape = SubResource("ConcavePolygonShape3D_7nkx2")
+
+[node name="ContainerBlack 14" type="MeshInstance3D" parent="Blendermodels"]
+transform = Transform3D(-0.164466, 0, -1.39919, 0, 1.40882, 0, 1.39919, 0, -0.164466, 35.2961, 5.79836, -23.4135)
+mesh = SubResource("ArrayMesh_ej1r7")
+skeleton = NodePath("")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Blendermodels/ContainerBlack 14"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Blendermodels/ContainerBlack 14/StaticBody3D"]
+shape = SubResource("ConcavePolygonShape3D_7nkx2")
+
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="Blendermodels/ContainerBlack 14/StaticBody3D"]
+shape = SubResource("ConcavePolygonShape3D_7nkx2")
+
+[node name="ContainerBlack 10" type="MeshInstance3D" parent="Blendermodels"]
+transform = Transform3D(0.0309792, 0, -1.40848, 0, 1.40882, 0, 1.40848, 0, 0.0309792, 28.6449, 8.57569, -29.4152)
+mesh = SubResource("ArrayMesh_ej1r7")
+skeleton = NodePath("")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Blendermodels/ContainerBlack 10"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Blendermodels/ContainerBlack 10/StaticBody3D"]
+shape = SubResource("ConcavePolygonShape3D_7nkx2")
+
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="Blendermodels/ContainerBlack 10/StaticBody3D"]
+shape = SubResource("ConcavePolygonShape3D_7nkx2")
+
+[node name="ContainerBlack 16" type="MeshInstance3D" parent="Blendermodels"]
+transform = Transform3D(-0.0652345, 0, -1.40731, 0, 1.40882, 0, 1.40731, 0, -0.0652345, 33.5153, 8.57569, -32.1826)
+mesh = SubResource("ArrayMesh_ej1r7")
+skeleton = NodePath("")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Blendermodels/ContainerBlack 16"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Blendermodels/ContainerBlack 16/StaticBody3D"]
+shape = SubResource("ConcavePolygonShape3D_7nkx2")
+
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="Blendermodels/ContainerBlack 16/StaticBody3D"]
+shape = SubResource("ConcavePolygonShape3D_7nkx2")
+
+[node name="ContainerBlack 12" type="MeshInstance3D" parent="Blendermodels"]
+transform = Transform3D(0.147262, 0, 1.4011, 0, 1.40882, 0, -1.4011, 0, 0.147262, 34.441, 11.368, -29.1811)
+mesh = SubResource("ArrayMesh_ej1r7")
+skeleton = NodePath("")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Blendermodels/ContainerBlack 12"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Blendermodels/ContainerBlack 12/StaticBody3D"]
+shape = SubResource("ConcavePolygonShape3D_7nkx2")
+
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="Blendermodels/ContainerBlack 12/StaticBody3D"]
+shape = SubResource("ConcavePolygonShape3D_7nkx2")
+
+[node name="ContainerBlack 32" type="MeshInstance3D" parent="Blendermodels"]
+transform = Transform3D(-0.3043, 0, -1.37556, 0, 1.40882, 0, 1.37556, 0, -0.3043, 13.9177, 2.95344, -32.5126)
+mesh = SubResource("ArrayMesh_ej1r7")
+skeleton = NodePath("")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Blendermodels/ContainerBlack 32"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Blendermodels/ContainerBlack 32/StaticBody3D"]
+shape = SubResource("ConcavePolygonShape3D_7nkx2")
+
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="Blendermodels/ContainerBlack 32/StaticBody3D"]
+shape = SubResource("ConcavePolygonShape3D_7nkx2")
+
+[node name="ContainerBlue 27" type="MeshInstance3D" parent="Blendermodels"]
+transform = Transform3D(0.363869, 0, 1.36102, 0, 1.40882, 0, -1.36102, 0, 0.363869, 14.0183, 5.74581, -32.6829)
+mesh = SubResource("ArrayMesh_0cgko")
+skeleton = NodePath("")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Blendermodels/ContainerBlue 27"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Blendermodels/ContainerBlue 27/StaticBody3D"]
+shape = SubResource("ConcavePolygonShape3D_w876a")
+
+[node name="ContainerBlue 28" type="MeshInstance3D" parent="Blendermodels"]
+transform = Transform3D(0.322758, 0, 1.37135, 0, 1.40882, 0, -1.37135, 0, 0.322758, 13.9856, 8.55493, -32.701)
+mesh = SubResource("ArrayMesh_0cgko")
+skeleton = NodePath("")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Blendermodels/ContainerBlue 28"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Blendermodels/ContainerBlue 28/StaticBody3D"]
+shape = SubResource("ConcavePolygonShape3D_w876a")
+
+[node name="ContainerOrange 25" type="MeshInstance3D" parent="Blendermodels"]
+transform = Transform3D(-0.270362, 0, -1.38264, 0, 1.40882, 0, 1.38264, 0, -0.270362, 13.9177, 0.186198, -32.6359)
+mesh = SubResource("ArrayMesh_xxvi5")
+skeleton = NodePath("")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Blendermodels/ContainerOrange 25"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Blendermodels/ContainerOrange 25/StaticBody3D"]
+transform = Transform3D(1, 0, 2.98023e-08, 0, 1, 0, -2.98023e-08, 0, 1, 0, 0, 0)
+shape = SubResource("ConcavePolygonShape3D_046yb")
+
+[node name="ContainerBlack 33" type="MeshInstance3D" parent="Blendermodels"]
+transform = Transform3D(0.321657, 0, 1.37161, 0, 1.40882, 0, -1.37161, 0, 0.321657, 13.9857, 11.368, -32.7012)
+mesh = SubResource("ArrayMesh_ej1r7")
+skeleton = NodePath("")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Blendermodels/ContainerBlack 33"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Blendermodels/ContainerBlack 33/StaticBody3D"]
+shape = SubResource("ConcavePolygonShape3D_7nkx2")
+
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="Blendermodels/ContainerBlack 33/StaticBody3D"]
+shape = SubResource("ConcavePolygonShape3D_7nkx2")
+
+[node name="ContainerRed 9" type="MeshInstance3D" parent="Blendermodels"]
+transform = Transform3D(0.063024, 0, -1.40741, 0, 1.40882, 0, 1.40741, 0, 0.063024, 22.9715, 8.6143, -29.2342)
+mesh = SubResource("ArrayMesh_7wuh1")
+skeleton = NodePath("")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Blendermodels/ContainerRed 9"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Blendermodels/ContainerRed 9/StaticBody3D"]
+shape = SubResource("ConcavePolygonShape3D_g7vyb")
+
+[node name="ContainerRed 30" type="MeshInstance3D" parent="Blendermodels"]
+transform = Transform3D(-0.161901, 0, -1.39949, 0, 1.40882, 0, 1.39949, 0, -0.161901, 3.06967, 8.6143, -19.0444)
+mesh = SubResource("ArrayMesh_7wuh1")
+skeleton = NodePath("")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Blendermodels/ContainerRed 30"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Blendermodels/ContainerRed 30/StaticBody3D"]
+shape = SubResource("ConcavePolygonShape3D_g7vyb")
+
+[node name="ContainerOrange 10" type="MeshInstance3D" parent="Blendermodels"]
+transform = Transform3D(0.00140034, 0, -1.40882, 0, 1.40882, 0, 1.40882, 0, 0.00140034, 28.6211, 5.80844, -29.5362)
+mesh = SubResource("ArrayMesh_xxvi5")
+skeleton = NodePath("")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Blendermodels/ContainerOrange 10"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Blendermodels/ContainerOrange 10/StaticBody3D"]
+transform = Transform3D(1, 0, 2.98023e-08, 0, 1, 0, -2.98023e-08, 0, 1, 0, 0, 0)
+shape = SubResource("ConcavePolygonShape3D_046yb")
+
+[node name="ContainerBlack 35" type="MeshInstance3D" parent="Blendermodels"]
+transform = Transform3D(-0.402743, 0, -1.35003, 0, 1.40882, 0, 1.35003, 0, -0.402743, 2.52723, 0.176113, -17.9071)
+mesh = SubResource("ArrayMesh_ej1r7")
+skeleton = NodePath("")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Blendermodels/ContainerBlack 35"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Blendermodels/ContainerBlack 35/StaticBody3D"]
+shape = SubResource("ConcavePolygonShape3D_7nkx2")
+
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="Blendermodels/ContainerBlack 35/StaticBody3D"]
+shape = SubResource("ConcavePolygonShape3D_7nkx2")
+
+[node name="ContainerRed 29" type="MeshInstance3D" parent="Blendermodels"]
+transform = Transform3D(-0.333925, 0, -1.36867, 0, 1.40882, 0, 1.36867, 0, -0.333925, 2.4292, 2.99205, -17.9572)
+mesh = SubResource("ArrayMesh_7wuh1")
+skeleton = NodePath("")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Blendermodels/ContainerRed 29"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Blendermodels/ContainerRed 29/StaticBody3D"]
+shape = SubResource("ConcavePolygonShape3D_g7vyb")
+
+[node name="ContainerOrange 27" type="MeshInstance3D" parent="Blendermodels"]
+transform = Transform3D(-0.433083, 0, -1.34061, 0, 1.40882, 0, 1.34061, 0, -0.433083, 2.64181, 5.80844, -18.0648)
+mesh = SubResource("ArrayMesh_xxvi5")
+skeleton = NodePath("")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Blendermodels/ContainerOrange 27"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Blendermodels/ContainerOrange 27/StaticBody3D"]
+transform = Transform3D(1, 0, 2.98023e-08, 0, 1, 0, -2.98023e-08, 0, 1, 0, 0, 0)
+shape = SubResource("ConcavePolygonShape3D_046yb")
+
+[node name="ContainerBlack 27" type="MeshInstance3D" parent="Blendermodels"]
+transform = Transform3D(-1.40692, 0, 0.0732162, 0, 1.40882, 0, -0.0732162, 0, -1.40692, -3.85597, 0.176113, -21.7859)
+mesh = SubResource("ArrayMesh_ej1r7")
+skeleton = NodePath("")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Blendermodels/ContainerBlack 27"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Blendermodels/ContainerBlack 27/StaticBody3D"]
+shape = SubResource("ConcavePolygonShape3D_7nkx2")
+
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="Blendermodels/ContainerBlack 27/StaticBody3D"]
+shape = SubResource("ConcavePolygonShape3D_7nkx2")
+
+[node name="ContainerRed 24" type="MeshInstance3D" parent="Blendermodels"]
+transform = Transform3D(-1.40308, 0, 0.127048, 0, 1.40882, 0, -0.127048, 0, -1.40308, -3.91875, 2.99205, -21.8102)
+mesh = SubResource("ArrayMesh_7wuh1")
+skeleton = NodePath("")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Blendermodels/ContainerRed 24"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Blendermodels/ContainerRed 24/StaticBody3D"]
+shape = SubResource("ConcavePolygonShape3D_g7vyb")
+
+[node name="ContainerOrange 22" type="MeshInstance3D" parent="Blendermodels"]
+transform = Transform3D(-1.40771, 0, 0.0559257, 0, 1.40882, 0, -0.0559257, 0, -1.40771, -3.95605, 5.80844, -21.8171)
+mesh = SubResource("ArrayMesh_xxvi5")
+skeleton = NodePath("")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Blendermodels/ContainerOrange 22"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Blendermodels/ContainerOrange 22/StaticBody3D"]
+transform = Transform3D(1, 0, 2.98023e-08, 0, 1, 0, -2.98023e-08, 0, 1, 0, 0, 0)
+shape = SubResource("ConcavePolygonShape3D_046yb")
+
+[node name="ContainerBlack 15" type="MeshInstance3D" parent="Blendermodels"]
+transform = Transform3D(-1.16675, 0, -0.789595, 0, 1.40882, 0, 0.789595, 0, -1.16675, 39.7056, 0.176113, -29.4426)
+mesh = SubResource("ArrayMesh_ej1r7")
+skeleton = NodePath("")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Blendermodels/ContainerBlack 15"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Blendermodels/ContainerBlack 15/StaticBody3D"]
+shape = SubResource("ConcavePolygonShape3D_7nkx2")
+
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="Blendermodels/ContainerBlack 15/StaticBody3D"]
+shape = SubResource("ConcavePolygonShape3D_7nkx2")
+
+[node name="ContainerRed 13" type="MeshInstance3D" parent="Blendermodels"]
+transform = Transform3D(-1.37124, 0, -0.323237, 0, 1.40882, 0, 0.323237, 0, -1.37124, 39.6393, 2.99205, -29.431)
+mesh = SubResource("ArrayMesh_7wuh1")
+skeleton = NodePath("")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Blendermodels/ContainerRed 13"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Blendermodels/ContainerRed 13/StaticBody3D"]
+shape = SubResource("ConcavePolygonShape3D_g7vyb")
+
+[node name="ContainerOrange 13" type="MeshInstance3D" parent="Blendermodels"]
+transform = Transform3D(-1.37821, 0, -0.292116, 0, 1.40882, 0, 0.292116, 0, -1.37821, 39.5458, 5.80844, -29.5232)
+mesh = SubResource("ArrayMesh_xxvi5")
+skeleton = NodePath("")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Blendermodels/ContainerOrange 13"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Blendermodels/ContainerOrange 13/StaticBody3D"]
+transform = Transform3D(1, 0, 2.98023e-08, 0, 1, 0, -2.98023e-08, 0, 1, 0, 0, 0)
+shape = SubResource("ConcavePolygonShape3D_046yb")
+
+[node name="ContainerRed 2" type="MeshInstance3D" parent="Blendermodels"]
+transform = Transform3D(-0.472175, 0, 1.32734, 0, 1.40882, 0, -1.32734, 0, -0.472175, 28.1952, 0.176112, -11.3253)
+mesh = SubResource("ArrayMesh_vve5t")
+skeleton = NodePath("")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Blendermodels/ContainerRed 2"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Blendermodels/ContainerRed 2/StaticBody3D"]
+shape = SubResource("ConcavePolygonShape3D_ar6jj")
+
+[node name="ContainerRed 14" type="MeshInstance3D" parent="Blendermodels"]
+transform = Transform3D(-0.472175, 0, 1.32734, 0, 1.40882, 0, -1.32734, 0, -0.472175, 33.9536, 0.176112, -32.8102)
+mesh = SubResource("ArrayMesh_vve5t")
+skeleton = NodePath("")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Blendermodels/ContainerRed 14"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Blendermodels/ContainerRed 14/StaticBody3D"]
+shape = SubResource("ConcavePolygonShape3D_ar6jj")
+
+[node name="ContainerRed 11" type="MeshInstance3D" parent="Blendermodels"]
+transform = Transform3D(0.0225465, 0, 1.40864, 0, 1.40882, 0, -1.40864, 0, 0.0225465, 35.5976, 0.176112, -22.6968)
+mesh = SubResource("ArrayMesh_vve5t")
+skeleton = NodePath("")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Blendermodels/ContainerRed 11"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Blendermodels/ContainerRed 11/StaticBody3D"]
+shape = SubResource("ConcavePolygonShape3D_ar6jj")
+
+[node name="ContainerBlack 29" type="MeshInstance3D" parent="Blendermodels"]
+transform = Transform3D(1.15459, 0, 0.80728, 0, 1.40882, 0, -0.80728, 0, 1.15459, 9.08993, 0.176113, -32.0591)
+mesh = SubResource("ArrayMesh_ej1r7")
+skeleton = NodePath("")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Blendermodels/ContainerBlack 29"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Blendermodels/ContainerBlack 29/StaticBody3D"]
+shape = SubResource("ConcavePolygonShape3D_7nkx2")
+
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="Blendermodels/ContainerBlack 29/StaticBody3D"]
+shape = SubResource("ConcavePolygonShape3D_7nkx2")
+
+[node name="ContainerRed 26" type="MeshInstance3D" parent="Blendermodels"]
+transform = Transform3D(-0.880259, 0, 1.09996, 0, 1.40882, 0, -1.09996, 0, -0.880259, 0.944553, 2.99205, -33.4434)
+mesh = SubResource("ArrayMesh_7wuh1")
+skeleton = NodePath("")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Blendermodels/ContainerRed 26"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Blendermodels/ContainerRed 26/StaticBody3D"]
+shape = SubResource("ConcavePolygonShape3D_g7vyb")
+
+[node name="ContainerOrange 23" type="MeshInstance3D" parent="Blendermodels"]
+transform = Transform3D(1.26912, 0, 0.611634, 0, 1.40882, 0, -0.611634, 0, 1.26912, 8.8133, 3.01383, -31.7746)
+mesh = SubResource("ArrayMesh_x5656")
+skeleton = NodePath("")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Blendermodels/ContainerOrange 23"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Blendermodels/ContainerOrange 23/StaticBody3D"]
+shape = SubResource("ConcavePolygonShape3D_hgr8n")
+
+[node name="ContainerRed 27" type="MeshInstance3D" parent="Blendermodels"]
+transform = Transform3D(1.00907, 0, -0.983133, 0, 1.40882, 0, 0.983133, 0, 1.00907, 0.469021, 0.176111, -33.6157)
+mesh = SubResource("ArrayMesh_vve5t")
+skeleton = NodePath("")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Blendermodels/ContainerRed 27"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Blendermodels/ContainerRed 27/StaticBody3D"]
+shape = SubResource("ConcavePolygonShape3D_ar6jj")
+
+[node name="ContainerBlue 3" type="MeshInstance3D" parent="Blendermodels"]
+transform = Transform3D(-1.302, 0, 0.53811, 0, 1.40882, 0, -0.53811, 0, -1.302, 21.3973, 0.176113, -8.52418)
+mesh = SubResource("ArrayMesh_a5gk3")
+skeleton = NodePath("")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Blendermodels/ContainerBlue 3"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Blendermodels/ContainerBlue 3/StaticBody3D"]
+shape = SubResource("ConcavePolygonShape3D_wi8ff")
+
+[node name="ContainerBlue 30" type="MeshInstance3D" parent="Blendermodels"]
+transform = Transform3D(-1.32015, 0, -0.491903, 0, 1.40882, 0, 0.491903, 0, -1.32015, 69.353, 0.176113, -15.4739)
+mesh = SubResource("ArrayMesh_a5gk3")
+skeleton = NodePath("")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Blendermodels/ContainerBlue 30"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Blendermodels/ContainerBlue 30/StaticBody3D"]
+shape = SubResource("ConcavePolygonShape3D_wi8ff")
+
+[node name="ContainerBlue 14" type="MeshInstance3D" parent="Blendermodels"]
+transform = Transform3D(0.2217, 0, 1.39126, 0, 1.40882, 0, -1.39126, 0, 0.2217, 35.0295, 0.176112, -19.7722)
+mesh = SubResource("ArrayMesh_a5gk3")
+skeleton = NodePath("")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Blendermodels/ContainerBlue 14"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Blendermodels/ContainerBlue 14/StaticBody3D"]
+shape = SubResource("ConcavePolygonShape3D_wi8ff")
+
+[node name="ContainerRed 3" type="MeshInstance3D" parent="Blendermodels"]
+transform = Transform3D(0.383265, 0, 1.35569, 0, 1.40882, 0, -1.35569, 0, 0.383265, 20.2048, 0.176112, -4.04796)
+mesh = SubResource("ArrayMesh_vve5t")
+skeleton = NodePath("")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Blendermodels/ContainerRed 3"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Blendermodels/ContainerRed 3/StaticBody3D"]
+shape = SubResource("ConcavePolygonShape3D_ar6jj")
+
+[node name="ContainerRed 31" type="MeshInstance3D" parent="Blendermodels"]
+transform = Transform3D(1.17412, 0, -0.778608, 0, 1.40882, 0, 0.778608, 0, 1.17412, 68.5633, 0.176112, -2.92563)
+mesh = SubResource("ArrayMesh_vve5t")
+skeleton = NodePath("")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Blendermodels/ContainerRed 31"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Blendermodels/ContainerRed 31/StaticBody3D"]
+shape = SubResource("ConcavePolygonShape3D_ar6jj")
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_n8gtr")
+
+[node name="Map" parent="." instance=ExtResource("12_6lr50")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.790825, 0, -5.67298)
+
+[node name="Point" parent="Map" index="2"]
+transform = Transform3D(1, 0, 0, 0, 0, 1, 0, -1, 0, 0, 26.8269, -11.8473)
+light_energy = 3.475
+
+[node name="Point2" type="OmniLight3D" parent="Map"]
+transform = Transform3D(1, 0, 0, 0, 0, 1, 0, -1, 0, 0, 26.8269, -15.0044)
+light_energy = 3.475
+omni_range = 4096.0
+
+[node name="Point24" type="OmniLight3D" parent="Map"]
+transform = Transform3D(1, 0, 0, 0, 0, 1, 0, -1, 0, 0, 14.5696, -15.0044)
+light_energy = 3.475
+omni_range = 4096.0
+
+[node name="Point3" type="OmniLight3D" parent="Map"]
+transform = Transform3D(1, 0, 0, 0, 0, 1, 0, -1, 0, -3.41637, 26.8269, -11.8473)
+light_energy = 3.475
+omni_range = 4096.0
+
+[node name="Point4" type="OmniLight3D" parent="Map"]
+transform = Transform3D(1, 0, 0, 0, 0, 1, 0, -1, 0, -3.41637, 26.8269, -15.0044)
+light_energy = 3.475
+omni_range = 4096.0
+
+[node name="Point5" type="OmniLight3D" parent="Map"]
+transform = Transform3D(1, 0, 0, 0, 0, 1, 0, -1, 0, -6.82092, 26.8269, -11.8473)
+light_energy = 3.475
+omni_range = 4096.0
+
+[node name="Point6" type="OmniLight3D" parent="Map"]
+transform = Transform3D(1, 0, 0, 0, 0, 1, 0, -1, 0, -6.82092, 26.8269, -15.0044)
+light_energy = 3.475
+omni_range = 4096.0
+
+[node name="Point7" type="OmniLight3D" parent="Map"]
+transform = Transform3D(1, 0, 0, 0, 0, 1, 0, -1, 0, -10.2373, 26.8269, -11.8473)
+light_energy = 3.475
+omni_range = 4096.0
+
+[node name="Point8" type="OmniLight3D" parent="Map"]
+transform = Transform3D(1, 0, 0, 0, 0, 1, 0, -1, 0, -10.2373, 26.8269, -15.0044)
+light_energy = 3.475
+omni_range = 4096.0
+
+[node name="Point9" type="OmniLight3D" parent="Map"]
+transform = Transform3D(1, 0, 0, 0, 0, 1, 0, -1, 0, -13.6132, 26.8269, -11.8473)
+light_energy = 3.475
+omni_range = 4096.0
+
+[node name="Point23" type="OmniLight3D" parent="Map"]
+transform = Transform3D(1, 0, 0, 0, 0, 1, 0, -1, 0, -13.6132, 13.5799, -11.8473)
+light_energy = 3.475
+omni_range = 4096.0
+
+[node name="Point26" type="OmniLight3D" parent="Map"]
+transform = Transform3D(1, 0, 0, 0, 0, 1, 0, -1, 0, -36.8183, 24.6687, -34.7345)
+light_energy = 3.475
+omni_range = 4096.0
+
+[node name="Point27" type="OmniLight3D" parent="Map"]
+transform = Transform3D(1, 0, 0, 0, 0, 1, 0, -1, 0, -36.8183, 24.6687, 5.44562)
+light_energy = 3.475
+omni_range = 4096.0
+
+[node name="Point10" type="OmniLight3D" parent="Map"]
+transform = Transform3D(1, 0, 0, 0, 0, 1, 0, -1, 0, -13.6132, 26.8269, -15.0044)
+light_energy = 3.475
+omni_range = 4096.0
+
+[node name="Point11" type="OmniLight3D" parent="Map"]
+transform = Transform3D(1, 0, 0, 0, 0, 1, 0, -1, 0, -17.0296, 26.8269, -11.8473)
+light_energy = 3.475
+omni_range = 4096.0
+
+[node name="Point12" type="OmniLight3D" parent="Map"]
+transform = Transform3D(1, 0, 0, 0, 0, 1, 0, -1, 0, -17.0296, 26.8269, -15.0044)
+light_energy = 3.475
+omni_range = 4096.0
+
+[node name="Point13" type="OmniLight3D" parent="Map"]
+transform = Transform3D(1, 0, 0, 0, 0, 1, 0, -1, 0, 6.91596, 26.8269, -11.8473)
+light_energy = 3.475
+omni_range = 4096.0
+
+[node name="Point14" type="OmniLight3D" parent="Map"]
+transform = Transform3D(1, 0, 0, 0, 0, 1, 0, -1, 0, 6.91596, 26.8269, -15.0044)
+light_energy = 3.475
+omni_range = 4096.0
+
+[node name="Point15" type="OmniLight3D" parent="Map"]
+transform = Transform3D(1, 0, 0, 0, 0, 1, 0, -1, 0, 3.4996, 26.8269, -11.8473)
+light_energy = 3.475
+omni_range = 4096.0
+
+[node name="Point16" type="OmniLight3D" parent="Map"]
+transform = Transform3D(1, 0, 0, 0, 0, 1, 0, -1, 0, 3.4996, 26.8269, -15.0044)
+light_energy = 3.475
+omni_range = 4096.0
+
+[node name="Point17" type="OmniLight3D" parent="Map"]
+transform = Transform3D(1, 0, 0, 0, 0, 1, 0, -1, 0, 13.7758, 26.8269, -11.8473)
+light_energy = 3.475
+omni_range = 4096.0
+
+[node name="Point18" type="OmniLight3D" parent="Map"]
+transform = Transform3D(1, 0, 0, 0, 0, 1, 0, -1, 0, 13.7758, 26.8269, -15.0044)
+light_energy = 3.475
+omni_range = 4096.0
+
+[node name="Point25" type="OmniLight3D" parent="Map"]
+transform = Transform3D(1, 0, 0, 0, 0, 1, 0, -1, 0, 13.7758, 14.3085, -15.0044)
+light_energy = 3.475
+omni_range = 4096.0
+
+[node name="Point21" type="OmniLight3D" parent="Map"]
+transform = Transform3D(1, 0, 0, 0, 0, 1, 0, -1, 0, 17.1353, 26.8269, -11.8473)
+light_energy = 3.475
+omni_range = 4096.0
+
+[node name="Point22" type="OmniLight3D" parent="Map"]
+transform = Transform3D(1, 0, 0, 0, 0, 1, 0, -1, 0, 17.1353, 26.8269, -15.0044)
+light_energy = 3.475
+omni_range = 4096.0
+
+[node name="Point28" type="OmniLight3D" parent="Map"]
+transform = Transform3D(1, 0, 0, 0, 0, 1, 0, -1, 0, 46.0212, 23.6409, -33.2485)
+light_energy = 2.2
+omni_range = 4096.0
+
+[node name="Point29" type="OmniLight3D" parent="Map"]
+transform = Transform3D(1, 0, 0, 0, 0, 1, 0, -1, 0, 55.9976, 23.6409, -33.2485)
+light_energy = 2.2
+omni_range = 4096.0
+
+[node name="Point33" type="OmniLight3D" parent="Map"]
+transform = Transform3D(1, 0, 0, 0, 0, 1, 0, -1, 0, 55.9976, 23.6409, -13.2459)
+light_energy = 2.2
+omni_range = 4096.0
+
+[node name="Point30" type="OmniLight3D" parent="Map"]
+transform = Transform3D(1, 0, 0, 0, 0, 1, 0, -1, 0, 66.0085, 23.6409, -43.2842)
+light_energy = 2.2
+omni_range = 4096.0
+
+[node name="Point31" type="OmniLight3D" parent="Map"]
+transform = Transform3D(1, 0, 0, 0, 0, 1, 0, -1, 0, 75.9988, 23.6409, -33.2489)
+light_energy = 2.2
+omni_range = 4096.0
+
+[node name="Point32" type="OmniLight3D" parent="Map"]
+transform = Transform3D(1, 0, 0, 0, 0, 1, 0, -1, 0, 66.0121, 23.6409, -13.1948)
+light_energy = 2.2
+omni_range = 4096.0
+
+[node name="Point19" type="OmniLight3D" parent="Map"]
+transform = Transform3D(1, 0, 0, 0, 0, 1, 0, -1, 0, 10.3595, 26.8269, -11.8473)
+light_energy = 3.475
+omni_range = 4096.0
+
+[node name="Point20" type="OmniLight3D" parent="Map"]
+transform = Transform3D(1, 0, 0, 0, 0, 1, 0, -1, 0, 10.3595, 26.8269, -15.0044)
+light_energy = 3.475
+omni_range = 4096.0
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Map"]
+transform = Transform3D(79.87, 0, 0, 0, 27.795, 0, 0, 0, 2.4, 0, 13.2007, 12.3579)
+mesh = SubResource("BoxMesh_nkdt6")
+surface_material_override/0 = SubResource("ShaderMaterial_6a00m")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Map/MeshInstance3D"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Map/MeshInstance3D/StaticBody3D"]
+shape = SubResource("BoxShape3D_hbot5")
+
+[node name="ship" parent="Map" instance=ExtResource("21_sfsie")]
+transform = Transform3D(0.903313, -0.084931, 0.420491, -0.0499604, 0.952707, 0.299755, -0.426063, -0.29178, 0.856349, -2.68665, 0.028785, 5.15187)
+
+[node name="MultiplayerSpawner" type="MultiplayerSpawner" parent="."]
+_spawnable_scenes = PackedStringArray("res://Scenes/character_body_3d.tscn")
+spawn_path = NodePath("..")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="Menu" type="Control" parent="CanvasLayer"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 2.0
+offset_top = 5.0
+offset_right = 2.0
+offset_bottom = 5.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/Menu"]
+layout_mode = 1
+offset_right = 366.0
+offset_bottom = 300.0
+
+[node name="Title" type="Label" parent="CanvasLayer/Menu/VBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("22_k3qcd")
+theme_override_font_sizes/font_size = 58
+text = "SIGMA SHOOTER"
+
+[node name="HostButton" type="Button" parent="CanvasLayer/Menu/VBoxContainer"]
+layout_mode = 2
+focus_mode = 0
+mouse_filter = 1
+theme_override_fonts/font = ExtResource("22_k3qcd")
+theme_override_font_sizes/font_size = 30
+text = "HOST"
+flat = true
+alignment = 0
+
+[node name="JoinButton" type="Button" parent="CanvasLayer/Menu/VBoxContainer"]
+layout_mode = 2
+focus_mode = 0
+mouse_filter = 1
+theme_override_fonts/font = ExtResource("22_k3qcd")
+theme_override_font_sizes/font_size = 30
+text = "JOIN"
+flat = true
+alignment = 0
+
+[node name="AddressEntry" type="LineEdit" parent="CanvasLayer/Menu/VBoxContainer"]
+layout_mode = 2
+placeholder_text = "ENTER ADDRESS TO JOIN"
+
+[node name="QuitButton" type="Button" parent="CanvasLayer/Menu/VBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("22_k3qcd")
+theme_override_font_sizes/font_size = 30
+text = "QUIT
+"
+flat = true
+alignment = 0
+
+[connection signal="pressed" from="CanvasLayer/Menu/VBoxContainer/HostButton" to="." method="_on_host_button_pressed"]
+[connection signal="pressed" from="CanvasLayer/Menu/VBoxContainer/JoinButton" to="." method="_on_join_button_pressed"]
+[connection signal="pressed" from="CanvasLayer/Menu/VBoxContainer/QuitButton" to="." method="_on_quit_button_pressed"]
+
+[editable path="Blendermodels"]
+[editable path="Map"]

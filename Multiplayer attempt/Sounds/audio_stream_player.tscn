@@ -1,0 +1,9 @@
+[gd_scene load_steps=2 format=3 uid="uid://cxh4j8xp4i8b8"]
+
+[ext_resource type="AudioStream" uid="uid://cwujp1g83qbkk" path="res://Sounds/ELI SONG FOR SETH.mp3" id="1_xri5e"]
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer"]
+stream = ExtResource("1_xri5e")
+volume_db = -10.0
+autoplay = true
+parameters/looping = false

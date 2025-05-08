@@ -1,0 +1,366 @@
+[gd_scene load_steps=17 format=3 uid="uid://bklenyncmwhyt"]
+
+[ext_resource type="Script" uid="uid://cx3ox72pti35k" path="res://Scripts/CharacterBody3D.gd" id="1_ujyip"]
+[ext_resource type="Texture2D" uid="uid://cjctls0r0dpxs" path="res://textures/2024-06-20 22_40_18-Window.png" id="2_mr8pa"]
+[ext_resource type="PackedScene" uid="uid://lfwci1lh34p0" path="res://Scenes/shotgun.tscn" id="3_fqjc8"]
+[ext_resource type="Shader" uid="uid://cchg33edeu6r6" path="res://textures/pixel.gdshader" id="5_3umem"]
+[ext_resource type="FontFile" uid="uid://buidr2wtkj8we" path="res://textures/dogica/TTF/dogicapixel.ttf" id="6_k15u6"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_f5xne"]
+albedo_texture = ExtResource("2_mr8pa")
+uv1_offset = Vector3(0.485, 0.14, 0)
+grow_amount = 4.3
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_kp17n"]
+albedo_color = Color(0.909804, 0.596078, 0, 1)
+clearcoat_enabled = true
+clearcoat_roughness = 0.2
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_jw1de"]
+material = SubResource("StandardMaterial3D_kp17n")
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_uy03j"]
+
+[sub_resource type="Animation" id="Animation_j8cx7"]
+resource_name = "RESET"
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Mesh:scale")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(1, 1, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Mesh:position")
+tracks/1/interp = 2
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0, 1, 0)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Collision:scale")
+tracks/2/interp = 2
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(1, 1, 1)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Collision:position")
+tracks/3/interp = 2
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0, 1, 0)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Head:position")
+tracks/4/interp = 2
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0, 1.5, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_5ec5e"]
+resource_name = "crouch"
+length = 0.2
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Mesh:scale")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector3(1, 1, 1), Vector3(1, 0.6, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Mesh:position")
+tracks/1/interp = 2
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector3(0, 1, 0), Vector3(0, 0.6, 0)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Collision:scale")
+tracks/2/interp = 2
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector3(1, 1, 1), Vector3(1, 0.6, 1)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Collision:position")
+tracks/3/interp = 2
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 0.2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector3(0, 1, 0), Vector3(0, 0.6, 0)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Head:position")
+tracks/4/interp = 2
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0, 0.2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector3(0, 1.5, 0), Vector3(0, 1, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_5e5t5"]
+_data = {
+&"RESET": SubResource("Animation_j8cx7"),
+&"crouch": SubResource("Animation_5ec5e")
+}
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_7bbmr"]
+
+[sub_resource type="GDScript" id="GDScript_jqtgv"]
+script/source = "@tool
+extends Node
+
+# This module affects runtime nad 
+
+
+#TODO: Add descriptions
+@export_category(\"Controller Editor Module\")
+@export var head_y_rotation : float = 0:
+	set(new_rotation):
+		head_y_rotation = new_rotation
+		HEAD.rotation.y = head_y_rotation
+		update_configuration_warnings()
+
+@export_group(\"Nodes\")
+@export var CHARACTER : CharacterBody3D
+@export var head_path : String = \"Head\" # From this nodes parent node
+#@export var CAMERA : Camera3D
+#@export var HEADBOB_ANIMATION : AnimationPlayer
+#@export var JUMP_ANIMATION : AnimationPlayer
+#@export var CROUCH_ANIMATION : AnimationPlayer
+#@export var COLLISION_MESH : CollisionShape3D
+
+var HEAD
+
+
+func _ready():
+	HEAD = get_node(\"../\" + head_path)
+	if Engine.is_editor_hint():
+		pass
+	else:
+		HEAD.rotation.y = head_y_rotation
+
+func _process(delta):
+	if Engine.is_editor_hint():
+		pass
+
+func _get_configuration_warnings():
+	var warnings = []
+
+	if head_y_rotation > 360:
+		warnings.append(\"The head rotation is greater than 360\")
+	
+	if head_y_rotation < 0:
+		warnings.append(\"The head rotation is less than 0\")
+
+	# Returning an empty array gives no warnings
+	return warnings
+"
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_pkq61"]
+shader = ExtResource("5_3umem")
+
+[sub_resource type="SceneReplicationConfig" id="SceneReplicationConfig_2ikwh"]
+properties/0/path = NodePath(".:position")
+properties/0/spawn = true
+properties/0/replication_mode = 1
+properties/1/path = NodePath(".:rotation")
+properties/1/spawn = true
+properties/1/replication_mode = 1
+properties/2/path = NodePath("Head/Camera:rotation")
+properties/2/spawn = true
+properties/2/replication_mode = 1
+
+[node name="Character" type="CharacterBody3D" groups=["player"]]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
+collision_layer = 2
+script = ExtResource("1_ujyip")
+
+[node name="Mesh" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
+material_override = SubResource("StandardMaterial3D_f5xne")
+mesh = SubResource("CapsuleMesh_jw1de")
+
+[node name="Collision" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
+shape = SubResource("CapsuleShape3D_uy03j")
+
+[node name="CrouchAnimation" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_5e5t5")
+}
+autoplay = "RESET"
+
+[node name="CrouchCeilingDetection" type="ShapeCast3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.78997, 0)
+shape = SubResource("SphereShape3D_7bbmr")
+target_position = Vector3(0, 0.5, 0)
+collision_mask = 3
+
+[node name="Head" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.5, 0)
+
+[node name="Camera" type="Camera3D" parent="Head" groups=["player"]]
+
+[node name="Weapons" type="Node3D" parent="Head/Camera"]
+
+[node name="Shotgun" parent="Head/Camera/Weapons" instance=ExtResource("3_fqjc8")]
+
+[node name="RightWallCast" type="RayCast3D" parent="Head"]
+transform = Transform3D(3.5, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
+target_position = Vector3(0.3, 0, 0)
+
+[node name="LeftWallCast" type="RayCast3D" parent="Head"]
+transform = Transform3D(-3.5, 8.74228e-08, 0, -3.0598e-07, -1, 0, 0, 0, 1, 0, 0, 0)
+target_position = Vector3(0.3, 0, 0)
+
+[node name="RightLongCast" type="RayCast3D" parent="Head"]
+transform = Transform3D(-5, 0, 0, 0, 0.633, -5.53386e-08, 0, 5.53386e-08, 0.633, 0, -0.117985, 0)
+target_position = Vector3(0.3, 0, 0)
+
+[node name="LeftLongCast" type="RayCast3D" parent="Head"]
+transform = Transform3D(5, -5.53386e-08, -5.53386e-08, -4.37114e-07, -0.633, 0, 4.37114e-07, -4.83786e-15, 0.633, 0, -0.117985, 0)
+target_position = Vector3(0.3, 0, 0)
+
+[node name="EditorModule" type="Node" parent="."]
+script = SubResource("GDScript_jqtgv")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="Pixel" type="ColorRect" parent="CanvasLayer"]
+material = SubResource("ShaderMaterial_pkq61")
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 1
+color = Color(1, 1, 1, 0.27451)
+metadata/_edit_use_anchors_ = true
+
+[node name="Crosshair" type="ColorRect" parent="CanvasLayer"]
+z_index = -1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -2.0
+offset_top = -2.0
+offset_right = 2.0
+offset_bottom = 2.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_vertical = 4
+mouse_filter = 1
+
+[node name="Deathscreen" type="Control" parent="CanvasLayer"]
+visible = false
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Panel" type="Panel" parent="CanvasLayer/Deathscreen"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -80.0
+offset_top = -38.0
+offset_right = 80.0
+offset_bottom = 38.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="CanvasLayer/Deathscreen/Panel"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -55.0
+offset_top = -30.5
+offset_right = 55.0
+offset_bottom = -7.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("6_k15u6")
+text = "You Died."
+
+[node name="Button" type="Button" parent="CanvasLayer/Deathscreen/Panel"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -47.0
+offset_top = -3.0
+offset_right = 47.0
+offset_bottom = 27.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("6_k15u6")
+text = "Restart"
+
+[node name="MultiplayerSynchronizer" type="MultiplayerSynchronizer" parent="."]
+replication_config = SubResource("SceneReplicationConfig_2ikwh")
+
+[connection signal="pressed" from="CanvasLayer/Deathscreen/Panel/Button" to="." method="_on_button_pressed"]

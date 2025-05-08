@@ -1,0 +1,111 @@
+[gd_scene load_steps=14 format=3 uid="uid://lfwci1lh34p0"]
+
+[ext_resource type="Script" uid="uid://cilitwaf4xwng" path="res://Scripts/gun.gd" id="1_ik0xe"]
+[ext_resource type="Texture2D" uid="uid://dhn3ycsr8i2lh" path="res://textures/RiotOutput/RSHTA0.png" id="1_lgwqn"]
+[ext_resource type="Texture2D" uid="uid://cwsj1tg46c7ps" path="res://textures/RiotOutput/RSHFA0.png" id="2_7olmm"]
+[ext_resource type="Texture2D" uid="uid://b2n2f6isqtff" path="res://textures/RiotOutput/RSHFB0.png" id="3_15sex"]
+[ext_resource type="Texture2D" uid="uid://cngtalui3wuhl" path="res://textures/RiotOutput/RSHTB0.png" id="4_0682i"]
+[ext_resource type="Texture2D" uid="uid://beb5lhp8mtexf" path="res://textures/RiotOutput/RSHTC0.png" id="5_6abw8"]
+[ext_resource type="Texture2D" uid="uid://cmjmh7ky372ht" path="res://textures/RiotOutput/RSHTD0.png" id="6_6mjkk"]
+[ext_resource type="Texture2D" uid="uid://uef8sbjblk45" path="res://textures/RiotOutput/RSHTF0.png" id="7_73dhm"]
+[ext_resource type="Texture2D" uid="uid://bmixoya5cp0s7" path="res://textures/RiotOutput/RSHTH0.png" id="8_ei251"]
+[ext_resource type="Texture2D" uid="uid://dewyiomploc7p" path="res://textures/RiotOutput/RSHTJ0.png" id="9_kg1wo"]
+[ext_resource type="Texture2D" uid="uid://h2n88m40ahhu" path="res://textures/RiotOutput/RSHTK0.png" id="10_p4td7"]
+[ext_resource type="Texture2D" uid="uid://0elv4f0vvqc6" path="res://textures/RiotOutput/RSHTL0.png" id="11_vvbfl"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_v0dc8"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_lgwqn")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_7olmm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_15sex")
+}, {
+"duration": 1.0,
+"texture": ExtResource("1_lgwqn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_0682i")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_6abw8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_6mjkk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_73dhm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_ei251")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_kg1wo")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_p4td7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_vvbfl")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_6abw8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_0682i")
+}],
+"loop": false,
+"name": &"shoot",
+"speed": 10.0
+}]
+
+[node name="Shotgun" type="Node3D"]
+script = ExtResource("1_ik0xe")
+Gun_Type = "Shotgun"
+Gun_Ammo = 8
+Gun_Max = 8
+Damage = 14.0
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="CanvasLayer"]
+position = Vector2(529, 379)
+scale = Vector2(3.06102, 3.06102)
+sprite_frames = SubResource("SpriteFrames_v0dc8")
+animation = &"shoot"
+autoplay = "idle"
+
+[node name="Rays" type="Node3D" parent="."]
+
+[node name="RayCast3D" type="RayCast3D" parent="Rays"]
+target_position = Vector3(0, 0, -10)
+
+[node name="RayCast3D2" type="RayCast3D" parent="Rays"]
+target_position = Vector3(0, 0, -10)
+
+[node name="RayCast3D3" type="RayCast3D" parent="Rays"]
+target_position = Vector3(0, 0, -10)
+
+[node name="RayCast3D4" type="RayCast3D" parent="Rays"]
+target_position = Vector3(0, 0, -10)
+
+[node name="RayCast3D5" type="RayCast3D" parent="Rays"]
+target_position = Vector3(0, 0, -10)
+
+[node name="RayCast3D6" type="RayCast3D" parent="Rays"]
+target_position = Vector3(0, 0, -10)
+
+[node name="RayCast3D7" type="RayCast3D" parent="Rays"]
+target_position = Vector3(0, 0, -10)
+
+[node name="RayCast3D8" type="RayCast3D" parent="Rays"]
+target_position = Vector3(0, 0, -10)

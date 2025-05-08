@@ -1,0 +1,250 @@
+[gd_scene load_steps=9 format=3 uid="uid://qltnw4wuxt6m"]
+
+[ext_resource type="Shader" uid="uid://cchg33edeu6r6" path="res://textures/pixel.gdshader" id="1_alx3h"]
+[ext_resource type="PackedScene" uid="uid://b8ly5tgjq6i70" path="res://Models/ship.blend" id="3_ac10o"]
+[ext_resource type="Script" uid="uid://b3a4k1vqltulr" path="res://Scripts/mainmenu.gd" id="4_sghik"]
+[ext_resource type="FontFile" uid="uid://buidr2wtkj8we" path="res://textures/dogica/TTF/dogicapixel.ttf" id="5_nu2cs"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_kvx0k"]
+shader = ExtResource("1_alx3h")
+
+[sub_resource type="Animation" id="Animation_38wd5"]
+length = 0.001
+tracks/0/type = "bezier"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:rotation:x")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/1/type = "bezier"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:rotation:y")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/2/type = "bezier"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath(".:rotation:z")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(0.139103, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/3/type = "bezier"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath(".:position:x")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(9.7359, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/4/type = "bezier"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath(".:position:y")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(-1.61388, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/5/type = "bezier"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath(".:position:z")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(-17.1665, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+
+[sub_resource type="Animation" id="Animation_ua73m"]
+resource_name = "shipmove"
+length = 14.7945
+loop_mode = 1
+tracks/0/type = "bezier"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:rotation:x")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"handle_modes": PackedInt32Array(0, 0, 0, 0, 0, 0),
+"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0, 0, -0.734832, -0.0592854, 0.25, 0, -0.0100851, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 3.8, 7.23333, 7.8, 11.1667, 14.7333)
+}
+tracks/1/type = "bezier"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:rotation:y")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"handle_modes": PackedInt32Array(0, 0, 0, 0, 0, 0),
+"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0, -0.0100851, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 3.8, 7.23333, 7.8, 11.1667, 14.7333)
+}
+tracks/2/type = "bezier"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath(".:rotation:z")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"handle_modes": PackedInt32Array(0, 0, 0, 0, 0, 0),
+"points": PackedFloat32Array(0.139103, -0.25, 0, 0.25, 0, -0.00471241, -0.25, 0, 0.25, 0, -0.152193, -0.25, 0, 0.25, 0, -0.162278, -0.25, 0, 0.25, 0, -0.00471241, -0.25, 0, 0.25, 0, 0.139103, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 3.8, 7.23333, 7.8, 11.1667, 14.7333)
+}
+tracks/3/type = "bezier"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath(".:position:x")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"handle_modes": PackedInt32Array(0, 0, 0, 0, 0, 0),
+"points": PackedFloat32Array(9.7359, -0.25, 0, 0.25, 0, -1.73181, -0.25, 0, 0.25, 0, -7.84647, -2, 0.706239, 0.25, 0, -7.85655, -0.25, 0, 0.766666, 0.0448551, -2.13473, -0.433334, -1.31856, 0.499999, 2.03878, 9.7359, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 3.8, 7.23333, 7.8, 11.1667, 14.7333)
+}
+tracks/4/type = "bezier"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath(".:position:y")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"handle_modes": PackedInt32Array(0, 0, 0, 0, 0, 0),
+"points": PackedFloat32Array(-1.61388, -0.25, 0, 1.2, 0.0895715, -4.85199, -0.8, -0.456962, 1.1, -0.0296631, -2.55195, -2.36817, 0.112, 0.25, 0, -2.56203, -0.25, 0, 0.633333, -0.183128, -4.85199, -0.882021, 0.580763, 1.1, -0.0296631, -1.61388, -1.86667, 0.51687, 0.25, 0),
+"times": PackedFloat32Array(0, 3.8, 7.23333, 7.8, 11.1667, 14.7333)
+}
+tracks/5/type = "bezier"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath(".:position:z")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"handle_modes": PackedInt32Array(0, 0, 0, 0, 0, 0),
+"points": PackedFloat32Array(-17.1665, -0.25, 0, 0.25, 0, -17.1665, -0.25, 0, 0.25, 0, -17.1665, -0.25, 0, 0.25, 0, -17.1766, -0.25, 0, 0.25, 0, -17.1665, -0.25, 0, 0.25, 0, -17.1665, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 3.8, 7.23333, 7.8, 11.1667, 14.7333)
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_rgjeo"]
+_data = {
+&"RESET": SubResource("Animation_38wd5"),
+&"shipmove": SubResource("Animation_ua73m")
+}
+
+[node name="CanvasLayer" type="CanvasLayer"]
+
+[node name="Pixel" type="ColorRect" parent="."]
+material = SubResource("ShaderMaterial_kvx0k")
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 2.0
+offset_top = 5.0
+offset_right = 2.0
+offset_bottom = 5.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 1
+color = Color(1, 1, 1, 0.27451)
+metadata/_edit_use_anchors_ = true
+
+[node name="Node3D" type="Node3D" parent="."]
+
+[node name="ship" parent="Node3D" instance=ExtResource("3_ac10o")]
+transform = Transform3D(0.990341, -0.138655, 0, 0.138655, 0.990341, 0, 0, 0, 1, 9.7359, -1.61388, -17.1665)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Node3D/ship"]
+libraries = {
+"": SubResource("AnimationLibrary_rgjeo")
+}
+autoplay = "shipmove"
+
+[node name="OmniLight3D" type="OmniLight3D" parent="Node3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.14383, 385.861, 2.37423)
+light_energy = 9.03
+omni_range = 4096.0
+
+[node name="SubViewportContainer" type="SubViewportContainer" parent="Node3D"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+metadata/_edit_use_anchors_ = true
+
+[node name="SubViewport" type="SubViewport" parent="Node3D/SubViewportContainer"]
+handle_input_locally = false
+size = Vector2i(1152, 648)
+render_target_update_mode = 4
+
+[node name="Camera3D" type="Camera3D" parent="Node3D/SubViewportContainer/SubViewport"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 385.861, 0)
+
+[node name="Menu" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 2.0
+offset_top = 5.0
+offset_right = 2.0
+offset_bottom = 5.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("4_sghik")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Menu"]
+layout_mode = 1
+offset_right = 366.0
+offset_bottom = 300.0
+
+[node name="Title" type="Label" parent="Menu/VBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("5_nu2cs")
+theme_override_font_sizes/font_size = 58
+text = "SIGMA SHOOTER"
+
+[node name="StartButton" type="Button" parent="Menu/VBoxContainer"]
+layout_mode = 2
+focus_mode = 0
+mouse_filter = 1
+theme_override_fonts/font = ExtResource("5_nu2cs")
+theme_override_font_sizes/font_size = 30
+text = "START"
+flat = true
+alignment = 0
+
+[node name="QuitButton" type="Button" parent="Menu/VBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("5_nu2cs")
+theme_override_font_sizes/font_size = 30
+text = "QUIT
+"
+flat = true
+alignment = 0
+
+[connection signal="pressed" from="Menu/VBoxContainer/StartButton" to="Menu" method="_on_start_button_pressed"]
+[connection signal="pressed" from="Menu/VBoxContainer/QuitButton" to="Menu" method="_on_quit_button_pressed"]
